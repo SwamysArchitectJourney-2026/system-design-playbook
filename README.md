@@ -177,7 +177,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Viswanatha Swamy P K**
+Viswanatha Swamy P K
 
 ---
 

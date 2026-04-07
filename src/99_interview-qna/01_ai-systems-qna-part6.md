@@ -157,4 +157,3 @@
 > “I design AI systems as distributed, observable, and governed systems—where LLMs provide reasoning, but execution is deterministic, measurable, and aligned to business outcomes.”
 
 ---
-

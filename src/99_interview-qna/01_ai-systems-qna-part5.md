@@ -131,4 +131,3 @@
 > Rollback must be instant because behavior is non-deterministic.
 
 ---
-

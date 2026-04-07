@@ -1,5 +1,3 @@
----
-
 # 🧩 SECTION 3: AGENTIC SYSTEM DESIGN
 
 ---
@@ -129,4 +127,3 @@
 > Revert to previous stable model or workflow instantly.
 
 ---
-

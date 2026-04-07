@@ -150,4 +150,3 @@
 > Executives care about **impact, not implementation details**.
 
 ---
-

@@ -35,7 +35,7 @@ case-study-name/
 
 ## README.md Template
 
-~~~markdown
+```markdown
 # [System Name] Case Study
 
 A comprehensive system design case study for [system description].
@@ -84,13 +84,13 @@ After studying this case study, you should be able to:
 ## Related Topics
 
 - [Links to related building blocks, patterns, principles]
-~~~
+```
 
 ---
 
 ## 01_requirements.md Template
 
-~~~markdown
+```markdown
 # [System Name] - Requirements
 
 ## Functional Requirements
@@ -122,13 +122,13 @@ After studying this case study, you should be able to:
 - **Time to Market**: [Timeline]
 - **Team Size**: [Constraints]
 - **Technical Constraints**: [Any limitations]
-~~~
+```
 
 ---
 
 ## 02_back-of-envelope.md Template
 
-~~~markdown
+````markdown
 # [System Name] - Back-of-Envelope Calculations
 
 ## Assumptions
@@ -142,7 +142,7 @@ After studying this case study, you should be able to:
 ### Storage Requirements
 
 **Calculation**:
-```
+```text
 [Show calculation steps]
 ```
 
@@ -151,7 +151,7 @@ After studying this case study, you should be able to:
 ### Bandwidth Requirements
 
 **Calculation**:
-```
+```text
 [Show calculation steps]
 ```
 
@@ -160,7 +160,7 @@ After studying this case study, you should be able to:
 ### Compute Requirements
 
 **Calculation**:
-```
+```text
 [Show calculation steps]
 ```
 
@@ -174,13 +174,13 @@ After studying this case study, you should be able to:
 | Bandwidth | [Value] |
 | QPS | [Value] |
 | Servers | [Value] |
-~~~
+````
 
 ---
 
 ## 03_high-level-design.md Template
 
-~~~markdown
+```markdown
 # [System Name] - High-Level Design
 
 ## System Architecture
@@ -217,13 +217,13 @@ This design demonstrates:
 **What evaluators look for**:
 - ✅ [Positive signal]
 - ❌ [Common mistake to avoid]
-~~~
+```
 
 ---
 
 ## 04_low-level-design.md Template
 
-~~~markdown
+````markdown
 # [System Name] - Low-Level Design
 
 ## Data Models
@@ -242,14 +242,14 @@ This design demonstrates:
 ### Endpoint 1: [Name]
 
 **Request**:
-```
+```text
 [Method] /api/path
 [Headers]
 [Body]
 ```
 
 **Response**:
-```
+```text
 [Status Code]
 [Body]
 ```
@@ -273,15 +273,17 @@ This LLD demonstrates:
 - [Signal 2]
 
 **Common candidate mistakes**:
+
 - ❌ [Mistake 1]
 - ❌ [Mistake 2]
-~~~
+
+````
 
 ---
 
 ## 05_scalability.md Template
 
-~~~markdown
+```markdown
 # [System Name] - Scalability
 
 ## Scaling Strategies
@@ -310,13 +312,13 @@ This LLD demonstrates:
 - [Optimization 1]
 - [Optimization 2]
 - [Optimization 3]
-~~~
+```
 
 ---
 
 ## 06_observability.md Template
 
-~~~markdown
+```markdown
 # [System Name] - Observability
 
 ## SLIs and SLOs
@@ -355,13 +357,13 @@ This LLD demonstrates:
 
 - [Tracing strategy]
 - [Key spans to track]
-~~~
+```
 
 ---
 
 ## 07_security.md Template
 
-~~~markdown
+```markdown
 # [System Name] - Security
 
 ## Authentication
@@ -394,13 +396,13 @@ This LLD demonstrates:
 - [Practice 1]
 - [Practice 2]
 - [Practice 3]
-~~~
+```
 
 ---
 
 ## 08_trade-offs.md Template
 
-~~~markdown
+```markdown
 # [System Name] - Trade-offs
 
 ## Architecture Trade-offs
@@ -444,7 +446,7 @@ This demonstrates:
 - ✅ Clear rationale for decisions
 - ❌ Ignoring trade-offs
 - ❌ Over-optimizing one dimension
-~~~
+```
 
 ---
 
@@ -452,7 +454,7 @@ This demonstrates:
 
 ### Context Diagram (C4 Level 1)
 
-~~~markdown
+```markdown
 # [System Name] - C4 Level 1: System Context
 
 ## System Context Diagram
@@ -466,11 +468,11 @@ This demonstrates:
 **System**: [What the system does]
 
 **External Systems**: [External dependencies]
-~~~
+```
 
 ### Container Diagram (C4 Level 2)
 
-~~~markdown
+```markdown
 # [System Name] - C4 Level 2: Container Architecture
 
 ## Container Diagram
@@ -486,11 +488,11 @@ This demonstrates:
 ## Container Descriptions
 
 [Describe each container]
-~~~
+```
 
 ### Component Diagram (C4 Level 3)
 
-~~~markdown
+```markdown
 # [System Name] - C4 Level 3: Component Details
 
 ## Component Diagram
@@ -503,11 +505,11 @@ This demonstrates:
 ## Component Responsibilities
 
 [Describe each component]
-~~~
+```
 
 ### Sequence Diagrams
 
-~~~markdown
+```markdown
 # [Flow Name] - Sequence Diagram
 
 ## [Flow Description]
@@ -532,7 +534,7 @@ This flow demonstrates:
 **Common candidate mistakes**:
 - ❌ [Mistake 1]
 - ❌ [Mistake 2]
-~~~
+```
 
 ---
 
