@@ -49,10 +49,11 @@ system-design-in-practice/
 │       ├── 01_ai-systems-qna-part11.md    # Speak-Ready: Platform, DevOps & Cost Engineering
 │       ├── 01_ai-systems-qna-part12.md    # Speak-Ready: Failures, Trade-offs & Storytelling
 │       ├── 01_ai-systems-qna-part13.md    # Top 10 Speak-Ready Architect Answers
-│       ├── 02_architect-prep-qa-part1.md  # Gen AI Lead Q1–Q10 (long-form)
-│       ├── 02_architect-prep-qa-part2.md  # SA Q11–Q20 + EA Q21–Q30 (Batch 1)
-│       ├── 02_architect-prep-qa-part3.md  # All roles Q31–Q60 (Batch 2)
-│       └── 02_architect-prep-qa-part4.md  # All roles Q61–Q100 + Final Advice (Batches 3–4)
+│       ├── 02_architect-prep-qa-part1.md  # Gen AI Lead Q1–Q10 + SA Q11–Q20 (Batch 1)
+│       ├── 02_architect-prep-qa-part2.md  # EA Q21–Q30 + Gen AI Lead Q31–Q40
+│       ├── 02_architect-prep-qa-part3.md  # SA Q41–Q50 + EA Q51–Q60 (Batch 2 close)
+│       ├── 02_architect-prep-qa-part4.md  # All roles Q61–Q90 (Batch 3 — behavioral)
+│       └── 02_architect-prep-qa-part5.md  # All roles Q91–Q100 + Final Advice (Batch 4)
 ├── CLAUDE.md                              # Claude Code instructions
 ├── CONTRIBUTING.md                        # Contribution guidelines
 ├── CODE_OF_CONDUCT.md                     # Code of conduct

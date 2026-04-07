@@ -38,14 +38,15 @@
 | `part12` | Speak-Ready: Failures, Trade-offs & Storytelling |
 | `part13` | Top 10 Speak-Ready Principal/Architect Answers |
 
-### `02_architect-prep-qa` — 100-Question Long-Form Prep (4 parts)
+### `02_architect-prep-qa` — 100-Question Long-Form Prep (5 parts)
 
 | File | Content |
 |------|---------|
-| `part1` | Gen AI Lead Q1–Q10 (technical & orchestration) |
-| `part2` | Principal SA Q11–Q20 + Enterprise Architect Q21–Q30 (Batch 1) |
-| `part3` | All three roles Q31–Q60 (Batch 2 — advanced) |
-| `part4` | All three roles Q61–Q100 + Final Preparation Advice (Batches 3–4) |
+| `part1` | Gen AI Lead Q1–Q10 + Principal SA Q11–Q20 (Batch 1) |
+| `part2` | Enterprise Architect Q21–Q30 + Gen AI Lead Q31–Q40 (Batch 1 tail + Batch 2 start) |
+| `part3` | Principal SA Q41–Q50 + Enterprise Architect Q51–Q60 (Batch 2 close) |
+| `part4` | All three roles Q61–Q90 (Batch 3 — behavioral, leadership, crisis) |
+| `part5` | All three roles Q91–Q100 + Final Preparation Advice (Batch 4 — curveballs) |
 
 ---
 
