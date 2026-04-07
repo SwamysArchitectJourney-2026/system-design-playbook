@@ -13,18 +13,30 @@ learning_objectives:
 
 ## ❓1. When should you NOT use AI?
 
-> Use AI only when problems involve ambiguity or unstructured data.
-> Avoid it for deterministic, rule-based systems where it adds cost and unpredictability.
+**The Context:** Interviewers ask this to test your pragmatism versus hype-chasing.
+**The Trap:** Giving a generic answer about "ethics" or "when data is bad."
+**The Architect's Answer (Chain of Thought):**
+1. Evaluate if a problem is deterministic (rule-based) or probabilistic (pattern-based).
+2. If it can be solved with a SQL GROUP BY query, regex, or standard control flow with 100% accuracy, applying an LLM is an anti-pattern.
+3. AI introduces latency, non-determinism, and massive compute costs. Advocate for AI only when dealing with unstructured data, semantic ambiguity (intent classification), or massive-scale pattern recognition where traditional rules break down.
 
 
 ## ❓2. How do you frame an AI problem?
 
-> Convert business goals → prediction/generation tasks → define inputs, outputs, constraints, and success metrics.
+**The Trap:** Immediately jumping into vector databases, chunking strategies, and model selection before understanding the "why".
+**The Architect's Answer (Chain of Thought):**
+1. Translate the abstract business goal (e.g., "improve customer service") into a concrete prediction or generation task (e.g., "classify intent and generate a summarized response").
+2. Explicitly define the available inputs (context), the required schemas (outputs), and the non-functional constraints (latency SLA, cost per token, data privacy).
+3. Map technical accuracy metrics (RAGAS evaluation scores) directly to the business ROI.
 
 
 ## ❓3. ML vs DL vs LLM—when to use?
 
-> ML for structured prediction, DL for complex patterns, LLMs for language reasoning and generation.
+**The Trap:** Treating LLMs as a universal hammer and ignoring cost.
+**The Architect's Answer (Chain of Thought):**
+* **Traditional ML (XGBoost, Random Forest):** Optimal for structured, tabular prediction tasks where explainability, sub-10ms latency, and low compute cost are critical.
+* **Deep Learning (CNNs, RNNs):** Required for complex pattern recognition on specific unstructured modalities (like computer vision defect detection) when you have massive labeled datasets.
+* **LLMs (GPT-4, Claude):** Best for zero-shot or few-shot language reasoning, semantic search (RAG), unstructured data extraction, and dynamic text generation. I evaluate cost vs. latency: an LLM is overkill if an ML classifier does the job in 2ms.
 
 
 ## ❓4. What is an agentic system?
@@ -1331,3 +1343,5 @@ Problem → Constraints → Design → Trade-offs → Outcome
 > I designed it using event-driven architecture…
 > Trade-offs included latency vs reliability…
 > Result: improved scalability and reduced failures.
+
+
