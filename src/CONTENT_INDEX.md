@@ -20,6 +20,11 @@
 
 ## Interview Q&A (`99_interview-qna/`)
 
+Primary consolidated files:
+
+- `ai-systems-qna/complete.md`
+- `architect-prep-qa/complete.md`
+
 ### `ai-systems-qna/` — AI Systems Q&A (13 parts)
 
 | File | Content |
