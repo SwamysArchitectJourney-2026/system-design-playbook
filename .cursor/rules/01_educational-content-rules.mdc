@@ -12,7 +12,7 @@
 
 ### Case Study Documentation (`src/07_case-studies/` directory)
 - ✅ **File naming**: Standard naming conventions (requirements.md, high-level-design.md, etc.)
-- ✅ **Line limits**: Recommended ≤150 lines, but flexible for comprehensive documentation
+- ✅ **Line limits**: Recommended ≤1000 lines, but flexible for comprehensive documentation
 - ⚠️ **YAML frontmatter**: NOT required (case study files are documentation)
 - ✅ **Zero-copy policy**: Applies (content must be original)
 - ✅ **File references**: Must point to existing files
@@ -20,7 +20,7 @@
 
 ### Educational Content (`src/01_introduction/`, `src/02_interview-prep/`, `src/03_foundations/`, `src/04_principles/`, `src/05_building-blocks/`, `src/06_patterns/`, `src/08_failures/`)
 - ✅ **File naming**: Must follow numbering conventions (01_, 02_, etc., no 00_)
-- ✅ **Line limits**: Recommended ≤150 lines (split, don't trim)
+- ✅ **Line limits**: Recommended ≤1000 lines (split, don't trim)
 - ✅ **YAML frontmatter**: Recommended for content files (all 5 metadata fields when content is added)
 - ✅ **Zero-copy policy**: Applies (content must be transformative)
 - ✅ **File references**: Must point to existing files
@@ -72,20 +72,20 @@
 
 **APPLICABILITY**: This rule applies to educational content files (`src/01_introduction/`, `src/02_interview-prep/`, `src/03_foundations/`, `src/04_principles/`, `src/05_building-blocks/`, `src/06_patterns/`, `src/08_failures/`).
 
-**For Case Study Documentation**: The 150-line limit is a **recommendation**, not a strict requirement. Case study files may exceed 150 lines if needed for comprehensive documentation.
+**For Case Study Documentation**: The 1000-line limit is a **recommendation**, not a strict requirement. Case study files may exceed 1000 lines if needed for comprehensive documentation.
 
 ✅ **Modular content** designed for focused 25-minute sessions  
 ✅ **Multi-Part Structure**: Complex topics split into Part 1, Part 2, ... Part N  
 ✅ **One-Shot Learning**: Each segment complete and actionable within time limit  
-✅ **Target Length**: 150 lines of content maximum per response (educational content)
+✅ **Target Length**: 1000 lines of content maximum per response (educational content)
 
 ### ⚠️ CRITICAL: Splitting vs. Trimming Policy
 
 **APPLICABILITY**: This rule applies to educational content files (`src/01_introduction/`, `src/02_interview-prep/`, `src/03_foundations/`, `src/04_principles/`, `src/05_building-blocks/`, `src/06_patterns/`, `src/08_failures/`).
 
-**For Case Study Documentation**: If case study files exceed 150 lines, consider splitting for better organization, but it's not mandatory.
+**For Case Study Documentation**: If case study files exceed 1000 lines, consider splitting for better organization, but it's not mandatory.
 
-**MANDATORY APPROACH** (Educational Content Only): When content exceeds 150 lines, **ALWAYS SPLIT** into multiple parts. **NEVER TRIM** or condense content.
+**MANDATORY APPROACH** (Educational Content Only): When content exceeds 1000 lines, **ALWAYS SPLIT** into multiple parts. **NEVER TRIM** or condense content.
 
 **Why Splitting is Required:**
 - ✅ **Preserves ALL educational content** - No loss of examples, explanations, or concepts
@@ -107,10 +107,10 @@
 5. **Update references** - Update all file references after splitting
 
 **Example**: If a file has 300 lines covering "Factory Pattern Fundamentals" and "Factory Pattern Advanced", split into:
-- `01_Factory-Pattern-Part1-A.md` (Fundamentals - 150 lines)
-- `01_Factory-Pattern-Part1-B.md` (Advanced - 150 lines)
+- `01_Factory-Pattern-Part1-A.md` (Fundamentals - 1000 lines)
+- `01_Factory-Pattern-Part1-B.md` (Advanced - 1000 lines)
 
-**NOT**: Condense to 150 lines by removing examples or explanations.
+**NOT**: Condense to 1000 lines by removing examples or explanations.
 
 ---
 
@@ -211,7 +211,7 @@ related_topics:
 4. ✅ **Maintain order** - Parts reflect sequential content flow
 
 **When to Use This Pattern**:
-- Content exceeds 150 lines
+- Content exceeds 1000 lines
 - Cannot be split into distinct semantic concepts
 - Content is a single cohesive topic that must be split mechanically
 
@@ -246,7 +246,7 @@ All content must demonstrate:
 3. ✅ Would a learner understand this without the original source?
 4. ✅ Are the examples relevant and practical?
 5. ✅ Does this content add educational value beyond the reference?
-6. ✅ Is this content within 150 lines for effective delivery?
+6. ✅ Is this content within 1000 lines for effective delivery?
 
 ---
 
@@ -335,7 +335,7 @@ class ProductFactory:
    - **Apply 7-category review checklist while transforming**:
      - Verify YAML frontmatter structure as you create it
      - Ensure content is transformative (not copied) during transformation
-     - **Check line count as you build content (≤ 150 lines) - SPLIT if exceeds, NEVER TRIM**
+     - **Check line count as you build content (≤ 1000 lines) - SPLIT if exceeds, NEVER TRIM**
      - Validate file naming conventions during creation
      - Verify file references as you add them
      - Ensure zero-copy policy compliance during transformation
@@ -525,8 +525,8 @@ Before committing:
 - [ ] `enables:` key present in `related_topics` section
 
 #### 2. Content Structure Review
-- [ ] File length ≤ 150 lines (excluding YAML frontmatter)
-- [ ] **If content exceeds 150 lines**: File has been SPLIT into multiple parts (not trimmed)
+- [ ] File length ≤ 1000 lines (excluding YAML frontmatter)
+- [ ] **If content exceeds 1000 lines**: File has been SPLIT into multiple parts (not trimmed)
 - [ ] All educational content preserved across split parts
 - [ ] Has clear headings (## level)
 - [ ] Content is modular and focused
@@ -582,7 +582,7 @@ Before committing:
    - Open each file
    - Check YAML frontmatter structure
    - Verify all metadata fields
-   - Count lines (must be ≤ 150)
+   - Count lines (must be ≤ 1000)
    - Check file naming conventions
    - Validate all file references
    - Review content quality indicators

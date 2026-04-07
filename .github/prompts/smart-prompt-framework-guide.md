@@ -190,7 +190,7 @@ MANDATORY VALIDATION:
 - ✅ Trade-offs are analyzed, not just mentioned
 - ✅ Content teaches HOW to think, not just WHAT to build
 - ✅ Follows transformative workflow (original content, not copied)
-- ✅ ≤150 lines per file (split into parts if needed)
+- ✅ ≤1000 lines per file (split into parts if needed)
 ```
 
 ### **For Enterprise Architecture & System Design:**

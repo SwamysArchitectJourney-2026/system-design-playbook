@@ -122,7 +122,7 @@ All content must be **transformative, not reformative**. Never copy notes or sou
 
 ### File Standards
 
-- ✅ Recommended **≤ 150 lines per file** — split into parts if needed
+- ✅ Recommended **≤ 1000 lines per file** — split into parts if needed
 - ✅ Use `NN_topic-slug.md` naming in sequence-based modules
 - ✅ Use kebab-case, lowercase, hyphen-separated filenames
 - ❌ **NEVER** use `00_` prefix — use `01_` and above
@@ -204,7 +204,7 @@ Before any content is accepted, answer these questions:
 - [ ] Does every design decision include **explicit reasoning**?
 - [ ] Are trade-offs **analyzed**, not just mentioned?
 - [ ] Does this teach **HOW to think**, not just WHAT to build?
-- [ ] Is the file **≤ 150 lines** (or split cleanly into parts)?
+- [ ] Is the file **≤ 1000 lines** (or split cleanly into parts)?
 - [ ] Are all diagrams **original** and created for this repo?
 
 ---
@@ -225,7 +225,7 @@ Before any content is accepted, answer these questions:
 - ❌ Add content that cannot be explained in 5–10 minutes
 - ❌ State design decisions without reasoning
 - ❌ Use `00_` as a file prefix — ever
-- ❌ Create files exceeding 150 lines without splitting
+- ❌ Create files exceeding 1000 lines without splitting
 - ❌ Embed copyrighted diagrams or figures
 - ❌ Add content that is not reusable across at least two contexts
 

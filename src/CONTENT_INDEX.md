@@ -20,7 +20,7 @@
 
 ## Interview Q&A (`99_interview-qna/`)
 
-### `01_ai-systems-qna` — AI Systems Q&A (13 parts)
+### `ai-systems-qna/` — AI Systems Q&A (13 parts)
 
 | File | Content |
 |------|---------|
@@ -38,7 +38,7 @@
 | `part12` | Speak-Ready: Failures, Trade-offs & Storytelling |
 | `part13` | Top 10 Speak-Ready Principal/Architect Answers |
 
-### `02_architect-prep-qa` — 100-Question Long-Form Prep (5 parts)
+### `architect-prep-qa/` — 100-Question Long-Form Prep (5 parts)
 
 | File | Content |
 |------|---------|

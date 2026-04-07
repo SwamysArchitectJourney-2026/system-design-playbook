@@ -40,7 +40,7 @@
 ## Content Rules (Quick Reference)
 
 - **File naming**: `01_`, `02_` prefix (NEVER `00_`) — hyphens for multi-word names
-- **File size**: ≤ 150 lines — split with `-part1`, `-part2` suffixes
+- **File size**: ≤ 1000 lines — split with `-part1`, `-part2` suffixes
 - **Zero-copy policy**: all content must be transformative, not reformative
 - **Diagrams**: Mermaid-first, ASCII fallback
 - **Scaffold folders**: contain only `.gitkeep` — content added progressively

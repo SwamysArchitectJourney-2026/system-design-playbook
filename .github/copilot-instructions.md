@@ -63,7 +63,7 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 1. **Follow Zero-Copy Policy**: All content must be transformative, not reformative
 2. **Use Numbering**: Files must use `01_`, `02_`, etc. (never `00_`)
-3. **Keep Modular**: Recommended ≤150 lines per file (split, don't trim)
+3. **Keep Modular**: Recommended ≤1000 lines per file (split, don't trim)
 4. **Create Original Diagrams**: Use Mermaid-first with ASCII fallback
 5. **Case Study Structure**: Follow standard structure (requirements, HLD, LLD, scalability, trade-offs)
 
@@ -81,7 +81,7 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 - Prefer **semantic filenames** over editorial artifacts.
 - Avoid encoding hierarchy/versioning in filenames (e.g., avoid `Part1-A`, `A/B/C`). If you feel you need `A/B/C`, you likely need a folder.
-- Use `-part1`, `-part2` only for **mechanical splitting** (e.g., to respect the ~150 line modularity guideline), not as a long-term hierarchy.
+- Use `-part1`, `-part2` only for **mechanical splitting** (e.g., to respect the ~1000 line modularity guideline), not as a long-term hierarchy.
 
 **Recommended patterns in this repo**
 
@@ -125,8 +125,8 @@ During review, treat naming as part of “maintainability”:
 
 #### Content Structure
 
-- ✅ Recommended ≤150 lines per file
-- ✅ Split into multiple parts if content exceeds 150 lines
+- ✅ Recommended ≤1000 lines per file
+- ✅ Split into multiple parts if content exceeds 1000 lines
 - ✅ Never trim or condense content
 - ✅ Each part should be self-contained
 
@@ -213,7 +213,7 @@ Before publishing any content:
 3. ✅ Would a learner understand this without the original source?
 4. ✅ Are the examples relevant and practical?
 5. ✅ Does this content add educational value beyond the reference?
-6. ✅ Is this content within 150 lines for effective delivery?
+6. ✅ Is this content within 1000 lines for effective delivery?
 
 ---
 

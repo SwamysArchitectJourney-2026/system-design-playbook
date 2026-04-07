@@ -17,7 +17,7 @@ Swamy's personal system design playbook. A **thinking system**, not a notes repo
 
 ### File Size
 
-- **≤ 150 lines per file** — split into parts if exceeded; never trim or condense
+- **≤ 1000 lines per file** — split into parts if exceeded; never trim or condense
 
 ### Content Policy
 
