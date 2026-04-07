@@ -46,15 +46,14 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 **Quick Overview**:
 
-- `src/01_introduction/` - Getting started with system design
-- `src/02_interview-prep/` - Interview preparation strategies
-- `src/03_foundations/` - Foundational concepts (abstractions, consistency, failures, C4 diagrams)
-- `src/04_principles/` - System design principles (availability, scalability, etc.)
-- `src/05_building-blocks/` - Core building blocks (DNS, load balancers, databases, etc.)
-- `src/06_patterns/` - Architectural patterns (caching, rate limiting, CQRS, etc.)
-- `src/07_case-studies/` - End-to-end case studies (URL Shortener, YouTube, Twitter, etc.)
-- `src/08_failures/` - Real-world failure analysis
-- `src/references/` - Learning resources (books, papers, tools)
+- `src/01_core/` - Design, tradeoff & failure frameworks
+- `src/02_patterns/` - Caching, rate-limiting, retries, messaging
+- `src/03_systems/` - Notification, chat, URL shortener
+- `src/04_deep-dives/` - Consistency, partitioning, scaling
+- `src/05_ai-ml-systems/` - MLOps, observability, AI security
+- `src/06_decision-trees/` - When-to-use-what decision guides
+- `src/07_case-studies/` - End-to-end case studies
+- `src/99_interview-qna/` - Interview Q&A (AI, Architect, Enterprise)
 
 ---
 

@@ -1,168 +1,60 @@
 # Repository Structure & Context
 
-**Version**: 2.0  
-**Last Updated**: January 1, 2026
+**Version**: 3.0
+**Last Updated**: April 7, 2026
 
 ---
 
-## 🧭 Repository Context
+## Repository Context
 
-**System Design in Practice** is a comprehensive guide to system design, focusing on real-world architectural decisions, trade-offs, and scalability patterns. It provides:
+**System Design in Practice** is Swamy's personal system design playbook — a thinking system, not a notes repo. Focused on structured reasoning, reusable architectural patterns, and production-grade decision-making.
 
-- Core system design principles
-- Common architectural patterns
-- Building blocks of distributed systems
-- End-to-end system design case studies
-- Diagrams (C4, sequence, flow)
-- Trade-offs and failure scenarios
+**Target Audience**: Software Engineers, Senior Engineers transitioning to architect roles, Technical Leads.
 
-**Target Audience**:
+### CRITICAL: Repository Purpose
 
-- Software Engineers preparing for system design interviews
-- Senior engineers transitioning to architect roles
-- Engineers designing scalable systems in production
-
-**Purpose**: Provides a practical, interview-ready guide to system design with real-world case studies, architectural patterns, and scalability considerations.
-
-### 🚨 CRITICAL: Repository Purpose
-
-**This repository (`system-design-in-practice`) contains:**
-
-- ✅ **Educational Content**: System design principles, patterns, and building blocks (`src/01_introduction/` through `src/08_failures/`)
-- ✅ **Case Studies**: End-to-end system design case studies (`src/07_case-studies/`)
-- ✅ **References**: Learning resources (books, papers, tools) (`src/references/`)
-- ✅ **Documentation**: Roadmap and learning path (`docs/01_road-map.md`)
-
-### 📋 Content Type Classifications
-
-**Educational Content** (`src/01_introduction/`, `src/02_interview-prep/`, `src/03_foundations/`, `src/04_principles/`, `src/05_building-blocks/`, `src/06_patterns/`, `src/08_failures/`):
-
-- Purpose: Educational learning materials for system design
-- YAML Frontmatter: Recommended but not strictly required for placeholder content
-- Line Limit: Recommended ≤150 lines (split, don't trim)
-- File Naming: Must use numbering (01_, 02_, etc., no 00_)
-
-**Case Studies** (`src/07_case-studies/`):
-
-- Purpose: End-to-end system design case studies
-- Structure: Each case study has `requirements.md`, `high-level-design.md`, `low-level-design.md`, `scalability.md`, `trade-offs.md`
-- Diagrams: Co-located in `diagrams/` folder within each case study
-- File Naming: Standard naming (no numbering required for case study folders)
-
-**References** (`src/references/`):
-
-- Purpose: Learning resources and reference materials
-- File Naming: Logical names (books.md, papers.md, tools.md)
-- No numbering required (reference materials)
+- ✅ **Playbook Content**: Design frameworks, patterns, systems, deep-dives (`src/01_core/` through `src/06_decision-trees/`)
+- ✅ **Case Studies**: End-to-end designs (`src/07_case-studies/`)
+- ✅ **Interview Q&A**: AI, Architect, and Enterprise Q&A (`src/99_interview-qna/`)
+- ✅ **Documentation**: Roadmap and repo structure (`docs/`)
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
-> **📋 Single Source of Truth**: The complete and up-to-date repository structure is maintained in [`docs/02_repository-structure.md`](../../docs/02_repository-structure.md). This file should be referenced for the authoritative structure. When the structure changes, update that file first, then update references here.
-
-For the complete repository structure, see: **[docs/02_repository-structure.md](../../docs/02_repository-structure.md)**
-
-### Current Structure Overview (As of December 15, 2025)
-
-**Note**: This is a summary. For the complete structure with all file names and details, refer to [`docs/02_repository-structure.md`](../../docs/02_repository-structure.md).
+> **Single Source of Truth**: [`docs/02_repository-structure.md`](../../docs/02_repository-structure.md)
 
 **Quick Overview**:
 
-- `src/01_introduction/` - Getting started with system design
-- `src/02_interview-prep/` - Interview preparation strategies
-- `src/03_foundations/` - Foundational concepts (abstractions, consistency, failures, C4 diagrams)
-- `src/04_principles/` - System design principles (availability, scalability, etc.)
-- `src/05_building-blocks/` - Core building blocks (DNS, load balancers, databases, etc.)
-- `src/06_patterns/` - Architectural patterns (caching, rate limiting, CQRS, etc.)
-- `src/07_case-studies/` - End-to-end case studies (URL Shortener, YouTube, Twitter, etc.)
-- `src/08_failures/` - Real-world failure analysis
-- `src/references/` - Learning resources (books, papers, tools)
-
-## 📁 Directory Structure Details
-
-### Educational Content Directories
-
-**01_introduction/** - Getting started with system design
-
-- Overview of modern system design
-- Why learn system design
-- Course structure
-
-**02_interview-prep/** - Interview preparation
-
-- Getting ready for interviews
-- Do's and don'ts
-- Preparation timeline
-- Mock interview strategies
-- AI evaluation tools
-
-**03_foundations/** - Foundational concepts
-
-- Abstractions in system design
-- Network abstractions (RPC)
-- Consistency models
-- Failure models
-- Back-of-the-envelope calculations
-- C4 model for system design
-
-**04_principles/** - System design principles
-
-- Availability, reliability, scalability
-- Consistency, fault tolerance
-- Maintainability, security
-
-**05_building-blocks/** - Core building blocks
-
-- DNS, load balancers, databases
-- Key-value stores, CDN, sequencer
-- Monitoring, distributed cache
-- Message queues, pub-sub
-- Object storage, search
-- Distributed logging, task scheduler
-- Sharded counters
-
-**06_patterns/** - Architectural patterns
-
-- Caching, rate limiting
-- Circuit breaker, CQRS
-- Event-driven architecture
-
-**07_case-studies/** - End-to-end case studies
-
-- Each case study follows standard structure
-- Diagrams co-located in `diagrams/` folder
-- C4 diagrams: context, container, component
-
-**08_failures/** - Real-world failure analysis
-
-- Introduction to system failures
-- Case studies of major outages
-- Lessons learned
-
-### References Directory
-
-**references/** - Learning resources
-
-- Books, papers, tools
-- Not numbered (reference materials)
-
-## 📞 Support & Escalation
-
-**Questions about system design principles?** → Check `src/04_principles/`
-
-**Need building blocks information?** → Check `src/05_building-blocks/`
-
-**Looking for case studies?** → Check `src/07_case-studies/`
-
-**Structure outdated?** → Update `docs/02_repository-structure.md` first, then update references in `.github/copilot-instructions.md` and `README.md`
+- `src/01_core/` — Design, tradeoff & failure frameworks *(scaffold)*
+- `src/02_patterns/` — Caching, rate-limiting, retries, messaging *(scaffold)*
+- `src/03_systems/` — Notification, chat, URL shortener *(scaffold)*
+- `src/04_deep-dives/` — Consistency, partitioning, scaling *(scaffold)*
+- `src/05_ai-ml-systems/` — MLOps, observability, AI security *(scaffold)*
+- `src/06_decision-trees/` — When-to-use-what decision guides *(scaffold)*
+- `src/07_case-studies/` — End-to-end case studies *(scaffold)*
+- `src/99_interview-qna/` — Interview Q&A (AI, Architect, Enterprise) ✅
 
 ---
 
-## For More Information
+## Content Rules (Quick Reference)
 
-- **Repository**: Check README.md for repository location
+- **File naming**: `01_`, `02_` prefix (NEVER `00_`) — hyphens for multi-word names
+- **File size**: ≤ 150 lines — split with `-part1`, `-part2` suffixes
+- **Zero-copy policy**: all content must be transformative, not reformative
+- **Diagrams**: Mermaid-first, ASCII fallback
+- **Scaffold folders**: contain only `.gitkeep` — content added progressively
+
+---
+
+## Support & Escalation
+
+**Structure outdated?** → Update `docs/02_repository-structure.md` FIRST, then update this file.
+
+**Content rules?** → See `.cursor/rules/01_educational-content-rules.mdc`
+
+**More Information**:
+
 - **Learning Path**: `docs/01_road-map.md`
 - **Content Index**: `src/CONTENT_INDEX.md`
 - **GitHub Copilot Instructions**: `.github/copilot-instructions.md`
-- **Contributing**: `CONTRIBUTING.md`

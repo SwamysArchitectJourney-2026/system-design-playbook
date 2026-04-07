@@ -46,15 +46,14 @@ Self-check: "Did I update `docs/02_repository-structure.md` first?" — If no, S
 
 | Path | Purpose |
 |------|---------|
-| `src/01_introduction/` | Getting started |
-| `src/02_evaluation-prep/` | Interview prep |
-| `src/03_foundations/` | Core concepts |
-| `src/04_principles/` | Design principles |
-| `src/05_building-blocks/` | Core building blocks |
-| `src/06_patterns/` | Architectural patterns |
+| `src/01_core/` | Design, tradeoff & failure frameworks |
+| `src/02_patterns/` | Caching, rate-limiting, retries, messaging |
+| `src/03_systems/` | Notification, chat, URL shortener |
+| `src/04_deep-dives/` | Consistency, partitioning, scaling |
+| `src/05_ai-ml-systems/` | MLOps, observability, AI security |
+| `src/06_decision-trees/` | When-to-use-what decision guides |
 | `src/07_case-studies/` | End-to-end case studies |
-| `src/08_failures/` | Real-world failure analysis |
-| `src/09_ai-ml-systems/` | Gen AI and ML system design |
+| `src/99_interview-qna/` | Interview Q&A (AI, Architect, Enterprise) |
 | `docs/02_repository-structure.md` | Authoritative repo structure |
 | `source-material/` | Staging area (git-ignored) |
 
