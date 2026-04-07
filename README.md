@@ -53,7 +53,7 @@ This is **Swamy's personal playbook and reference workspace**, not official cour
 > Full structure: [`docs/02_repository-structure.md`](docs/02_repository-structure.md)
 
 ```text
-system-design-in-practice/
+system-design-playbook/
 │
 ├── src/01_core/             → Design, tradeoff & failure frameworks
 ├── src/02_patterns/         → Caching, rate-limiting, retries, messaging

@@ -85,7 +85,7 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 **Recommended patterns in this repo**
 
-- In main learning folders (e.g., `src/03_foundations/`):
+- In main learning folders (e.g., `src/01_core/`):
    - Use ordered files: `NN_topic-slug.md`.
    - If you must split: `NN_topic-slug-part1.md`, `NN_topic-slug-part2.md` (keep the same `NN_` prefix).
 - In reference-style subfolders (e.g., a future `glossary/` folder):
@@ -371,9 +371,10 @@ docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.
 
 - [Learning Path](../docs/01_road-map.md)
 - [Content Index](../src/CONTENT_INDEX.md)
-- [System Design Principles](../src/04_principles/)
-- [Building Blocks](../src/05_building-blocks/)
+- [Core Frameworks](../src/01_core/)
+- [Patterns](../src/02_patterns/)
 - [Case Studies](../src/07_case-studies/)
+- [Interview Q&A](../src/99_interview-qna/)
 - [Contributing](../CONTRIBUTING.md)
 
 ---
