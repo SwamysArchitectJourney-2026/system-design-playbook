@@ -1,3 +1,5 @@
+# Enterprise System Architecture: 100 Interview Questions & Answers
+
 # Architect Prep QnA - Complete
 
 This file consolidates all parts from architect-prep-qa/part1.md through architect-prep-qa/part5.md.
@@ -7,8 +9,6 @@ This file consolidates all parts from architect-prep-qa/part1.md through archite
 ## Part 1
 
 Source: part1.md
-
-# 02 Architect Prep QA Part 1
 
 Preparing for these three distinct but overlapping roles—**Gen AI Lead**, **Principal Solution Architect**, and **Enterprise Architect**—requires a strategic shift in how you frame your two decades of experience. You are moving across the spectrum from deep technical orchestration (LLMOps, RAG, multi-agent) to high-level strategic governance (capability models, rationalization, SAFe).
 
@@ -68,8 +68,6 @@ This role is about mapping technology to business value, rationalizing portfolio
 * **How to Answer:** Ground the conversation in specific value streams. Talk about moving from prototypes to proof-of-concepts that solve actual bottlenecks—such as using data modeling and statistical inferencing to predict system failures, or utilizing generative AI to automate service resolution and field dispatch. Emphasize that you pair these innovations with strict architectural guardrails and security reviews to ensure data privacy and compliance.
 
 ---
-
-That is a massive and excellent goal. Because of my output limits as an AI, generating 100 fully detailed, production-grade Q&As in a single response will cause the text to cut off abruptly.
 
 To ensure you get the depth and quality these senior roles demand without losing information, let’s tackle this in batches. Here is **Batch 1: The First 30 High-Impact Q&As**, split evenly across the three roles. These cover the core technical, architectural, and strategic intersections the interviewers will test.
 
@@ -189,8 +187,6 @@ To ensure you get the depth and quality these senior roles demand without losing
 
 Source: part2.md
 
-# 02 Architect Prep QA Part 2
-
 ### **Part 3: Enterprise Architect (Governance, Portfolio, & Strategy)**
 
 **21. Q: How do you build and maintain a Business Capability Model?**
@@ -302,8 +298,6 @@ Source: part2.md
 ## Part 3
 
 Source: part3.md
-
-# 02 Architect Prep QA Part 3
 
 ### **Part 2: Principal Solution Architect — Batch 2 (Distributed Systems & Scale)**
 
@@ -417,12 +411,6 @@ Source: part3.md
 
 Source: part4.md
 
-
-# 02 Architect Prep QA Part 4
-
-How would you like to proceed?
-
-Here is **Batch 3: Questions 61 to 90**.
 
 For this batch, we are blending high-stakes **Behavioral/Leadership** scenarios with advanced **System Design & Strategy**. At this level, interviewers assume you have the technical chops; they are testing your emotional intelligence, your ability to influence executives, and how you handle crises.
 
@@ -605,8 +593,6 @@ To fix it, I implement three layers: 1) **Semantic Caching** to intercept duplic
 
 ---
 
-We have exactly **10 questions left** to hit your goal of 100!
-
 For the final stretch (91-100), we can focus on **"Curveball" scenarios**—the incredibly difficult, abstract questions designed to test how you think on your feet (e.g., estimating cloud costs on a napkin, debating open-source vs. enterprise, or defining the ethics of an autonomous AI decision).
 
 Shall we finish the final 10?
@@ -617,10 +603,6 @@ Shall we finish the final 10?
 
 Source: part5.md
 
-
-# 02 Architect Prep QA Part 5
-
-Here is **Batch 4: The Final 10**.
 
 These are the **"Curveball" scenarios**. At the highest levels of technical leadership, interviewers will throw abstract, impossible, or highly stressful scenarios at you. They don't expect a perfect technical answer; they are testing your thought process, your ability to estimate under pressure, and how you handle "no-win" situations.
 
@@ -722,4 +704,3 @@ You now have 100 high-caliber questions and answers. Here is how you use them:
 1. **Do not memorize.** Interviewers can tell when you are reciting.
 2. **Use the "STAR-T" method:** Situation, Task, Action, Result, and **Takeaway** (the architectural principle you learned).
 3. **Control the whiteboard:** If it's a video interview, use a digital whiteboard (like Excalidraw or Miro) or just hold up a piece of paper. Drawing a system diagram while you talk instantly elevates you from "candidate" to "peer."
-
