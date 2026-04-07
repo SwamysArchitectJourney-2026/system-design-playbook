@@ -46,15 +46,14 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 **Quick Overview**:
 
-- `src/01_introduction/` - Getting started with system design
-- `src/02_interview-prep/` - Interview preparation strategies
-- `src/03_foundations/` - Foundational concepts (abstractions, consistency, failures, C4 diagrams)
-- `src/04_principles/` - System design principles (availability, scalability, etc.)
-- `src/05_building-blocks/` - Core building blocks (DNS, load balancers, databases, etc.)
-- `src/06_patterns/` - Architectural patterns (caching, rate limiting, CQRS, etc.)
-- `src/07_case-studies/` - End-to-end case studies (URL Shortener, YouTube, Twitter, etc.)
-- `src/08_failures/` - Real-world failure analysis
-- `src/references/` - Learning resources (books, papers, tools)
+- `src/01_core/` - Design, tradeoff & failure frameworks
+- `src/02_patterns/` - Caching, rate-limiting, retries, messaging
+- `src/03_systems/` - Notification, chat, URL shortener
+- `src/04_deep-dives/` - Consistency, partitioning, scaling
+- `src/05_ai-ml-systems/` - MLOps, observability, AI security
+- `src/06_decision-trees/` - When-to-use-what decision guides
+- `src/07_case-studies/` - End-to-end case studies
+- `src/99_interview-qna/` - Interview Q&A (AI, Architect, Enterprise)
 
 ---
 
@@ -64,7 +63,7 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 1. **Follow Zero-Copy Policy**: All content must be transformative, not reformative
 2. **Use Numbering**: Files must use `01_`, `02_`, etc. (never `00_`)
-3. **Keep Modular**: Recommended ≤150 lines per file (split, don't trim)
+3. **Keep Modular**: Recommended ≤1000 lines per file (split, don't trim)
 4. **Create Original Diagrams**: Use Mermaid-first with ASCII fallback
 5. **Case Study Structure**: Follow standard structure (requirements, HLD, LLD, scalability, trade-offs)
 
@@ -82,11 +81,11 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 - Prefer **semantic filenames** over editorial artifacts.
 - Avoid encoding hierarchy/versioning in filenames (e.g., avoid `Part1-A`, `A/B/C`). If you feel you need `A/B/C`, you likely need a folder.
-- Use `-part1`, `-part2` only for **mechanical splitting** (e.g., to respect the ~150 line modularity guideline), not as a long-term hierarchy.
+- Use `-part1`, `-part2` only for **mechanical splitting** (e.g., to respect the ~1000 line modularity guideline), not as a long-term hierarchy.
 
 **Recommended patterns in this repo**
 
-- In main learning folders (e.g., `src/03_foundations/`):
+- In main learning folders (e.g., `src/01_core/`):
    - Use ordered files: `NN_topic-slug.md`.
    - If you must split: `NN_topic-slug-part1.md`, `NN_topic-slug-part2.md` (keep the same `NN_` prefix).
 - In reference-style subfolders (e.g., a future `glossary/` folder):
@@ -126,8 +125,8 @@ During review, treat naming as part of “maintainability”:
 
 #### Content Structure
 
-- ✅ Recommended ≤150 lines per file
-- ✅ Split into multiple parts if content exceeds 150 lines
+- ✅ Recommended ≤1000 lines per file
+- ✅ Split into multiple parts if content exceeds 1000 lines
 - ✅ Never trim or condense content
 - ✅ Each part should be self-contained
 
@@ -172,6 +171,10 @@ Each case study should include:
 - ✅ **ALWAYS** use environment variables or secure configuration
 - ✅ **ALWAYS** add sensitive files to `.gitignore`
 
+### Staging folders (not in public docs)
+- Do **not** mention **`source-material/`** or **`reference-material/`** in `README.md`, your public content directories, or **`docs/**/*.md`**.
+- Synthesize into tracked documentation; assistants may name these paths only in agent config files to state this policy — see `.cursor/rules/08_source_material_rules.mdc`.
+
 ---
 
 ## 📋 Code Quality Standards
@@ -214,7 +217,7 @@ Before publishing any content:
 3. ✅ Would a learner understand this without the original source?
 4. ✅ Are the examples relevant and practical?
 5. ✅ Does this content add educational value beyond the reference?
-6. ✅ Is this content within 150 lines for effective delivery?
+6. ✅ Is this content within 1000 lines for effective delivery?
 
 ---
 
@@ -372,9 +375,10 @@ docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.
 
 - [Learning Path](../docs/01_road-map.md)
 - [Content Index](../src/CONTENT_INDEX.md)
-- [System Design Principles](../src/04_principles/)
-- [Building Blocks](../src/05_building-blocks/)
+- [Core Frameworks](../src/01_core/)
+- [Patterns](../src/02_patterns/)
 - [Case Studies](../src/07_case-studies/)
+- [Interview Q&A](../src/99_interview-qna/)
 - [Contributing](../CONTRIBUTING.md)
 
 ---

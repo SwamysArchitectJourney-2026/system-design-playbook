@@ -2,16 +2,14 @@
   RepoName = 'system-design-in-practice'
 
   ExpectedFolders = @(
-    'src\01_introduction'
-    'src\02_evaluation-prep'
-    'src\03_foundations'
-    'src\04_principles'
-    'src\05_building-blocks'
-    'src\06_patterns'
+    'src\01_core'
+    'src\02_patterns'
+    'src\03_systems'
+    'src\04_deep-dives'
+    'src\05_ai-ml-systems'
+    'src\06_decision-trees'
     'src\07_case-studies'
-    'src\08_failures'
-    'src\09_ai-ml-systems'
-    'src\references'
+    'src\99_interview-qna'
     'docs'
     'tools\psscripts'
   )

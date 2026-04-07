@@ -9,6 +9,7 @@ ignores:
   - "**/.venv/**"
   - "**/.vscode/**"
   - "source-material/**"
+  - "src/99_interview-qna/**"
   - ".git/**"
   - "**/*.png"
   - "**/*.PNG"

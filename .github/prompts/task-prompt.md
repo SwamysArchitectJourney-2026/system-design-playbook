@@ -25,6 +25,10 @@ Perform a COMPREHENSIVE audit of the repository using Prompt Engineering Playboo
 - Ensure markdown formatting compliance
 - Check for completeness and consistency with playbook objectives
 
+### A.1 Staging Hygiene
+
+- No references or links to internal-only staging (source-material/, eference-material/) in public docs (see .cursor/rules/08_source_material_rules.mdc).
+
 ### B. Prompt Pattern Alignment
 
 - Verify prompts follow established patterns (instruction-based, role-based, RAG, chain-of-thought, evaluation)
@@ -317,3 +321,4 @@ For each file:
 ## Start Now
 
 Open every file in the repository tree, run Prompt Engineering Playbook-specific checks, and produce the structured JSON report following these requirements. Focus on prompt quality, template completeness, code example correctness, and alignment with Azure OpenAI best practices.
+

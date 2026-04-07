@@ -50,37 +50,19 @@ This is **Swamy's personal playbook and reference workspace**, not official cour
 
 ## 🗂 Repository Structure
 
+> Full structure: [`docs/02_repository-structure.md`](docs/02_repository-structure.md)
+
 ```text
 system-design-playbook/
 │
-├── 00-core/
-│   ├── design-framework.md       → End-to-end design thinking approach
-│   ├── tradeoff-framework.md     → Decision-making and trade-off models
-│   └── failure-framework.md      → Failure handling and resilience thinking
-│
-├── patterns/
-│   ├── caching.md                → Caching strategies and trade-offs
-│   ├── rate-limiting.md          → Rate limiting algorithms and design
-│   ├── retries.md                → Retry strategies and backoff mechanisms
-│   └── messaging.md              → Messaging and event-driven patterns
-│
-├── systems/
-│   ├── notification-system.md    → End-to-end system design
-│   ├── chat-system.md            → Real-time communication design
-│   └── url-shortener.md          → Scalable service design
-│
-├── deep-dives/
-│   ├── consistency.md            → Consistency models and trade-offs
-│   ├── partitioning.md           → Data partitioning strategies
-│   └── scaling.md                → Scaling techniques and bottlenecks
-│
-├── ai-systems/
-│   ├── mlops-agents.md           → MLOps for agent systems
-│   ├── observability.md          → Monitoring and tracing AI systems
-│   └── security.md               → DevSecOps and AI security
-│
-└── decision-trees/
-    └── when-to-use-what.md       → Decision guidance across patterns
+├── src/01_core/             → Design, tradeoff & failure frameworks
+├── src/02_patterns/         → Caching, rate-limiting, retries, messaging
+├── src/03_systems/          → Notification, chat, URL shortener
+├── src/04_deep-dives/       → Consistency, partitioning, scaling
+├── src/05_ai-ml-systems/    → MLOps, observability, AI security
+├── src/06_decision-trees/   → When-to-use-what decision guides
+├── src/07_case-studies/     → End-to-end case studies
+└── src/99_interview-qna/    → Interview Q&A (AI, Architect, Enterprise)
 ```
 
 ---
@@ -91,7 +73,7 @@ system-design-playbook/
 
 Start with:
 
-* `00-core/design-framework.md`
+* `src/01_core/design-framework.md` *(once populated)*
 
 This defines the **default approach to any system design problem**.
 
@@ -195,7 +177,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Viswanatha Swamy P K**
+Viswanatha Swamy P K
 
 ---
 

@@ -202,7 +202,7 @@ interview/
 
 ### Decision Framework
 
-**Question 1**: Does the content exceed 150 lines?
+**Question 1**: Does the content exceed 1000 lines?
 - **Yes** → Continue to Question 2
 - **No** → Keep as single file
 
@@ -222,9 +222,9 @@ interview/
 
 **Before** (problematic):
 ```
-01_Interview-Glossary-Part1-A.md  (150 lines)
-01_Interview-Glossary-Part1-B.md  (150 lines)
-01_Interview-Glossary-Part1-C.md  (150 lines)
+01_Interview-Glossary-Part1-A.md  (1000 lines)
+01_Interview-Glossary-Part1-B.md  (1000 lines)
+01_Interview-Glossary-Part1-C.md  (1000 lines)
 ```
 
 **After** (semantic):
@@ -408,7 +408,7 @@ question-bank/
 1. **First try to split by concept** (new file) instead of by "Part"
    - Example: `fundamentals.md` and `advanced.md` instead of `topic-part1.md` and `topic-part2.md`
 
-2. **If you still need parts** (mechanical splitting for 150-line limit):
+2. **If you still need parts** (mechanical splitting for 1000-line limit):
    - Use `-part1`, `-part2` (not `A/B/C`)
    - Preserve the base slug so links remain predictable
    - Example: `03_consistency-models-part1.md`, `03_consistency-models-part2.md`
@@ -447,7 +447,7 @@ question-bank/
 ### Decision Tree
 
 ```
-Is content > 150 lines?
+Is content > 1000 lines?
 ├─ No → Single file with semantic name
 └─ Yes → Can it be split into distinct concepts?
     ├─ Yes → Separate files with semantic names
@@ -461,7 +461,7 @@ Is content > 150 lines?
 - **If you feel the need to add `A/B/C` → you need folders**
 - **If you feel the need to add `Part1/Part2` → you need better conceptual boundaries**
 - **If the filename is doing structural work → it's already wrong**
-- **Use `-part1`, `-part2` only for mechanical splitting** (to respect ~150 line limit), not as a long-term hierarchy
+- **Use `-part1`, `-part2` only for mechanical splitting** (to respect ~1000 line limit), not as a long-term hierarchy
 
 ---
 

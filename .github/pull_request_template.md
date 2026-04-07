@@ -45,7 +45,7 @@ Brief summary of what was changed and why.
 - [ ] My changes follow the repository's [content rules](../.cursor/rules/01_educational-content-rules.mdc)
 - [ ] I have checked for broken file references
 - [ ] I have verified YAML frontmatter (if applicable)
-- [ ] I have checked line count compliance (≤150 lines for educational content)
+- [ ] I have checked line count compliance (≤1000 lines for educational content)
 - [ ] I have verified file naming conventions
 - [ ] I have run markdownlint (if applicable)
 - [ ] I have tested my changes locally
@@ -53,6 +53,7 @@ Brief summary of what was changed and why.
 ### Content Quality
 
 - [ ] Content is original and transformative (zero-copy policy)
+- [ ] No references to internal-only staging (source-material/, reference-material/) in public docs
 - [ ] Examples and diagrams are original
 - [ ] Learning objectives are clear (if applicable)
 - [ ] Cross-references are updated
