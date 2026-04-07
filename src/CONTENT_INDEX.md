@@ -25,34 +25,6 @@ Primary consolidated files:
 - `ai-systems-qna/complete.md`
 - `architect-prep-qa/complete.md`
 
-### `ai-systems-qna/` — AI Systems Q&A (13 parts)
-
-| File | Content |
-|------|---------|
-| `part1` | AI & Architecture Foundations + GenAI & LLM Systems (Q1–Q20) |
-| `part2` | Agentic System Design + MLOps (Q21–Q40) |
-| `part3` | AIOps, DevSecOps + Final Master Statement (Q41–Q60) |
-| `part4` | Speak-Ready: Role Clarity & Agentic AI |
-| `part5` | Speak-Ready: RAG & LLMOps |
-| `part6` | Speak-Ready: AIOps, DevSecOps & Architect Alignment |
-| `part7` | Speak-Ready: Gap Analysis & Enterprise Architecture |
-| `part8` | Speak-Ready: Cloud & Governance |
-| `part9` | Speak-Ready: Leadership & GenAI Leadership |
-| `part10` | Speak-Ready: Integration & Data Architecture |
-| `part11` | Speak-Ready: Platform, DevOps & Cost Engineering |
-| `part12` | Speak-Ready: Failures, Trade-offs & Storytelling |
-| `part13` | Top 10 Speak-Ready Principal/Architect Answers |
-
-### `architect-prep-qa/` — 100-Question Long-Form Prep (5 parts)
-
-| File | Content |
-|------|---------|
-| `part1` | Gen AI Lead Q1–Q10 + Principal SA Q11–Q20 (Batch 1) |
-| `part2` | Enterprise Architect Q21–Q30 + Gen AI Lead Q31–Q40 (Batch 1 tail + Batch 2 start) |
-| `part3` | Principal SA Q41–Q50 + Enterprise Architect Q51–Q60 (Batch 2 close) |
-| `part4` | All three roles Q61–Q90 (Batch 3 — behavioral, leadership, crisis) |
-| `part5` | All three roles Q91–Q100 + Final Preparation Advice (Batch 4 — curveballs) |
-
 ---
 
 ## Docs
