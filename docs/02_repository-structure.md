@@ -37,25 +37,9 @@ system-design-in-practice/
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
 │   └── 99_interview-qna/                  # ✅ Interview Q&A material
 │       ├── ai-systems-qna/                # AI systems interview track
-│       │   ├── part1.md                   # AI & Architecture Foundations (Q1–Q20)
-│       │   ├── part2.md                   # Agentic Systems & MLOps (Q21–Q40)
-│       │   ├── part3.md                   # AIOps, DevSecOps, Final Master (Q41–Q60)
-│       │   ├── part4.md                   # Speak-Ready: Role Clarity & Agentic AI
-│       │   ├── part5.md                   # Speak-Ready: RAG & LLMOps
-│       │   ├── part6.md                   # Speak-Ready: AIOps, DevSecOps, Architect
-│       │   ├── part7.md                   # Speak-Ready: Gap Analysis & Enterprise Architecture
-│       │   ├── part8.md                   # Speak-Ready: Cloud & Governance
-│       │   ├── part9.md                   # Speak-Ready: Leadership & GenAI Leadership
-│       │   ├── part10.md                  # Speak-Ready: Integration & Data Architecture
-│       │   ├── part11.md                  # Speak-Ready: Platform, DevOps & Cost Engineering
-│       │   ├── part12.md                  # Speak-Ready: Failures, Trade-offs & Storytelling
-│       │   └── part13.md                  # Top 10 Speak-Ready Architect Answers
+│       │   └── complete.md                # Consolidated AI systems interview Q&A
 │       └── architect-prep-qa/             # Architect prep long-form track
-│           ├── part1.md                   # Gen AI Lead Q1–Q10 + SA Q11–Q20 (Batch 1)
-│           ├── part2.md                   # EA Q21–Q30 + Gen AI Lead Q31–Q40
-│           ├── part3.md                   # SA Q41–Q50 + EA Q51–Q60 (Batch 2 close)
-│           ├── part4.md                   # All roles Q61–Q90 (Batch 3 — behavioral)
-│           └── part5.md                   # All roles Q91–Q100 + Final Advice (Batch 4)
+│           └── complete.md                # Consolidated architect prep Q&A
 ├── CLAUDE.md                              # Claude Code instructions
 ├── CONTRIBUTING.md                        # Contribution guidelines
 ├── CODE_OF_CONDUCT.md                     # Code of conduct
