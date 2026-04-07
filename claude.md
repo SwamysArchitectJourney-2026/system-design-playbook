@@ -9,20 +9,24 @@ Swamy's personal system design playbook. A **thinking system**, not a notes repo
 ## Critical Rules
 
 ### File Naming
+
 - **NEVER** use `00_` prefix — use `01_` and above, no exceptions
 - Use zero-padded numeric prefixes: `01_`, `02_`, etc.
 - Use hyphens for multi-word names: `01_modern-system-design.md`
 - Split files use `-part1`, `-part2` (never `A/B/C`)
 
 ### File Size
+
 - **≤ 150 lines per file** — split into parts if exceeded; never trim or condense
 
 ### Content Policy
+
 - **Zero-copy policy** — all content must be transformative, not reformative
 - **Quality bar**: can it be explained clearly in 5–10 minutes?
 - Chain-of-Thought reasoning required in every design decision — show the "why"
 
 ### Diagrams
+
 - **Mermaid-first**, ASCII fallback — never embed copyrighted figures
 
 ---
@@ -30,6 +34,7 @@ Swamy's personal system design playbook. A **thinking system**, not a notes repo
 ## Structure Update Protocol
 
 **When repository structure changes**:
+
 1. Update `docs/02_repository-structure.md` **FIRST** (single source of truth)
 2. Then update `.github/copilot-instructions.md`, `README.md`, `.cursor/rules/02_repository-structure.mdc`
 
