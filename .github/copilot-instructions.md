@@ -171,6 +171,10 @@ Each case study should include:
 - ✅ **ALWAYS** use environment variables or secure configuration
 - ✅ **ALWAYS** add sensitive files to `.gitignore`
 
+### Staging folders (not in public docs)
+- Do **not** mention **`source-material/`** or **`reference-material/`** in `README.md`, your public content directories, or **`docs/**/*.md`**.
+- Synthesize into tracked documentation; assistants may name these paths only in agent config files to state this policy — see `.cursor/rules/08_source_material_rules.mdc`.
+
 ---
 
 ## 📋 Code Quality Standards

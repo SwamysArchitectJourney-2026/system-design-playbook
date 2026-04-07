@@ -53,6 +53,7 @@ Brief summary of what was changed and why.
 ### Content Quality
 
 - [ ] Content is original and transformative (zero-copy policy)
+- [ ] No references to internal-only staging (source-material/, reference-material/) in public docs
 - [ ] Examples and diagrams are original
 - [ ] Learning objectives are clear (if applicable)
 - [ ] Cross-references are updated

@@ -1,0 +1,28 @@
+---
+description: Rules for gitignored / internal staging material
+globs: *
+---
+# Reference and staging material
+
+## Folders
+- **source-material/** — Local, **gitignored** staging for raw inputs (drafts, exports, transcripts). Not part of the published corpus in the repo.
+- **eference-material/** — If present, **read-only** internal staging (same hygiene as below).
+
+## Public docs (do not name staging)
+Do **not** mention or reference **source-material/** (or **eference-material/**) in:
+- README.md
+- Your **public content** trees (example from this repo: src/, docs/)
+- docs/**/*.md (user-facing or narrative docs)
+
+Synthesize into real docs with a **zero-copy** discipline: ideas in your own words, not paste from staging.
+
+## Where the path *may* appear
+Policy may name source-material/ only in **assistant / tooling config**, e.g. CLAUDE.md, .cursor/rules/*.mdc, .cursor/skills.md, .github/copilot-instructions.md, .github/skills/** — and **only** to state this rule, not to dump staging content verbatim.
+
+## Staging hygiene
+- **Read-only**: Do not modify or delete files in staging unless the repository owner explicitly asks.
+- **No copy-paste into public docs**: Promote content by **synthesis**, not by linking or quoting staging.
+
+## Zero-copy (summary)
+**Good:** own words, different vocabulary, real understanding.
+**Bad:** word-for-word copy, cosmetic paraphrase, close paraphrase without citation where needed.

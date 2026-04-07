@@ -422,3 +422,5 @@ source-material/
 
 # Copilot-generated local artifacts (do not track)
 .copilot/tmp/
+source-material/
+reference-material/

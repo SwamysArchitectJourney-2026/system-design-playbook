@@ -24,6 +24,11 @@ Swamy's personal system design playbook. A **thinking system**, not a notes repo
 - **Zero-copy policy** — all content must be transformative, not reformative
 - **Quality bar**: can it be explained clearly in 5–10 minutes?
 - Chain-of-Thought reasoning required in every design decision — show the "why"
+- **Staging hygiene**: Do **not** mention `source-material/` (or `reference-material/`) in `README.md`, public content folders, or `docs/**/*.md`. Synthesize into tracked docs; full rule: `.cursor/rules/08_source_material_rules.mdc`.
+
+### Staging hygiene
+- Do **not** mention source-material/ (or 
+eference-material/) in README.md, public content folders, or docs/**/*.md. Synthesize into tracked docs; full rule: .cursor/rules/08_source_material_rules.mdc.
 
 ### Diagrams
 
