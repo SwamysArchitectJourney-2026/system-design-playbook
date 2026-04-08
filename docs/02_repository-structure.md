@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.8
+**Version**: 3.10
 **Last Updated**: April 8, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -47,7 +47,8 @@ system-design-in-practice/
 │       ├── 04_agentic-ai-lead-competency-profile/
 │       ├── 05_ai-solution-architect-production-sdlc-profile/
 │       ├── 06_enterprise-principal-genai-and-ea-themes/
-│       └── career-orientation/
+│       ├── 07_gen-ai-lead-role-pattern/   # LLMOps + model lifecycle + responsible AI (Gen AI lead)
+│       └── career-orientation/            # skill maps + role compasses (orientation only)
 ├── claude.md                              # Claude Code instructions
 ├── CONTRIBUTING.md                        # Contribution guidelines
 ├── CODE_OF_CONDUCT.md                     # Code of conduct
@@ -79,7 +80,9 @@ Each case study under `07_case-studies/` must include:
 
 ### Interview question packs (`99_interview-qna/`)
 
-Role tracks use **`01_templates/`**, **`02_core_questions/<slug>/`** with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Do **not** use a `00_` prefix (use `01_` and above). The Azure track adds **`03_azure_specific/`** and **`04_cross_domain/`**.
+Role tracks use **`01_templates/`**, **`02_core_questions/<slug>/`** with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Do **not** use a `00_` prefix (use `01_` and above). The Azure track adds **`03_azure_specific/`** and **`04_cross_domain/`**. Folder **`07_gen-ai-lead-role-pattern/`** targets Gen AI lead loops (LLMOps, lifecycle, governance) alongside **`04_agentic-ai-lead-competency-profile/`** (RAG + agents).
+
+**`career-orientation/`** — short orientation docs (e.g. production AI skill map, Gen AI lead competency compass), not full question banks.
 
 ---
 

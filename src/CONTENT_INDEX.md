@@ -24,13 +24,13 @@
 
 **Shared layer:** `interview-execution/` (golden template, grill layer, cross-domain prompts).
 
-**Role tracks** (`01_`–`06_` folders): each has `README.md`, `01_templates/`, `02_core_questions/<design>/` with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Azure track also has `03_azure_specific/` and `04_cross_domain/`.
+**Role tracks** (`01_`–`07_` folders): each has `README.md`, `01_templates/`, `02_core_questions/<design>/` with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Azure track also has `03_azure_specific/` and `04_cross_domain/`. **`07_gen-ai-lead-role-pattern/`** — LLMOps, model lifecycle, governance.
 
 **Consolidated Q&A:** `ai-systems-architect/complete.md`, `enterprise-system-architect/complete.md` (each track also has templates + one `02_core_questions/` pack).
 
 **Payments:** `payment-system-interview/README.md` — foundations `01`–`04` + `02_core_questions/design-payment-azure-e2e/`.
 
-**Career:** `career-orientation/README.md`.
+**Career:** `career-orientation/README.md` — `01_production-ai-engineer-skill-map.md`, `02_gen-ai-lead-competency-compass.md`.
 
 ---
 
