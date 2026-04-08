@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.4
+**Version**: 3.5
 **Last Updated**: April 8, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -37,11 +37,12 @@ system-design-in-practice/
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
 │   └── 99_interview-qna/                  # ✅ Interview prep and Q&A
 │       ├── README.md                      # Index of tracks
+│       ├── interview-execution/           # Golden template, grill layer, cross-domain prompts
 │       ├── ai-systems-architect/          # AI systems interview track
 │       │   └── complete.md                # Consolidated AI systems Q&A
 │       ├── enterprise-system-architect/   # Enterprise / architect prep track
 │       │   └── complete.md                # Consolidated architect-style Q&A
-│       ├── payment-system-interview/      # Payment system design playbook (modular)
+│       ├── payment-system-interview/      # Payment system design playbook (modular + follow-ups)
 │       ├── 01_azure-solutions-architect-role-pattern/   # Job-market competency theme
 │       ├── 02_dotnet-application-architect-azure-stack/
 │       ├── 03_azure-engineering-lead-platform-pattern/

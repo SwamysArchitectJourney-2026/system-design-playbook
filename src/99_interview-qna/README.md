@@ -1,5 +1,11 @@
 # Interview Q&A and prep tracks
 
+Execution layer (templates, grill, cross-domain drills):
+
+- [01 — Golden answer template (interview spine)](interview-execution/01_golden-answer-template.md)
+- [02 — Follow-up grill layer](interview-execution/02_follow-up-grill-layer.md)
+- [03 — Cross-domain prompt bank](interview-execution/03_cross-domain-prompt-bank.md)
+
 Consolidated long-form Q&A:
 
 - [AI systems architect — complete](ai-systems-architect/complete.md)
@@ -10,6 +16,7 @@ Payment system design (synthesized interview playbook):
 - [01 — Clarifying requirements](payment-system-interview/01_clarifying-requirements-for-payment-systems.md)
 - [02 — Component model and data flow](payment-system-interview/02_component-model-and-data-flow.md)
 - [03 — Idempotency, ledger, failure handling](payment-system-interview/03_idempotency-ledger-and-failure-handling.md)
+- [04 — Follow-ups and grill (payment system)](payment-system-interview/04_follow-ups-and-grill-payment-system.md)
 
 ## Job market signals
 

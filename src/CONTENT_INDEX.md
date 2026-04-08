@@ -20,6 +20,12 @@
 
 ## Interview Q&A (`99_interview-qna/`)
 
+Interview execution (templates and drills):
+
+- `interview-execution/01_golden-answer-template.md`
+- `interview-execution/02_follow-up-grill-layer.md`
+- `interview-execution/03_cross-domain-prompt-bank.md`
+
 Consolidated tracks:
 
 - `ai-systems-architect/complete.md`
@@ -30,6 +36,7 @@ Payment system interview playbook:
 - `payment-system-interview/01_clarifying-requirements-for-payment-systems.md`
 - `payment-system-interview/02_component-model-and-data-flow.md`
 - `payment-system-interview/03_idempotency-ledger-and-failure-handling.md`
+- `payment-system-interview/04_follow-ups-and-grill-payment-system.md`
 
 Job market signals (competency themes — one folder per topic; indexed in `99_interview-qna/README.md`):
 
