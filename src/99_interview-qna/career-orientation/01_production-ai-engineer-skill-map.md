@@ -35,3 +35,7 @@ Many engineers start with **model training from scratch**, heavy math drills, Ka
 ## Mindset
 
 Treat AI features like **distributed systems**: idempotency, retries, timeouts, observability, and clear user-visible states matter as much as model choice.
+
+## Executable drill pack
+
+For a full **question pack** aligned with this skill map (IC scope), use `../08_ai-engineer-role-pattern/README.md`.

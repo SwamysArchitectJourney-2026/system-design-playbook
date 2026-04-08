@@ -5,3 +5,5 @@
 - **One executable design:** [02_core_questions/design-llm-serving-observability/](02_core_questions/design-llm-serving-observability/answer.md)
 
 Shared spine: `../interview-execution/`.
+
+For **AI engineer (IC)** depth on shipping one feature—not full systems-architect breadth—see `../08_ai-engineer-role-pattern/README.md`.

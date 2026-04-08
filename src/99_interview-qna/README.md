@@ -20,6 +20,7 @@ Each numbered folder uses: `01_templates/` → `02_core_questions/<topic>/` (`an
 | AI solution architect (SDLC) | [05_ai-solution-architect-production-sdlc-profile/README.md](05_ai-solution-architect-production-sdlc-profile/README.md) |
 | Enterprise / principal / GenAI themes | [06_enterprise-principal-genai-and-ea-themes/README.md](06_enterprise-principal-genai-and-ea-themes/README.md) |
 | Gen AI lead (LLMOps + lifecycle) | [07_gen-ai-lead-role-pattern/README.md](07_gen-ai-lead-role-pattern/README.md) |
+| AI engineer (IC — ship one feature) | [08_ai-engineer-role-pattern/README.md](08_ai-engineer-role-pattern/README.md) |
 
 **Quick competency summaries** (single-page themes) still live beside each track as `01_…/01_….md`, etc.
 
