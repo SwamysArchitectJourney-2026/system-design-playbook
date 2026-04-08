@@ -20,10 +20,25 @@
 
 ## Interview Q&A (`99_interview-qna/`)
 
-Primary consolidated files:
+Consolidated tracks:
 
-- `ai-systems-qna/complete.md`
-- `architect-prep-qa/complete.md`
+- `ai-systems-architect/complete.md`
+- `enterprise-system-architect/complete.md`
+
+Payment system interview playbook:
+
+- `payment-system-interview/01_clarifying-requirements-for-payment-systems.md`
+- `payment-system-interview/02_component-model-and-data-flow.md`
+- `payment-system-interview/03_idempotency-ledger-and-failure-handling.md`
+
+Job market signals (competency themes — one folder per topic):
+
+- `job-market-signals/README.md` (index)
+- `job-market-signals/01_azure-solutions-architect-role-pattern/01_azure-solutions-architect-role-pattern.md` … through `06_enterprise-principal-genai-and-ea-themes/`
+
+Career orientation:
+
+- `career-orientation/01_production-ai-engineer-skill-map.md`
 
 ---
 

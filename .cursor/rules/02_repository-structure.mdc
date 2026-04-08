@@ -1,7 +1,7 @@
 # Repository Structure & Context
 
-**Version**: 3.0
-**Last Updated**: April 7, 2026
+**Version**: 3.2
+**Last Updated**: April 8, 2026
 
 ---
 
@@ -33,7 +33,7 @@
 - `src/05_ai-ml-systems/` — MLOps, observability, AI security *(scaffold)*
 - `src/06_decision-trees/` — When-to-use-what decision guides *(scaffold)*
 - `src/07_case-studies/` — End-to-end case studies *(scaffold)*
-- `src/99_interview-qna/` — Interview Q&A (AI, Architect, Enterprise) ✅
+- `src/99_interview-qna/` — Interview Q&A and prep (consolidated tracks, payment playbook, job-market signals, career orientation) ✅
 
 ---
 
