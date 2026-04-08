@@ -50,4 +50,3 @@ If you have examples, diagrams, or code snippets that would help, please include
 ---
 
 **Note**: This repository is a personal learning journey. Your suggestions help make the content better for everyone learning system design.
-

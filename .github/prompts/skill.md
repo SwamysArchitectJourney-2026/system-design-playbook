@@ -40,6 +40,7 @@ Assist Swamy in building and maintaining a **curated system design playbook** th
 **Primary**: Swamy himself — an experienced engineer building architect-level thinking.
 
 **Secondary** (context for calibration):
+
 - Software engineers preparing for system design interviews
 - Senior engineers transitioning to architect roles
 - Engineers designing scalable systems in production
