@@ -1,6 +1,6 @@
 # Repository Structure & Context
 
-**Version**: 3.5
+**Version**: 3.6
 **Last Updated**: April 8, 2026
 
 ---
@@ -33,7 +33,7 @@
 - `src/05_ai-ml-systems/` — MLOps, observability, AI security *(scaffold)*
 - `src/06_decision-trees/` — When-to-use-what decision guides *(scaffold)*
 - `src/07_case-studies/` — End-to-end case studies *(scaffold)*
-- `src/99_interview-qna/` — Interview Q&A and prep (`interview-execution/` templates + grill, consolidated tracks, payment playbook + follow-ups, `01_`–`06_` job-market themes, career orientation; see `README.md`) ✅
+- `src/99_interview-qna/` — Interview prep: `interview-execution/` + role folders with `01_templates/` + `02_core_questions/` packs; Azure track adds `03_azure_specific/` + `04_cross_domain/`; see `99_interview-qna/README.md` ✅
 
 ---
 

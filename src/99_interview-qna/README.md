@@ -1,36 +1,36 @@
 # Interview Q&A and prep tracks
 
-Execution layer (templates, grill, cross-domain drills):
+## Shared execution layer
 
+- [Interview execution — index](interview-execution/README.md)
 - [01 — Golden answer template (interview spine)](interview-execution/01_golden-answer-template.md)
 - [02 — Follow-up grill layer](interview-execution/02_follow-up-grill-layer.md)
 - [03 — Cross-domain prompt bank](interview-execution/03_cross-domain-prompt-bank.md)
 
-Consolidated long-form Q&A:
+## Role tracks (templates + question packs)
 
-- [AI systems architect — complete](ai-systems-architect/complete.md)
-- [Enterprise / system architect — complete](enterprise-system-architect/complete.md)
+Each numbered folder uses: `01_templates/` → `02_core_questions/<topic>/` (`answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`), plus Azure-specific `03_azure_specific/` and `04_cross_domain/` where built out.
 
-Payment system design (synthesized interview playbook):
+| Track | Index |
+|-------|--------|
+| Azure Solutions Architect | [01_azure-solutions-architect-role-pattern/README.md](01_azure-solutions-architect-role-pattern/README.md) |
+| .NET application architect + Azure | [02_dotnet-application-architect-azure-stack/README.md](02_dotnet-application-architect-azure-stack/README.md) |
+| Azure engineering lead | [03_azure-engineering-lead-platform-pattern/README.md](03_azure-engineering-lead-platform-pattern/README.md) |
+| Agentic AI lead | [04_agentic-ai-lead-competency-profile/README.md](04_agentic-ai-lead-competency-profile/README.md) |
+| AI solution architect (SDLC) | [05_ai-solution-architect-production-sdlc-profile/README.md](05_ai-solution-architect-production-sdlc-profile/README.md) |
+| Enterprise / principal / GenAI themes | [06_enterprise-principal-genai-and-ea-themes/README.md](06_enterprise-principal-genai-and-ea-themes/README.md) |
 
-- [01 — Clarifying requirements](payment-system-interview/01_clarifying-requirements-for-payment-systems.md)
-- [02 — Component model and data flow](payment-system-interview/02_component-model-and-data-flow.md)
-- [03 — Idempotency, ledger, failure handling](payment-system-interview/03_idempotency-ledger-and-failure-handling.md)
-- [04 — Follow-ups and grill (payment system)](payment-system-interview/04_follow-ups-and-grill-payment-system.md)
+**Quick competency summaries** (single-page themes) still live beside each track as `01_…/01_….md`, etc.
 
-## Job market signals
+## Consolidated long-form Q&A
 
-Anonymized competency themes derived from job postings. Each topic is its own folder at this level (`01_`–`06_`).
+- [AI systems architect — track README](ai-systems-architect/README.md) · [complete.md](ai-systems-architect/complete.md)
+- [Enterprise system architect — track README](enterprise-system-architect/README.md) · [complete.md](enterprise-system-architect/complete.md)
 
-| # | Topic | File |
-|---|--------|------|
-| 01 | Azure Solutions Architect pattern | [01_azure-solutions-architect-role-pattern.md](01_azure-solutions-architect-role-pattern/01_azure-solutions-architect-role-pattern.md) |
-| 02 | .NET application architect + Azure | [02_dotnet-application-architect-azure-stack.md](02_dotnet-application-architect-azure-stack/02_dotnet-application-architect-azure-stack.md) |
-| 03 | Azure engineering lead / platform | [03_azure-engineering-lead-platform-pattern.md](03_azure-engineering-lead-platform-pattern/03_azure-engineering-lead-platform-pattern.md) |
-| 04 | Agentic AI lead | [04_agentic-ai-lead-competency-profile.md](04_agentic-ai-lead-competency-profile/04_agentic-ai-lead-competency-profile.md) |
-| 05 | AI solution architect (SDLC / production) | [05_ai-solution-architect-production-sdlc-profile.md](05_ai-solution-architect-production-sdlc-profile/05_ai-solution-architect-production-sdlc-profile.md) |
-| 06 | Enterprise, principal, GenAI, EA themes | [06_enterprise-principal-genai-and-ea-themes.md](06_enterprise-principal-genai-and-ea-themes/06_enterprise-principal-genai-and-ea-themes.md) |
+## Payment system (modular + E2E pack)
 
-Career orientation:
+- [Payment track README](payment-system-interview/README.md)
 
-- [01 — Production AI engineer skill map](career-orientation/01_production-ai-engineer-skill-map.md)
+## Career orientation
+
+- [Career orientation README](career-orientation/README.md) · [skill map](career-orientation/01_production-ai-engineer-skill-map.md)

@@ -20,31 +20,17 @@
 
 ## Interview Q&A (`99_interview-qna/`)
 
-Interview execution (templates and drills):
+**Index:** `99_interview-qna/README.md`
 
-- `interview-execution/01_golden-answer-template.md`
-- `interview-execution/02_follow-up-grill-layer.md`
-- `interview-execution/03_cross-domain-prompt-bank.md`
+**Shared layer:** `interview-execution/` (golden template, grill layer, cross-domain prompts).
 
-Consolidated tracks:
+**Role tracks** (`01_`–`06_` folders): each has `README.md`, `01_templates/`, `02_core_questions/<design>/` with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Azure track also has `03_azure_specific/` and `04_cross_domain/`.
 
-- `ai-systems-architect/complete.md`
-- `enterprise-system-architect/complete.md`
+**Consolidated Q&A:** `ai-systems-architect/complete.md`, `enterprise-system-architect/complete.md` (each track also has templates + one `02_core_questions/` pack).
 
-Payment system interview playbook:
+**Payments:** `payment-system-interview/README.md` — foundations `01`–`04` + `02_core_questions/design-payment-azure-e2e/`.
 
-- `payment-system-interview/01_clarifying-requirements-for-payment-systems.md`
-- `payment-system-interview/02_component-model-and-data-flow.md`
-- `payment-system-interview/03_idempotency-ledger-and-failure-handling.md`
-- `payment-system-interview/04_follow-ups-and-grill-payment-system.md`
-
-Job market signals (competency themes — one folder per topic; indexed in `99_interview-qna/README.md`):
-
-- `01_azure-solutions-architect-role-pattern/01_azure-solutions-architect-role-pattern.md` … through `06_enterprise-principal-genai-and-ea-themes/`
-
-Career orientation:
-
-- `career-orientation/01_production-ai-engineer-skill-map.md`
+**Career:** `career-orientation/README.md`.
 
 ---
 

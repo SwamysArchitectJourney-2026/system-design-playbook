@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.5
+**Version**: 3.6
 **Last Updated**: April 8, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -35,21 +35,19 @@ system-design-in-practice/
 │   ├── 05_ai-ml-systems/                  # 🔲 Scaffold — mlops, observability, security
 │   ├── 06_decision-trees/                 # 🔲 Scaffold — when-to-use-what guides
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
-│   └── 99_interview-qna/                  # ✅ Interview prep and Q&A
-│       ├── README.md                      # Index of tracks
-│       ├── interview-execution/           # Golden template, grill layer, cross-domain prompts
-│       ├── ai-systems-architect/          # AI systems interview track
-│       │   └── complete.md                # Consolidated AI systems Q&A
-│       ├── enterprise-system-architect/   # Enterprise / architect prep track
-│       │   └── complete.md                # Consolidated architect-style Q&A
-│       ├── payment-system-interview/      # Payment system design playbook (modular + follow-ups)
-│       ├── 01_azure-solutions-architect-role-pattern/   # Job-market competency theme
+│   └── 99_interview-qna/                  # ✅ Interview prep and Q&A (see README)
+│       ├── README.md                      # Master index
+│       ├── interview-execution/           # Shared golden template + grill + cross-domain prompts
+│       ├── ai-systems-architect/          # complete.md + templates + 02_core_questions/
+│       ├── enterprise-system-architect/   # complete.md + templates + 02_core_questions/
+│       ├── payment-system-interview/      # Modular 01–04 + templates + 02_core_questions/
+│       ├── 01_azure-solutions-architect-role-pattern/   # templates, core/domain/cross question packs
 │       ├── 02_dotnet-application-architect-azure-stack/
 │       ├── 03_azure-engineering-lead-platform-pattern/
 │       ├── 04_agentic-ai-lead-competency-profile/
 │       ├── 05_ai-solution-architect-production-sdlc-profile/
 │       ├── 06_enterprise-principal-genai-and-ea-themes/
-│       └── career-orientation/            # Role focus (e.g. production AI engineer)
+│       └── career-orientation/
 ├── claude.md                              # Claude Code instructions
 ├── CONTRIBUTING.md                        # Contribution guidelines
 ├── CODE_OF_CONDUCT.md                     # Code of conduct
@@ -78,6 +76,10 @@ Folders marked 🔲 contain only `.gitkeep` — content is added progressively a
 Each case study under `07_case-studies/` must include:
 `requirements.md`, `high-level-design.md`, `low-level-design.md`,
 `scalability.md`, `trade-offs.md`, `diagrams/`
+
+### Interview question packs (`99_interview-qna/`)
+
+Role tracks use **`01_templates/`**, **`02_core_questions/<slug>/`** with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Do **not** use a `00_` prefix (use `01_` and above). The Azure track adds **`03_azure_specific/`** and **`04_cross_domain/`**.
 
 ---
 

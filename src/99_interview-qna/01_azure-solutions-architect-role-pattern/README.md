@@ -18,3 +18,7 @@ This folder is structured for **execution**, not browsing: templates, repeatable
 3. Drill `followups.md` for the same question until answers are under two minutes each.
 
 Shared grill and golden flow: `../interview-execution/`.
+
+## One-page competency map
+
+- [01_azure-solutions-architect-role-pattern.md](01_azure-solutions-architect-role-pattern.md) (short posting-to-themes summary)
