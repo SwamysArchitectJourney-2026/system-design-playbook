@@ -6,7 +6,7 @@ topic: "End-to-end payment narrative (Azure-oriented)"
 
 # Payment processing — end-to-end interview narrative
 
-This file is the **spoken spine**. Deep modules live in the parent folder (`01`–`04`).
+This file is the **spoken spine**. Deep modules live in the parent folder (`01`–`04`). System-specific failures: `failures.md`.
 
 ## 1. Clarify
 

@@ -7,7 +7,7 @@ answer_format: "01_templates/answer-format-enforcement.md"
 
 # Design event-driven architecture on Azure
 
-## Based on Template v1.0
+## Based on Template v1.1
 
 Companion: `failures.md`, `../../01_templates/service-selection-guide.md` (Event Hubs vs Service Bus vs Queue).
 
@@ -80,7 +80,15 @@ See `diagram.md`.
 4. **Partition unavailable / EH issue:** rare—regional DR story; pause producers if needed (backpressure contract).
 5. **Schema mismatch:** dead-letter or quarantine with **schema version** in envelope.
 
-## 6. Trade-offs and decisions (why X over Y)
+## 6. What breaks first?
+
+1. **Event Hubs ingest** — hot partition or under-provisioned TUs/PUs → producer backpressure.
+2. **Downstream store** (Cosmos/SQL) **429** or write ceiling → consumer **lag** explodes.
+3. **Service Bus** throttling or **DLQ** flood after bad deploy.
+4. **Functions** scale limits / cold start on sudden ramp.
+5. **Missing lag SLOs** — ops learns from customer complaints, not metrics.
+
+## 7. Key design decisions
 
 | Decision | Chosen | Rejected | Why | Breaks when |
 |----------|--------|----------|-----|-------------|
@@ -89,16 +97,26 @@ See `diagram.md`.
 | Light compute | Functions | AKS | Speed to ship | Long jobs / cold start |
 | Pattern | Event-driven | Sync RPC | Decoupling, burst | Debuggability—need tracing |
 
-## 7. Evolution strategy (MVP → scale → global)
+## 8. Trade-offs summary
+
+- **EH-only vs EH+SB:** add SB when you need **per-message DLQ, sessions,** and competing-consumer task queues—not a raw stream.
+- **Functions vs AKS:** flip to AKS for long-running processors, heavy networking, or GPU.
+- **Sync fallback:** expose selective **RPC** for low-volume admin paths if event path is overkill.
+
+## 9. Evolution strategy (MVP → scale → global)
 
 1. **MVP:** EH + one consumer group + Functions + SQL.
 2. **10×:** more partitions, SB fan-out, schema governance, autoscale.
 3. **Advanced:** Spark/stream analytics, replay pipelines, contract tests between teams.
 
-## 8. Security, observability, and cost
+## 10. Security architecture
 
-**Security:** **Managed identities** for Event Hubs, Service Bus, Storage; **private endpoints** where required; avoid secrets in Function app settings—Key Vault references.
+**Managed identities** for Event Hubs, Service Bus, Storage; **private endpoints** where required; avoid secrets in Function app settings—**Key Vault** references.
 
-**Observability:** **Application Insights** + **correlation IDs** on event envelope; consumer **lag** metrics; DLQ depth alerts; end-to-end trace across Functions and SB.
+## 11. Observability and operations
 
-**Cost:** **Event Hubs** throughput/processing units vs peak; **Service Bus** tier; **retention** duration (replay vs storage $); Functions **execution** and **Premium** plan when cold start unacceptable.
+**Application Insights** + **correlation IDs** on event envelope; consumer **lag** metrics; DLQ depth alerts; end-to-end trace across Functions and SB.
+
+## 12. Cost considerations
+
+**Event Hubs** throughput/processing units vs peak; **Service Bus** tier; **retention** duration (replay vs storage $); Functions **execution** and **Premium** plan when cold start unacceptable.

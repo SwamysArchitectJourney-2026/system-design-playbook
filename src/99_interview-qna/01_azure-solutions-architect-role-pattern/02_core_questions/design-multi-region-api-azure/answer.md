@@ -7,7 +7,7 @@ answer_format: "01_templates/answer-format-enforcement.md"
 
 # Design a multi-region API platform on Azure
 
-## Based on Template v1.0
+## Based on Template v1.1
 
 Companion: `failures.md`, `../../01_templates/service-selection-guide.md`.
 
@@ -75,7 +75,15 @@ See `diagram.md`.
 4. **Tenant abuse:** APIM **rate limit** + bulkhead pools; protect shared DB.
 5. **Cross-region write conflict** (active-active): **etag** conflicts or home-region routing—must be explicit.
 
-## 6. Trade-offs and decisions (why X over Y)
+## 6. What breaks first?
+
+1. **Shared data plane** — one Cosmos/SQL region saturates while Front Door keeps routing “healthy” API nodes.
+2. **Cache stampede** after failover or deploy — origin and DB hit together.
+3. **APIM / regional gateway** throttling under burst before autoscale.
+4. **Cross-region chatter** — chatty APIs + egress costs + latency amplification.
+5. **Incorrect active-active** without conflict model — **correctness** breaks before uptime metrics move.
+
+## 7. Key design decisions
 
 | Decision | Chosen | Rejected | Why | When rejected wins |
 |----------|--------|----------|-----|-------------------|
@@ -85,16 +93,26 @@ See `diagram.md`.
 
 Details: `tradeoffs.md`.
 
-## 7. Evolution strategy (MVP → scale → global)
+## 8. Trade-offs summary
+
+- **Regional APIM vs one global** — flip to global only with strict automation and DR story for the control plane.
+- **Home-region writes vs true multi-master** — flip only with explicit conflict resolution or CRDT/domain rules.
+- **Cosmos vs SQL** — same as global web: relational vs geo write footprint.
+
+## 9. Evolution strategy (MVP → scale → global)
 
 1. Single region + APIM + Front Door entry.
 2. Second region passive or read-only; failover drills.
 3. Multi-region writes only with explicit conflict and caching strategy.
 
-## 8. Security, observability, and cost
+## 10. Security architecture
 
-**Security:** **Entra ID** (or B2B) for OAuth validation at **APIM**; **managed identities** from APIM/backend to data; **mTLS** or **private** origins where policy requires; **Key Vault** for client certs if mutual TLS to partners.
+**Entra ID** (or B2B) for OAuth validation at **APIM**; **managed identities** from APIM/backend to data; **mTLS** or **private** origins where policy requires; **Key Vault** for client certs if mutual TLS to partners.
 
-**Observability:** **Application Insights** per region + central **Log Analytics**; **distributed tracing** with correlation across regional hops; SLO per geography.
+## 11. Observability and operations
 
-**Cost:** **Multi-region** APIM + compute footprint; **Cosmos multi-region RU** or **SQL geo** licensing; **cross-region egress**—minimize chatty east-west calls; **reserved** capacity for steady regional pools.
+**Application Insights** per region + central **Log Analytics**; **distributed tracing** with correlation across regional hops; SLO per geography.
+
+## 12. Cost considerations
+
+**Multi-region** APIM + compute footprint; **Cosmos multi-region RU** or **SQL geo** licensing; **cross-region egress**—minimize chatty east-west calls; **reserved** capacity for steady regional pools.

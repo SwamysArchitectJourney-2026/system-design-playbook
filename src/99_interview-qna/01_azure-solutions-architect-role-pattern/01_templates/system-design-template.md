@@ -25,11 +25,13 @@ Repo-wide spine and grill layer:
 - `../../interview-execution/01_golden-answer-template.md`
 - `../../interview-execution/02_follow-up-grill-layer.md`
 
-## Enforcement (this track)
+## Enforcement (Template v1.1)
 
-- **Heading contract:** `answer-format-enforcement.md` (same section titles in every `answer.md`).
+- **Heading contract + required files:** `answer-format-enforcement.md` (every pack includes `failures.md`, narrated `diagram.md`, categorized `followups.md`).
 - **Decisions:** `../07_interview-decision-cheatsheet.md` (four-line rule).
-- **Azure picks:** `../08_azure-service-selection-guide.md` (when to use EH vs SB, Cosmos vs SQL, etc.).
+- **Azure picks:** `service-selection-guide.md` (canonical; `../08_azure-service-selection-guide.md` redirects).
+- **Failure recall:** `failure-scenario-catalog.md` + `../09_interview-failure-playbook.md`.
+- **Grill categories:** `followup-attack-bank.md`.
 
 ## Azure vocabulary (drop in when relevant)
 

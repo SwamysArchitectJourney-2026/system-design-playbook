@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.7
+**Version**: 3.8
 **Last Updated**: April 8, 2026
 **Purpose**: Single source of truth for repository structure
 

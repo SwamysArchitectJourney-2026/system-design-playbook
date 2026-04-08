@@ -79,10 +79,13 @@ For a single design question you maintain in this repo, mirror the spine in file
 
 ```text
 <question-slug>/
-├── 01_answer.md          # full narrative using sections above
-├── 02_diagrams.md        # Mermaid + ASCII
-├── 03_tradeoffs.md
-└── 04_followups.md       # see ../interview-execution/02_follow-up-grill-layer.md
+├── answer.md             # narrative: clarify → scale → HLD → deep dives → failures → what breaks first → decisions → evolution → security → cost
+├── diagram.md            # Mermaid + numbered narration
+├── failures.md           # system-specific (not only generic catalog)
+├── tradeoffs.md
+└── followups.md          # “attack” categories; see ../interview-execution/02_follow-up-grill-layer.md
 ```
+
+Azure SA track uses **`01_azure-solutions-architect-role-pattern/01_templates/answer-format-enforcement.md` (Template v1.1)** for the same spine with explicit **security** vs **cost** headings.
 
 Diagrams stay **markdown-native** (Mermaid) unless you add binary assets deliberately.

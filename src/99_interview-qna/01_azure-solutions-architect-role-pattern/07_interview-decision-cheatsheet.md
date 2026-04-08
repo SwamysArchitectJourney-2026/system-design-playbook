@@ -16,6 +16,8 @@ For each decision:
 3. **Vs:** the best alternative you rejected.
 4. **Breaks when:** the failure or scale point where you would revisit.
 
+Pair every decision with **`01_templates/service-selection-guide.md`** so “why Event Hubs not SB” is one glance away.
+
 ## Pattern examples (fill with your system’s numbers)
 
 **Edge**

@@ -1,26 +1,46 @@
 ---
 learning_level: "Advanced"
-estimated_time: "10 minutes"
+estimated_time: "12 minutes"
 ---
 
 # Follow-ups: multi-region API
 
-**Q: How do you handle JWT validation in each region?**
+Bank: `../../01_templates/followup-attack-bank.md`.
 
-- JWKS caching, clock skew, key rotation; APIM or API validates signature; short-lived access tokens.
+## Security
 
-**Q: APIM config drift between regions?**
+**Q: JWT validation in each region?**
 
-- **Infrastructure as code**, automated promotion, canary in one region first.
-
-**Q: Cross-region write conflict?**
-
-- Last-write-wins only if business accepts; otherwise **optimistic concurrency** (`etag`), or **home region** write model.
+- JWKS cache, clock skew, rotation; validate at APIM or API; short-lived tokens.
 
 **Q: GDPR / data residency?**
 
-- Route and **store** data in allowed regions; avoid accidental replication across borders; DLP on logs.
+- Route + store in allowed regions; control replication; DLP on logs.
 
-**Q: What metric proves multi-region is working?**
+## Failure and resilience
 
-- Regional error budget, P99 latency by geography, successful failover drill outcomes.
+**Q: Cross-region write conflict?**
+
+- LWW only if acceptable; else **etag** / home-region writes.
+
+**Q: APIM config drift?**
+
+- IaC, automated promotion, canary region first.
+
+## Scalability and load
+
+**Q: What metric proves multi-region health?**
+
+- Error budget per region, P99 by geo, failover drill success.
+
+## Cost
+
+**Q: Hidden cost?**
+
+- Cross-region **egress**; duplicated regional stacks; multi-region Cosmos RU.
+
+## Azure depth
+
+**Q: Stamps per region vs one APIM?**
+
+- Latency + blast radius vs operational complexity—justify.

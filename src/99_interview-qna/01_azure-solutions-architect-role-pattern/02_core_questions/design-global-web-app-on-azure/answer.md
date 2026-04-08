@@ -7,7 +7,7 @@ answer_format: "01_templates/answer-format-enforcement.md"
 
 # Design a highly available global web application on Azure
 
-## Based on Template v1.0
+## Based on Template v1.1
 
 Companion files: `failures.md` (failure-first expansion), `diagram.md` (narrated flow), `tradeoffs.md`, `followups.md`. Service picks grounded in `../../01_templates/service-selection-guide.md`.
 
@@ -105,7 +105,15 @@ See `diagram.md`.
 5. **False healthy probe:** deep health checks that validate DB dependency lightly; alert on elevated error rate, not only probe bit.
 6. **Deployment bad release:** App Service **deployment slots** swap; quick rollback.
 
-## 6. Trade-offs and decisions (why X over Y)
+## 6. What breaks first?
+
+1. **Cache miss storm** (viral read) → Redis single-flight fails or origin **connection pool** saturates before DB autoscale reacts.
+2. **Cosmos 429 / SQL CPU** on hot partition or lock contention → P99 read/write collapse.
+3. **APIM** policy or gateway CPU under burst → **503/429** at edge despite healthy origins.
+4. **False healthy probes** → traffic routed to **bad build** or DB-starved slot.
+5. **Multi-region design debt** — active-active without conflict handling → **data correctness** incidents before pure “availability” fails.
+
+## 7. Key design decisions
 
 | Decision | Chosen | Rejected | Why chosen | When rejected choice wins |
 |----------|--------|----------|------------|---------------------------|
@@ -117,16 +125,26 @@ See `diagram.md`.
 
 **Expanded narrative:** see `tradeoffs.md` (must stay consistent with this table).
 
-## 7. Evolution strategy (MVP → scale → global)
+## 8. Trade-offs summary
+
+- **Front Door vs TM-only:** flip to TM when L7/WAF not required and cost is primary.
+- **Cosmos vs SQL:** flip to SQL when relational invariants dominate; flip to Cosmos when multi-region write latency dominates and model fits.
+- **App Service vs AKS:** flip to AKS when you need mesh, daemonsets, or heavy customization.
+
+## 9. Evolution strategy (MVP → scale → global)
 
 1. **MVP (single region):** Front Door → App Service → SQL + Redis + Blob; APIM; baseline monitoring.
 2. **Scale (~10× traffic):** read replicas or Cosmos RU autoscale; APIM caching where safe; partition tuning; autoscale rules with cooldowns.
 3. **Global:** second region origins on Front Door; Cosmos multi-region **or** SQL geo-failover; chaos drills; SLO dashboards by geography.
 
-## 8. Security, observability, and cost
+## 10. Security architecture
 
-**Security:** **Entra ID** / B2C for users; **managed identities** app → data; **Key Vault** for any remaining secrets; **private endpoints** on data plane when policy requires; **WAF** at Front Door.
+**Entra ID** / B2C for users; **managed identities** app → data; **Key Vault** for any remaining secrets; **private endpoints** on data plane when policy requires; **WAF** at Front Door.
 
-**Observability:** **Application Insights** + Log Analytics; SLO on availability and P99; distributed tracing **APIM → App Service → Redis → Cosmos/SQL**; synthetic canaries for “healthy but broken.”
+## 11. Observability and operations
 
-**Cost:** **Reserved** capacity for steady App Service/APIM baseline; **Cosmos autoscale RU** vs mis-provisioned fixed RU; **CDN** offload; watch **cross-region egress** and multi-region Cosmos/SQL footprint.
+**Application Insights** + Log Analytics; SLO on availability and P99; distributed tracing **APIM → App Service → Redis → Cosmos/SQL**; synthetic canaries for “healthy but broken.”
+
+## 12. Cost considerations
+
+**Reserved** capacity for steady App Service/APIM baseline; **Cosmos autoscale RU** vs mis-provisioned fixed RU; **CDN** offload; watch **cross-region egress** and multi-region Cosmos/SQL footprint.
