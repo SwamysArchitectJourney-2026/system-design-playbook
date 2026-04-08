@@ -31,10 +31,9 @@ Payment system interview playbook:
 - `payment-system-interview/02_component-model-and-data-flow.md`
 - `payment-system-interview/03_idempotency-ledger-and-failure-handling.md`
 
-Job market signals (competency themes — one folder per topic):
+Job market signals (competency themes — one folder per topic; indexed in `99_interview-qna/README.md`):
 
-- `job-market-signals/README.md` (index)
-- `job-market-signals/01_azure-solutions-architect-role-pattern/01_azure-solutions-architect-role-pattern.md` … through `06_enterprise-principal-genai-and-ea-themes/`
+- `01_azure-solutions-architect-role-pattern/01_azure-solutions-architect-role-pattern.md` … through `06_enterprise-principal-genai-and-ea-themes/`
 
 Career orientation:
 

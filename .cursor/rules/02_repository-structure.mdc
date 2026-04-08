@@ -1,6 +1,6 @@
 # Repository Structure & Context
 
-**Version**: 3.2
+**Version**: 3.4
 **Last Updated**: April 8, 2026
 
 ---
@@ -33,7 +33,7 @@
 - `src/05_ai-ml-systems/` — MLOps, observability, AI security *(scaffold)*
 - `src/06_decision-trees/` — When-to-use-what decision guides *(scaffold)*
 - `src/07_case-studies/` — End-to-end case studies *(scaffold)*
-- `src/99_interview-qna/` — Interview Q&A and prep (consolidated tracks, payment playbook, job-market signals, career orientation) ✅
+- `src/99_interview-qna/` — Interview Q&A and prep (consolidated tracks, payment playbook, `01_`–`06_` job-market theme folders, career orientation; see `README.md` for index) ✅
 
 ---
 

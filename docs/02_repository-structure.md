@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.2
+**Version**: 3.4
 **Last Updated**: April 8, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -42,14 +42,12 @@ system-design-in-practice/
 │       ├── enterprise-system-architect/   # Enterprise / architect prep track
 │       │   └── complete.md                # Consolidated architect-style Q&A
 │       ├── payment-system-interview/      # Payment system design playbook (modular)
-│       ├── job-market-signals/            # Anonymized JD → competency themes (folder per topic)
-│       │   ├── README.md
-│       │   ├── 01_azure-solutions-architect-role-pattern/
-│       │   ├── 02_dotnet-application-architect-azure-stack/
-│       │   ├── 03_azure-engineering-lead-platform-pattern/
-│       │   ├── 04_agentic-ai-lead-competency-profile/
-│       │   ├── 05_ai-solution-architect-production-sdlc-profile/
-│       │   └── 06_enterprise-principal-genai-and-ea-themes/
+│       ├── 01_azure-solutions-architect-role-pattern/   # Job-market competency theme
+│       ├── 02_dotnet-application-architect-azure-stack/
+│       ├── 03_azure-engineering-lead-platform-pattern/
+│       ├── 04_agentic-ai-lead-competency-profile/
+│       ├── 05_ai-solution-architect-production-sdlc-profile/
+│       ├── 06_enterprise-principal-genai-and-ea-themes/
 │       └── career-orientation/            # Role focus (e.g. production AI engineer)
 ├── claude.md                              # Claude Code instructions
 ├── CONTRIBUTING.md                        # Contribution guidelines
