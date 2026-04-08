@@ -25,6 +25,12 @@ Repo-wide spine and grill layer:
 - `../../interview-execution/01_golden-answer-template.md`
 - `../../interview-execution/02_follow-up-grill-layer.md`
 
+## Enforcement (this track)
+
+- **Heading contract:** `answer-format-enforcement.md` (same section titles in every `answer.md`).
+- **Decisions:** `../07_interview-decision-cheatsheet.md` (four-line rule).
+- **Azure picks:** `../08_azure-service-selection-guide.md` (when to use EH vs SB, Cosmos vs SQL, etc.).
+
 ## Azure vocabulary (drop in when relevant)
 
 - Edge: **Azure Front Door**, Traffic Manager, **CDN**

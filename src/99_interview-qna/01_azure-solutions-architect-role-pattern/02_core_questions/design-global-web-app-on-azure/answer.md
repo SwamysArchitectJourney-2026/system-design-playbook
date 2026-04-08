@@ -2,9 +2,14 @@
 learning_level: "Advanced"
 estimated_time: "40 minutes"
 topic: "Highly available global web application on Azure"
+answer_format: "01_templates/answer-format-enforcement.md"
 ---
 
 # Design a highly available global web application on Azure
+
+## Based on Template v1.0
+
+Companion files: `failures.md` (failure-first expansion), `diagram.md` (narrated flow), `tradeoffs.md`, `followups.md`. Service picks grounded in `../../01_templates/service-selection-guide.md`.
 
 ## 1. Clarify requirements
 
@@ -17,83 +22,111 @@ topic: "Highly available global web application on Azure"
 - Global users; **99.99%** availability for the serving path.
 - API latency target **P99 under 200 ms** for cached reads; writes may be higher if strongly consistent.
 - **Stateless** web/API tier behind load balancing.
-- **Strong consistency** for writes to authoritative store (user says so for this variant).
+- **Strong consistency** for writes to authoritative store (stated for this variant).
 
 **Explicit assumptions**
 
 - Traffic is **read-heavy** with moderate write rate unless told otherwise.
-- Compliance: standard commercial app (no special air-gap); PII encrypted at rest and in transit.
+- Compliance: standard commercial app; PII encrypted at rest and in transit.
 
-Opening line: *Let me clarify requirements and assumptions before drawing components.*
+**Opening line:** *Let me clarify requirements and assumptions before jumping into components.*
 
 ## 2. Scale estimation (back-of-envelope)
 
-Illustrative orders of magnitude (confirm with interviewer):
+Illustrative (confirm with interviewer):
 
 - **10M** registered users, **1M DAU**.
-- Peak **~10K RPS** at edge (mix of static + API); average lower.
-- **~5 TB** user data over a few years excluding logs (order-of-magnitude).
+- Peak **~10K RPS** at edge (static + API blend).
+- **~5 TB** user data over a few years (order-of-magnitude, excluding logs).
 
-**Dominant risks:** database hot partitions, cache stampede, cross-region consistency cost.
+**Dominant risks:** DB hot partitions, cache stampede, cross-region consistency cost, APIM throttling under burst.
 
 ## 3. High-level architecture
 
-**Edge:** DNS → **Azure Traffic Manager** or **Azure Front Door** (prefer Front Door for WAF, TLS, routing, and path-based rules).
+### 3.1 Edge — decision
 
-**Static / BFF:** **Azure CDN** (or Front Door + origin) for static assets; optional **App Service** or **Container Apps** / **AKS** for web BFF.
+- **Choose:** **Azure Front Door** (Standard/Premium per WAF need) as primary entry.
+- **Because:** L7 routing, TLS termination, **WAF**, health probes, and path-based routing in one place; aligns with global users + 99.99% story.
+- **Vs:** **Traffic Manager** alone — rejected for this prompt because we need L7 controls, not only DNS failover.
+- **Breaks when:** misconfigured health probes cause **false negatives** (flapping) or origin pools are not regionally symmetric—must validate probe path and host headers.
 
-**API:** Stateless services behind **App Service** (zones) or **AKS** with **Azure Load Balancer** / ingress; **API Management** at the inner edge for policies, throttling, and versioning.
+### 3.2 Compute — decision
 
-**Cache:** **Azure Cache for Redis** for hot reads and session externalization (if sessions exist—prefer stateless JWT + short TTL).
+- **Choose:** **App Service** (zone-redundant) or **AKS** for APIs; **API Management** internal to edge for governance.
+- **Because:** stateless tier; App Service is faster to defend in a time-boxed round unless interviewer demands Kubernetes.
+- **Vs:** **Functions-only** backend — rejected as default for sustained CRUD APIs with predictable latency (cold start and limits).
+- **Breaks when:** connection pool exhaustion to SQL/Cosmos or **APIM** policy CPU under heavy transformation—watch backend latency SLO.
 
-**Primary data:** **Azure Cosmos DB** (multi-region writes if global low-latency reads + writes required) **or** **Azure SQL** with geo-secondary if workload is relational and multi-region active-active is not mandatory.
+### 3.3 Cache — decision
 
-**Blob:** **Azure Blob Storage** for uploads, receipts, media.
+- **Choose:** **Azure Cache for Redis** for hot reads / optional rate limiting.
+- **Because:** read-heavy + P99 read target; offload DB.
+- **Vs:** no cache — rejected given latency goal at scale.
+- **Breaks when:** **memory pressure** evicts hot keys, or invalidation bugs cause stale UX—use TTL + versioned keys + single-flight for hottest keys.
 
-**Primary path (read-heavy):** Client → Front Door → API → Redis (hit) → Cosmos/SQL (miss).
+### 3.4 Data — decision
 
-See `diagram.md` for a Mermaid view.
+- **Choose:** **Cosmos DB** if multi-region **read/write** latency dominates; **Azure SQL** with **geo-secondary** if relational model + mostly single-region writes.
+- **Because:** interviewer asked strong consistency on writes—both can work; Cosmos buys global footprint; SQL buys transactions and familiar constraints.
+- **Vs:** SQL-only single region — rejected if “global users” implies write latency from distant geographies.
+- **Breaks when:** Cosmos **429 throttling** (hot partition / RU ceiling) or SQL **connection/CPU** ceiling—need partition key discipline or Hyperscale/read scale-out.
+
+### 3.5 Object storage
+
+- **Blob Storage** for media/uploads (lifecycle tiers for cost).
+
+**Primary read path:** Client → Front Door → APIM → API → Redis (hit) → Cosmos/SQL (miss).
+
+See `diagram.md`.
 
 ## 4. Deep dives (pick 2–3 in the room)
 
 ### Caching
 
-- TTL-based cache for read models; **cache-aside**; consider **single-flight** for hot keys.
-- For user-specific data, key by `tenant:user:id`; define **invalidation** on write (delete key or versioned payload).
+- Cache-aside; TTL; **single-flight** on hot keys; invalidate or bump version on write for user profile.
 
 ### Multi-region
 
-- **Phase A:** Single region + CDN.
-- **Phase B:** Active-passive second region with **Cosmos geo-replication** or SQL **geo-secondary** + controlled failover.
-- **Phase C:** Active-active with Cosmos multi-region + conflict policy (or partition users by home region to reduce conflicts).
+- Phase A: single region + CDN.
+- Phase B: passive secondary + geo-replication / failover groups.
+- Phase C: active-active only with explicit conflict story (Cosmos) or **home-region** routing for users.
 
 ### Database
 
-- **Cosmos:** partition key choice (e.g. `userId`) to avoid cross-partition scans; consistency level per operation (strong for financial-style writes if this app ever holds money).
-- **SQL:** connection pooling, read replicas for read scale, **hyperscale** if needed.
+- Cosmos: partition key (e.g. `userId`); consistency per operation.
+- SQL: pooling, read replicas, Hyperscale when needed.
 
-## 5. Failure handling
+## 5. Failure scenarios and mitigations
 
-- **Region failure:** Front Door / Traffic Manager health probes route away; data RPO/RTO per product requirement.
-- **Dependency failure:** **Timeouts**, **bounded retries**, **circuit breakers** to Redis and DB.
-- **Thundering herd:** autoscale rules + cache warming cautiously; **jitter** on retries.
+1. **Region loss:** Front Door routes to healthy origins; RPO/RTO from Cosmos/SQL story; runbook for **sticky session** mistakes (prefer stateless).
+2. **Cosmos throttling (429):** exponential backoff, **autoscale RU**, fix hot partition; temporary **degrade** read path (serve stale cache with banner if product allows).
+3. **Redis failover / eviction:** treat cache as optional for correctness; guard thundering herd with single-flight; monitor **used memory** and **evicted keys**.
+4. **APIM or origin overload:** **429** to clients with `Retry-After`; autoscale App Service; circuit break to protect DB.
+5. **False healthy probe:** deep health checks that validate DB dependency lightly; alert on elevated error rate, not only probe bit.
+6. **Deployment bad release:** App Service **deployment slots** swap; quick rollback.
 
-## 6. Trade-offs
+## 6. Trade-offs and decisions (why X over Y)
 
-- **Cosmos vs SQL:** global latency and elasticity vs SQL familiarity and transactional patterns—see `tradeoffs.md`.
-- **Redis:** huge win on read latency; cost and **staleness** risk.
+| Decision | Chosen | Rejected | Why chosen | When rejected choice wins |
+|----------|--------|----------|------------|---------------------------|
+| Edge | Front Door | TM only | L7 + WAF + routing | Pure DNS failover suffices, cost minimization |
+| Data (global write pressure) | Cosmos | Single-region SQL | Latency + elastic scale | Heavy relational joins, team SQL depth, lower $ |
+| Data (relational core) | Azure SQL | Cosmos | Transactions, constraints | Need multi-master geo writes at scale |
+| Cache | Redis | None | P99 read target | Extreme consistency on every read—bypass cache selectively |
+| Compute | App Service | AKS (default) | Speed to narrate, ops | Need service mesh, custom daemons, fine CNI |
 
-## 7. Evolution
+**Expanded narrative:** see `tradeoffs.md` (must stay consistent with this table).
 
-1. **MVP:** Single region, App Service + SQL + Redis + Front Door.
-2. **10× scale:** Partition data, APIM policies, read scaling, autoscale, heavier observability.
-3. **Global:** Multi-region Front Door, Cosmos or geo SQL story, chaos testing for failover.
+## 7. Evolution strategy (MVP → scale → global)
 
-## 8. Security and observability (if time)
+1. **MVP (single region):** Front Door → App Service → SQL + Redis + Blob; APIM; baseline monitoring.
+2. **Scale (~10× traffic):** read replicas or Cosmos RU autoscale; APIM caching where safe; partition tuning; autoscale rules with cooldowns.
+3. **Global:** second region origins on Front Door; Cosmos multi-region **or** SQL geo-failover; chaos drills; SLO dashboards by geography.
 
-- **Entra ID** for users (or B2C); **managed identities** service-to-service; **private endpoints** for data plane where required.
-- **Azure Monitor**, **Application Insights**, **Log Analytics**; SLOs on availability and P99 latency.
+## 8. Security, observability, and cost
 
-## 9. Cost
+**Security:** **Entra ID** / B2C for users; **managed identities** app → data; **Key Vault** for any remaining secrets; **private endpoints** on data plane when policy requires; **WAF** at Front Door.
 
-- **Reserved** capacity for baseline; **autoscale** for peaks; right-size Cosmos RUs or use **autoscale**; CDN offload.
+**Observability:** **Application Insights** + Log Analytics; SLO on availability and P99; distributed tracing **APIM → App Service → Redis → Cosmos/SQL**; synthetic canaries for “healthy but broken.”
+
+**Cost:** **Reserved** capacity for steady App Service/APIM baseline; **Cosmos autoscale RU** vs mis-provisioned fixed RU; **CDN** offload; watch **cross-region egress** and multi-region Cosmos/SQL footprint.

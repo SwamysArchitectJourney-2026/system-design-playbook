@@ -52,6 +52,12 @@ This is **Swamy's personal playbook and reference workspace**, not official cour
 
 > Full structure: [`docs/02_repository-structure.md`](docs/02_repository-structure.md)
 
+To export the full folder and file structure to a text file, run:
+
+```powershell
+tree /f > folderstructure.txt
+```
+
 ```text
 system-design-playbook/
 │

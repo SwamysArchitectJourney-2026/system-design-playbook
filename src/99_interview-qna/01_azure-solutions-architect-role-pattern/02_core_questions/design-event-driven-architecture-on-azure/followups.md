@@ -1,42 +1,62 @@
 ---
 learning_level: "Advanced"
-estimated_time: "12 minutes"
+estimated_time: "15 minutes"
 ---
 
 # Follow-ups: event-driven on Azure
 
-## Ordering
+Bank: `../../01_templates/followup-attack-bank.md`.
+
+## Data consistency
 
 **Q: Are events ordered globally?**
 
-- No—**per partition** only. If you need strict per-entity order, key by `entityId` to partition and accept throughput limits on hot keys.
+- No—**per partition** only. Strict per-entity order → partition by `entityId`; accept hot-key limits.
 
-## Duplicates
+**Q: Consumer crashes after processing but before checkpoint?**
 
-**Q: Consumer crashes after processing but before checkpoint—what happens?**
+- At-least-once → **reprocess**; **idempotency** store or deterministic writes.
 
-- At-least-once: **reprocess**; idempotency store or deterministic writes prevent double effect.
-
-## Poison messages
+## Failure and resilience
 
 **Q: Bad payload forever failing?**
 
-- DLQ (Service Bus) or **quarantine** topic; alert; tooling to inspect and replay after fix.
-
-## Backpressure
+- **DLQ** or quarantine; alert; fix; controlled replay.
 
 **Q: Producers spike 10×—downstream cannot keep up?**
 
-- Lag grows; scale consumers; consider **throttling** producers; **autoscale** rules on CPU/lag metrics.
+- Lag metrics; scale consumers; throttle producers if allowed; autoscale on lag.
+
+## Scalability and load
+
+**Q: What breaks first at 10× event rate?**
+
+- EH throughput / partition limits, consumer CPU, downstream DB 429, SB throttling—pick for your numbers.
+
+## Security
+
+**Q: How do producers authenticate to Event Hubs?**
+
+- **Managed identity** or SAS with rotation; network restrictions where required.
+
+## Cost
+
+**Q: Biggest cost driver?**
+
+- EH capacity + **retention** storage; SB premium; Function execution at scale.
+
+## Azure depth
+
+**Q: Event Hubs vs Service Bus for ingest?**
+
+- EH for stream throughput + replay; SB for brokered tasks—see `service-selection-guide.md`.
+
+**Q: Why not Kafka?**
+
+- Skills, ops, cost; EH Kafka API as compromise—justify.
 
 ## Debugging
 
-**Q: How do you trace one business transaction?**
+**Q: Trace one business transaction?**
 
-- **Correlation ID** in event envelope; end-to-end tracing; structured logs; avoid logging PII payloads.
-
-## Kafka vs Event Hubs
-
-**Q: Why not managed Kafka?**
-
-- Team skill, ecosystem, and cost; Event Hubs with Kafka API as middle ground—justify with requirements.
+- **Correlation ID** in envelope; tracing; no PII in logs.

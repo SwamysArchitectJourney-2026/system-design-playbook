@@ -2,9 +2,14 @@
 learning_level: "Advanced"
 estimated_time: "35 minutes"
 topic: "Multi-region API on Azure"
+answer_format: "01_templates/answer-format-enforcement.md"
 ---
 
 # Design a multi-region API platform on Azure
+
+## Based on Template v1.0
+
+Companion: `failures.md`, `../../01_templates/service-selection-guide.md`.
 
 ## 1. Clarify requirements
 
@@ -14,50 +19,82 @@ topic: "Multi-region API on Azure"
 - **SLA** and **RTO/RPO** for region loss.
 - **Multi-tenant** or single-tenant; **API keys** vs OAuth.
 
-## 2. Scale estimation
+## 2. Scale estimation (back-of-envelope)
 
-- RPS per region, payload sizes, error budgets; storage growth if API persists state.
+- RPS per region, payload sizes, error budgets; storage growth if API persists state; cross-region **egress** cost sensitivity.
 
-## 3. High-level design
+## 3. High-level architecture
 
-**Edge:** **Azure Front Door** (or Traffic Manager + regional Application Gateway) for global routing, TLS termination, WAF.
+### 3.1 Edge — decision
 
-**Gateway:** **Azure API Management** (often **per region** or **external** tier with multi-region backend) for policies, quotas, OAuth validation, caching at the edge where safe.
+- **Choose:** **Azure Front Door** + WAF for global entry.
+- **Because:** latency-based routing, TLS, L7 health, path rules for `/api` vs static.
+- **Vs:** Traffic Manager + regional App Gateway only — more moving parts at L7.
+- **Breaks when:** origins asymmetrically healthy—users see flaky behavior; need consistent **health** semantics.
 
-**Compute:** **AKS** or **App Service** or **Container Apps** in **multiple regions**, each talking to **regional** data endpoints where possible.
+### 3.2 Gateway — decision
 
-**Data patterns (choose explicitly):**
+- **Choose:** **API Management** stamped **per region** (common pattern) or external tier with multi-region backend—state which and why.
+- **Because:** OAuth validation, quotas, **per-tenant** throttling at edge of backend.
+- **Vs:** no APIM — every service reimplements policy—rejected at enterprise scale.
+- **Breaks when:** **policy CPU** hot; central APIM becomes SPOF if not regionalized.
 
-- **Global user home region:** route user to “home” region via Front Door + geo affinity cautiously; reduces conflicts.
-- **Global replicated store:** **Cosmos DB** with multi-region accounts; tune consistency per operation.
-- **Primary + secondary SQL:** active-passive with failover groups for relational cores.
+### 3.3 Compute — decision
+
+- **Choose:** **AKS** or **App Service** or **Container Apps** per region behind regional APIM.
+- **Vs:** single global cluster — rejected for blast radius and data proximity.
+
+### 3.4 Data — decision
+
+- **Cosmos** for multi-region writes + tunable consistency **or** **SQL failover groups** for relational active-passive—pick based on consistency and query model.
+- **Breaks when:** **split-brain** during failover if clients write to both regions without strategy.
 
 **Observability:** regional **Application Insights** + central **Log Analytics**.
 
-## 4. Deep dives
+See `diagram.md`.
+
+## 4. Deep dives (pick 2–3 in the room)
 
 ### Routing
 
-- Health probes; **weighted** routing; **latency-based** routing; **sticky sessions** only when necessary (prefer stateless JWT).
+- Health probes; weighted vs latency; avoid sticky sessions unless required—prefer stateless JWT.
 
-### APIM deployment model
+### APIM model
 
-- Discuss **stamping** (one APIM per region) vs centralized gateway trade-offs (latency, blast radius, config drift).
+- Stamps per region vs central—latency vs operational drift (GitOps mitigation).
 
-### Idempotency at API layer
+### Idempotency
 
-- **Idempotency-Key** header for mutating operations that may retry across regions or clients.
+- **Idempotency-Key** on mutating APIs for retries across regions/clients.
 
-## 5. Failure handling
+## 5. Failure scenarios and mitigations
 
-- Automatic failover at Front Door; **circuit breakers** to unhealthy regional backends; **bulkhead** quotas so one tenant cannot starve others.
+1. **Region down:** Front Door shifts; verify **data** failover (Cosmos automatic vs SQL failover group); state RPO.
+2. **Backend healthy but errors:** synthetic **canaries** beyond TCP probe.
+3. **Thundering herd after failover:** cache stampede—**single-flight**, pre-warm critical caches.
+4. **Tenant abuse:** APIM **rate limit** + bulkhead pools; protect shared DB.
+5. **Cross-region write conflict** (active-active): **etag** conflicts or home-region routing—must be explicit.
 
-## 6. Trade-offs
+## 6. Trade-offs and decisions (why X over Y)
 
-- **Active-active** APIs with **global writes** vs **partitioned** users by region—see `tradeoffs.md`.
+| Decision | Chosen | Rejected | Why | When rejected wins |
+|----------|--------|----------|-----|-------------------|
+| API GW | Regional APIM | Single global | Blast radius + latency | Tiny footprint, cost |
+| Writes | Home-region / partition | True active-active everywhere | Conflict control | Strict global write latency need |
+| Data | Cosmos vs SQL | (interviewer-driven) | See clarify | Relational joins vs global footprint |
 
-## 7. Evolution
+Details: `tradeoffs.md`.
 
-1. Single region + APIM + Front Door (preview global entry).
-2. Second region read-only or passive.
-3. Multi-region writes with clear conflict and caching rules.
+## 7. Evolution strategy (MVP → scale → global)
+
+1. Single region + APIM + Front Door entry.
+2. Second region passive or read-only; failover drills.
+3. Multi-region writes only with explicit conflict and caching strategy.
+
+## 8. Security, observability, and cost
+
+**Security:** **Entra ID** (or B2B) for OAuth validation at **APIM**; **managed identities** from APIM/backend to data; **mTLS** or **private** origins where policy requires; **Key Vault** for client certs if mutual TLS to partners.
+
+**Observability:** **Application Insights** per region + central **Log Analytics**; **distributed tracing** with correlation across regional hops; SLO per geography.
+
+**Cost:** **Multi-region** APIM + compute footprint; **Cosmos multi-region RU** or **SQL geo** licensing; **cross-region egress**—minimize chatty east-west calls; **reserved** capacity for steady regional pools.

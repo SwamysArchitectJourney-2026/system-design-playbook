@@ -2,9 +2,14 @@
 learning_level: "Advanced"
 estimated_time: "40 minutes"
 topic: "Event-driven architecture on Azure"
+answer_format: "01_templates/answer-format-enforcement.md"
 ---
 
 # Design event-driven architecture on Azure
+
+## Based on Template v1.0
+
+Companion: `failures.md`, `../../01_templates/service-selection-guide.md` (Event Hubs vs Service Bus vs Queue).
 
 ## 1. Clarify requirements
 
@@ -19,61 +24,81 @@ topic: "Event-driven architecture on Azure"
 - **At-least-once** delivery acceptable with **idempotent** consumers unless interviewer demands exactly-once (then outline transactional outbox + dedupe).
 - Average event **~1 KB** (tune with interviewer).
 
-## 2. Scale estimation
+## 2. Scale estimation (back-of-envelope)
 
-- **100K events/s** peak → plan **partitions** (Event Hub) to spread load; watch **TU/PU** or **processing units** limits vs cluster sizing.
-- Storage growth: events/sec × size × retention for replay/analytics.
+- **100K events/s** peak → **Event Hubs** partition count and **processing units** / cluster sizing (confirm SKU with interviewer).
+- Storage growth: events/sec × size × **retention** (replay vs cost).
 
 ## 3. High-level architecture
 
-**Ingest:** **Azure Event Hubs** (Kafka API optional) for high-volume ordered streams per partition.
+### 3.1 Ingest — decision
 
-**Compute:** **Azure Functions** (event-driven) or **AKS** consumers for heavier processing; **Dedicated** or **Premium** plans when cold start or VNET integration matters.
+- **Choose:** **Azure Event Hubs** for the firehose.
+- **Because:** throughput + partitioned ordering + replay for analytics and multiple consumer groups.
+- **Vs:** **Service Bus** as primary ingest — rejected at this volume (wrong tool for raw stream ingest).
+- **Breaks when:** **hot partition** (skewed partition key) or **quota** exhaustion—must design partition key and autoscale.
 
-**Work queues / commands:** **Azure Service Bus** (queues or topics) when you need **competing consumers**, **sessions**, **DLQ**, and **per-message** semantics distinct from raw streaming.
+### 3.2 Work distribution — decision
 
-**Storage / analytics:** **Azure Data Lake Gen2** for landing; **Synapse** / Spark / Fabric for batch/stream processing as evolution; operational store (Cosmos/SQL) for materialized state.
+- **Choose:** **Service Bus** (queue/topic) **after** stream processor when tasks need **DLQ**, **sessions**, competing consumers.
+- **Because:** per-message broker semantics differ from Event Hubs offsets.
+- **Vs:** **Storage Queues** — cheaper but fewer enterprise features (sessions, rich DLQ patterns).
+- **Breaks when:** SB **throttling** or oversized messages—need claim check pattern to Blob.
 
-**Flow (typical):**
+### 3.3 Compute — decision
 
-`Producer → Event Hubs → Stream processor → Service Bus (optional) → Workers → DB / Lake`
+- **Choose:** **Functions** for light processors; **AKS** for heavy/long-running or custom networking.
+- **Vs:** only Functions — rejected if processing exceeds duration limits or needs GPUs.
+
+### 3.4 Analytics path
+
+- **Data Lake Gen2** landing; optional Spark/Synapse/Fabric.
+
+**Flow:** `Producer → Event Hubs → Stream processor → Service Bus (optional) → Workers → DB / Lake`
 
 See `diagram.md`.
 
-## 4. Deep dives
+## 4. Deep dives (pick 2–3 in the room)
 
-### Event Hubs vs Service Bus
+### Event Hubs vs Service Bus (when both)
 
-- **Event Hubs:** throughput, replay, partitions, streaming pipelines.
-- **Service Bus:** brokered messaging, DLQ, sessions, transactional sends in some patterns.
-
-Many designs use **both**: Event Hubs for firehose; Service Bus for work distribution.
+- EH: streaming + replay; SB: tasks + DLQ + sessions.
 
 ### Idempotency
 
-- **Event ID** or **business key** in idempotency store (Cosmos/SQL/Redis) with TTL; safe retries from at-least-once.
+- Event ID / business key in dedupe store; at-least-once assumed.
 
 ### Schema
 
-- **Schema registry** discipline (Evolution, compatibility) to avoid breaking consumers.
+- Registry + compatibility mode to prevent consumer breaks.
 
-## 5. Failure handling
+## 5. Failure scenarios and mitigations
 
-- **Retry** with backoff in Functions/consumers; **DLQ** on Service Bus; **poison** handling and replay tooling.
-- **Consumer lag** alerting; autoscale consumer units on Event Hubs processor.
+1. **Consumer crash after processing, before checkpoint:** duplicate delivery—**idempotent** writes.
+2. **Poison message:** move to **DLQ**; alert; fix and replay with controls.
+3. **Lag spike:** scale processors; check downstream DB **429** or SB throttling.
+4. **Partition unavailable / EH issue:** rare—regional DR story; pause producers if needed (backpressure contract).
+5. **Schema mismatch:** dead-letter or quarantine with **schema version** in envelope.
 
-## 6. Trade-offs
+## 6. Trade-offs and decisions (why X over Y)
 
-- **Event-driven:** scalability and decoupling vs **debuggability** and distributed tracing needs.
-- **Functions vs AKS:** ops simplicity vs control and long-running jobs.
+| Decision | Chosen | Rejected | Why | Breaks when |
+|----------|--------|----------|-----|-------------|
+| Ingest | Event Hubs | SB-only | Throughput + replay | Misused as task queue |
+| Tasks | Service Bus | EH consumer only | DLQ / sessions | Message size / cost |
+| Light compute | Functions | AKS | Speed to ship | Long jobs / cold start |
+| Pattern | Event-driven | Sync RPC | Decoupling, burst | Debuggability—need tracing |
 
-## 7. Evolution
+## 7. Evolution strategy (MVP → scale → global)
 
-1. **MVP:** Event Hubs + single consumer group + one Function app + SQL operational store.
-2. **10×:** More partitions, multiple consumer groups, fan-out to Service Bus, schema governance.
-3. **Advanced:** Stream analytics / Spark, replay pipelines, contract testing between teams.
+1. **MVP:** EH + one consumer group + Functions + SQL.
+2. **10×:** more partitions, SB fan-out, schema governance, autoscale.
+3. **Advanced:** Spark/stream analytics, replay pipelines, contract tests between teams.
 
-## 8. Observability and security
+## 8. Security, observability, and cost
 
-- **Application Insights** + correlation IDs propagated through events (baggage / envelope metadata).
-- **Managed identities** for EH/SB/Storage; **private endpoints** where required.
+**Security:** **Managed identities** for Event Hubs, Service Bus, Storage; **private endpoints** where required; avoid secrets in Function app settings—Key Vault references.
+
+**Observability:** **Application Insights** + **correlation IDs** on event envelope; consumer **lag** metrics; DLQ depth alerts; end-to-end trace across Functions and SB.
+
+**Cost:** **Event Hubs** throughput/processing units vs peak; **Service Bus** tier; **retention** duration (replay vs storage $); Functions **execution** and **Premium** plan when cold start unacceptable.

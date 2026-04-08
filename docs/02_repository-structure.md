@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.6
+**Version**: 3.7
 **Last Updated**: April 8, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -41,7 +41,7 @@ system-design-in-practice/
 │       ├── ai-systems-architect/          # complete.md + templates + 02_core_questions/
 │       ├── enterprise-system-architect/   # complete.md + templates + 02_core_questions/
 │       ├── payment-system-interview/      # Modular 01–04 + templates + 02_core_questions/
-│       ├── 01_azure-solutions-architect-role-pattern/   # templates, core/domain/cross question packs
+│       ├── 01_azure-solutions-architect-role-pattern/   # templates + answer-format enforcement + decision/service guides + question packs
 │       ├── 02_dotnet-application-architect-azure-stack/
 │       ├── 03_azure-engineering-lead-platform-pattern/
 │       ├── 04_agentic-ai-lead-competency-profile/
