@@ -20,4 +20,4 @@ For **deep experience** (e.g. **20+ years** in industry), interviewers should **
 2. **Troubleshooting** — 10 minutes: **hypotheses ordered**, **what you measure first**.
 3. **Short Q&A** — only to **stress-test** what you drew.
 
-Use **`principal-enterprise-architect-interview-pack.md`** when you want **scripted** principal scenarios (AI gateway standardization, AKS SNAT, Cosmos CAP, OIDC IaC) with **strict** red/strong signals. Use `whiteboard-exercises-platform-ai.md` and `troubleshooting-drills-platform-ai.md` for additional variety; `architect-evaluation-rubric-platform-ai.md` for self-scoring or mock feedback.
+Use **`principal-enterprise-architect-interview-pack.md`** when you want **scripted** principal scenarios (AI gateway, AKS SNAT, Cosmos CAP, OIDC IaC, event-driven idempotency, multi-tenant isolation, network FinOps, cross-cloud M&A) with **strict** red/strong signals. Use `whiteboard-exercises-platform-ai.md` and `troubleshooting-drills-platform-ai.md` for additional variety; `architect-evaluation-rubric-platform-ai.md` for self-scoring or mock feedback.

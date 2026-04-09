@@ -8,7 +8,7 @@ For **very senior** candidates (e.g. **20+ years**), the pack stresses **enterpr
 
 **Principal-style evaluation:** Give them a **broken or risky enterprise** and ask them to **fix it on the whiteboard**—not “what does service X do?” The expanded scenarios live in **`01_templates/principal-enterprise-architect-interview-pack.md`**.
 
-**Use whiteboards first.** See **`whiteboard-exercises-platform-ai.md`** (six general labs), **`principal-enterprise-architect-interview-pack.md`** (four strict enterprise scenarios + posture matrix), and **`troubleshooting-drills-platform-ai.md`**. **`staff-plus-interview-bar.md`** explains the bar; **`architect-evaluation-rubric-platform-ai.md`** supports mock debriefs.
+**Use whiteboards first.** See **`whiteboard-exercises-platform-ai.md`** (six general labs), **`principal-enterprise-architect-interview-pack.md`** (eight strict enterprise scenarios + posture matrix), and **`troubleshooting-drills-platform-ai.md`**. **`staff-plus-interview-bar.md`** explains the bar; **`architect-evaluation-rubric-platform-ai.md`** supports mock debriefs.
 
 ## Drill order (suggested)
 
@@ -21,7 +21,7 @@ For **very senior** candidates (e.g. **20+ years**), the pack stresses **enterpr
 
 **Path B — principal / enterprise (tighter narrative)**
 
-1. **Principal pack** — run **2–4** exercises from `principal-enterprise-architect-interview-pack.md` on the whiteboard (30–40 min each if deep).
+1. **Principal pack** — run **2–4** exercises from `principal-enterprise-architect-interview-pack.md` on the whiteboard (30–40 min each if deep); rotate across the **eight** scenarios over multiple prep sessions.
 2. **Troubleshooting** — **Drill 1** (SNAT) from `troubleshooting-drills-platform-ai.md` if not already covered.
 3. **Posture matrix** — debrief using the **Architectural posture** section in the principal pack + rubric.
 
@@ -41,7 +41,7 @@ Shared spine: `../interview-execution/`. Azure picks: `../01_azure-solutions-arc
 | File | Role |
 |------|------|
 | `01_templates/staff-plus-interview-bar.md` | Staff/principal signal vs trivia |
-| `01_templates/principal-enterprise-architect-interview-pack.md` | **Four** enterprise whiteboard scenarios + **posture** matrix |
+| `01_templates/principal-enterprise-architect-interview-pack.md` | **Eight** enterprise whiteboard scenarios + **posture** matrix |
 | `01_templates/whiteboard-exercises-platform-ai.md` | Six timed whiteboard labs |
 | `01_templates/troubleshooting-drills-platform-ai.md` | Eight ordered diagnosis drills |
 | `01_templates/architect-evaluation-rubric-platform-ai.md` | Dimension rubric (1–4) + fail triggers |

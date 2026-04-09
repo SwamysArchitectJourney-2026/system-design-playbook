@@ -2,7 +2,7 @@
 
 **Use heavily.** Drawing reveals **ordering**, **omissions**, and **comfort with ambiguity** faster than verbal Q&A. Timebox each exercise; interviewer interrupts allowed.
 
-**Principal / enterprise depth:** For **four** stricter scripted scenarios (central AI gateway, AKS SNAT, Cosmos CAP, OIDC pipelines) with **evaluator red/strong flags**, use **`principal-enterprise-architect-interview-pack.md`** alongside this file.
+**Principal / enterprise depth:** For **eight** stricter scripted scenarios (AI gateway standardization, AKS SNAT, Cosmos CAP, OIDC IaC, Event Hubs idempotency/ordering, B2B SaaS pool vs silo, FinOps egress triage, M&A Azure–AWS Day 1) with **evaluator red/strong flags**, use **`principal-enterprise-architect-interview-pack.md`** alongside this file.
 
 ---
 

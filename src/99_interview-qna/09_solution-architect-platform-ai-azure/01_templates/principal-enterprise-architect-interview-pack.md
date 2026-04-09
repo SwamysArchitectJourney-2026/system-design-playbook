@@ -111,6 +111,100 @@ Auditors flag **client secrets** for a **service principal** in **GitHub Actions
 
 ---
 
+## Exercise 5 — Distributed systems chaos (Event Hubs / ordering)
+
+### Scenario
+
+Core **financial order processing** was moved to **event-driven** architecture on **Azure Event Hubs** (Kafka-style mental model). Production shows: **(1)** customers **charged twice** for one order; **(2)** order status **moves backward** (e.g. Shipped → Processing).
+
+### What they should draw
+
+1. **Publisher path** — API gateway → publisher service → **Event Hubs** (partitions, consumer groups).
+2. **Consumers** — **multiple** instances, **same** consumer group, **parallel** partitions.
+3. **State** — fast **idempotency** store (**Redis**) + system of record (**Cosmos DB** or **Azure SQL**).
+
+### Depth to expect
+
+- **Diagnosis:** **Exactly-once** end-to-end over the network is **not** something the broker “turns on”; typical guarantee is **at-least-once** → **duplicates** unless the **consumer** is idempotent. **Backward** transitions come from **out-of-order** delivery, **retries**, or **concurrent** handlers seeing stale events.
+- **Duplicates:** **Idempotency key** (e.g. **order id + operation id** or deterministic hash) checked **before** side effects; pattern like **claim** in Redis (**SETNX**-style semantics) with **TTL**, then **ack**; payment path must be **safe** on replay.
+- **Monotonic state:** **Version** or **sequence** per aggregate on the producer; consumer applies **only if** `incoming_version > stored_version` (or **tie-break** rule); document **partition** ordering guarantees (per-partition order vs global).
+- **Poison / bad events:** **DLQ** or quarantine so one bad message does not **block** the partition forever.
+
+### Evaluation
+
+- **Red flag:** “Enable **exactly-once** on the broker” as magic; **global table lock** for all orders as the “fix.”
+- **Strong signal:** Says **idempotency** immediately; **consumer-owned** deduplication; **versioning** or comparable **monotonic** rule for state; **DLQ** for validation failures.
+
+---
+
+## Exercise 6 — B2B SaaS isolation (pool vs silo)
+
+### Scenario
+
+**Cloud-native B2B SaaS** on Azure: **~5,000** SMB tenants and **3** Fortune 500 tenants demanding **strict isolation** and **performance** guarantees.
+
+### What they should draw
+
+- **Routing** — **Front Door** + **APIM** (or equivalent) with **tenant-aware** routing.
+- **Compute** — shared **AKS** for pool; **dedicated** node pools or clusters for **silo** tenants.
+- **Data** — pooled **elastic** / sharded model vs **physically separate** databases for giants.
+
+### Depth to expect
+
+- **Pool (SMB):** Shared **AKS** and **multi-tenant** data with **`TenantId`** as **partition key** (Cosmos) or **sharding** + **Elastic Pool** (SQL); **row-level security** (RLS) for **logical** isolation; optimize **COGS**.
+- **Silo (enterprise):** **Dedicated stamp**—own **compute** isolation (node pool / cluster) and **physical** DB isolation to kill **noisy neighbor** and satisfy **audit**.
+- **Routing:** **JWT** includes **`tenant_id`**; gateway **routes** pooled vs silo **backends** (and **policies** differ: stricter rate limits, IP allow lists, etc.).
+
+### Evaluation
+
+- **Red flag:** **One** giant shared DB for everyone with **no** noisy-neighbor story; or **5,000** standalone databases **day one**.
+- **Strong signal:** **Noisy neighbor**, **logical vs physical isolation**, **JWT-driven routing**, **hybrid** pool + silo **without** hand-waving **ops** cost.
+
+---
+
+## Exercise 7 — FinOps and network egress crisis (troubleshooting)
+
+### Scenario
+
+**CFO escalation:** Azure bill **spiked** (~tens of thousands) while **compute (AKS)**, **storage**, and **database** lines are **flat**. The jump is **bandwidth** / **peering** / **egress** categories.
+
+### Triage to listen for
+
+- **Confirm category** — Cost Management + **tags** + **resource types**; **Network Watcher** **flow logs** / **traffic analytics** to find **top** talkers (IP, port, volume).
+- **Hypothesis:** **Chatty** synchronous calls across **zones** or **peered** VNets moving **large** payloads; or **PaaS** traffic hairpinning over **public** paths and **NAT** / **egress** meters.
+
+### Architectural fixes
+
+- **Cross-AZ / topology chatter:** Prefer **same-AZ** traffic where possible (topology hints, **affinity**), **batch** and **cache** (Redis) to cut **duplicate** fetches; async where sync chains amplify bytes.
+- **Azure service egress:** **Private Link** / **service endpoints** so traffic stays on **Microsoft backbone** where it reduces **metered** public egress (and improves security); validate **egress** architecture per service.
+
+### Evaluation
+
+- **Red flag:** Only **VM sizing** or **disk cleanup** when **prompt says compute/storage flat**.
+- **Strong signal:** **Inter-AZ / peering** cost awareness; **Private Link** as **FinOps + security** lever; **caching** and **API shape** to reduce **chatter**.
+
+---
+
+## Exercise 8 — M&A cross-cloud (Azure + AWS, Day 1)
+
+### Scenario
+
+**Acquirer** is **Azure-only**; **target** is **AWS-only**. **Day 1:** ~**2,000** people need **access** to **Azure** HR/ERP; **Azure** analytics must **read** historical **sales** from **AWS S3**—**without** a big-bang **lift-and-shift**.
+
+### Depth to expect
+
+- **Identity first:** **Federation**—**Entra ID** **B2B** / cross-tenant trust to their **IdP** (**SAML** / **OIDC**), not **2,000** manual user clones on day one.
+- **Connectivity:** **Site-to-Site VPN** for **immediate** constrained bandwidth; **ExpressRoute + Direct Connect** via **colo** (or **cloud router**) when **stable high** throughput is justified—**no** ERP on **public** internet by default.
+- **Data:** **Strangler** / **incremental**—**ADF**, **Fabric**, or **Synapse** pipelines reading **S3** **in place** with **cross-cloud auth** (**OIDC** trust to AWS IAM for **Azure** workload identity pattern—**avoid** long-lived **access keys** where possible); land **transformed** slices into Azure analytics.
+- **Long arc:** **TIME**-style (tolerate / invest / migrate / eliminate) on **capabilities**; **API façades** so **users** are shielded while backends **converge** over **quarters**, not a **single** cutover.
+
+### Evaluation
+
+- **Red flag:** **Rehost all** AWS to Azure VMs **this quarter**; duplicate **identity** directories for everyone.
+- **Strong signal:** **Federation before** network diagrams; **OIDC**-style **cross-cloud** access patterns; **in-place** read + **strangler**; explicit **18-month** EA narrative.
+
+---
+
 ## Overall evaluation matrix — architectural posture
 
 Score **how** they operate, not only **what** they name.

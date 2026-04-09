@@ -3,7 +3,7 @@
 | File | Role |
 |------|------|
 | **`staff-plus-interview-bar.md`** | Staff/principal signal vs trivia |
-| **`principal-enterprise-architect-interview-pack.md`** | **Principal/enterprise** — four scenarios, diagrams, answers, red/strong signals, posture matrix |
+| **`principal-enterprise-architect-interview-pack.md`** | **Principal/enterprise** — eight scenarios, diagrams, answers, red/strong signals, posture matrix |
 | **`whiteboard-exercises-platform-ai.md`** | Six additional timed whiteboard labs |
 | **`troubleshooting-drills-platform-ai.md`** | Eight incident-style drills |
 | **`architect-evaluation-rubric-platform-ai.md`** | Self/mock evaluation dimensions + posture cross-ref |
