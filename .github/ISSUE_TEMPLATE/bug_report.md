@@ -52,4 +52,3 @@ If you have a suggestion for how to fix this, please describe it here.
 ---
 
 **Note**: This repository is a personal learning journey. Bug reports help improve the quality of the content for everyone.
-

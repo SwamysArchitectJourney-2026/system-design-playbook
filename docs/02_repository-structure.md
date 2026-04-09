@@ -1,7 +1,7 @@
 # Repository Structure
 
-**Version**: 3.0
-**Last Updated**: April 7, 2026
+**Version**: 3.11
+**Last Updated**: April 8, 2026
 **Purpose**: Single source of truth for repository structure
 
 > When the structure changes, update **this file first**, then update references in
@@ -35,12 +35,22 @@ system-design-in-practice/
 │   ├── 05_ai-ml-systems/                  # 🔲 Scaffold — mlops, observability, security
 │   ├── 06_decision-trees/                 # 🔲 Scaffold — when-to-use-what guides
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
-│   └── 99_interview-qna/                  # ✅ Interview Q&A material
-│       ├── ai-systems-qna/                # AI systems interview track
-│       │   └── complete.md                # Consolidated AI systems interview Q&A
-│       └── architect-prep-qa/             # Architect prep long-form track
-│           └── complete.md                # Consolidated architect prep Q&A
-├── CLAUDE.md                              # Claude Code instructions
+│   └── 99_interview-qna/                  # ✅ Interview prep and Q&A (see README)
+│       ├── README.md                      # Master index
+│       ├── interview-execution/           # Shared golden template + grill + cross-domain prompts
+│       ├── ai-systems-architect/          # complete.md + templates + 02_core_questions/
+│       ├── enterprise-system-architect/   # complete.md + templates + 02_core_questions/
+│       ├── payment-system-interview/      # Modular 01–04 + templates + 02_core_questions/
+│       ├── 01_azure-solutions-architect-role-pattern/   # templates + answer-format enforcement + decision/service guides + question packs
+│       ├── 02_dotnet-application-architect-azure-stack/
+│       ├── 03_azure-engineering-lead-platform-pattern/
+│       ├── 04_agentic-ai-lead-competency-profile/
+│       ├── 05_ai-solution-architect-production-sdlc-profile/
+│       ├── 06_enterprise-principal-genai-and-ea-themes/
+│       ├── 07_gen-ai-lead-role-pattern/   # LLMOps + model lifecycle + responsible AI (Gen AI lead)
+│       ├── 08_ai-engineer-role-pattern/   # IC AI engineer — shipping LLM-backed features end-to-end
+│       └── career-orientation/            # skill maps + role compasses (orientation only)
+├── claude.md                              # Claude Code instructions
 ├── CONTRIBUTING.md                        # Contribution guidelines
 ├── CODE_OF_CONDUCT.md                     # Code of conduct
 ├── LICENSE                                # MIT License
@@ -68,6 +78,12 @@ Folders marked 🔲 contain only `.gitkeep` — content is added progressively a
 Each case study under `07_case-studies/` must include:
 `requirements.md`, `high-level-design.md`, `low-level-design.md`,
 `scalability.md`, `trade-offs.md`, `diagrams/`
+
+### Interview question packs (`99_interview-qna/`)
+
+Role tracks use **`01_templates/`**, **`02_core_questions/<slug>/`** with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Do **not** use a `00_` prefix (use `01_` and above). The Azure track adds **`03_azure_specific/`** and **`04_cross_domain/`**. **`07_gen-ai-lead-role-pattern/`** — LLMOps, lifecycle, governance. **`04_agentic-ai-lead-competency-profile/`** — RAG + agents at lead depth. **`08_ai-engineer-role-pattern/`** — individual-contributor scope for shipping one LLM-backed product feature (API, retrieval slice, eval, ops).
+
+**`career-orientation/`** — short orientation docs (e.g. production AI skill map, Gen AI lead competency compass), not full question banks.
 
 ---
 

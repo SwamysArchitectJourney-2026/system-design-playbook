@@ -53,7 +53,7 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 - `src/05_ai-ml-systems/` - MLOps, observability, AI security
 - `src/06_decision-trees/` - When-to-use-what decision guides
 - `src/07_case-studies/` - End-to-end case studies
-- `src/99_interview-qna/` - Interview Q&A (AI, Architect, Enterprise)
+- `src/99_interview-qna/` - Interview prep (role tracks `01_`–`08_`, `interview-execution/`, `career-orientation/`)
 
 ---
 
@@ -83,14 +83,14 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 - Avoid encoding hierarchy/versioning in filenames (e.g., avoid `Part1-A`, `A/B/C`). If you feel you need `A/B/C`, you likely need a folder.
 - Use `-part1`, `-part2` only for **mechanical splitting** (e.g., to respect the ~1000 line modularity guideline), not as a long-term hierarchy.
 
-**Recommended patterns in this repo**
+##### Recommended patterns in this repo
 
 - In main learning folders (e.g., `src/01_core/`):
-   - Use ordered files: `NN_topic-slug.md`.
-   - If you must split: `NN_topic-slug-part1.md`, `NN_topic-slug-part2.md` (keep the same `NN_` prefix).
+  - Use ordered files: `NN_topic-slug.md`.
+  - If you must split: `NN_topic-slug-part1.md`, `NN_topic-slug-part2.md` (keep the same `NN_` prefix).
 - In reference-style subfolders (e.g., a future `glossary/` folder):
-   - Prefer `README.md` as the index + semantic topic files like `core-concepts.md`, `security.md`.
-   - Add ordering numbers only if there is a deliberate reading sequence.
+  - Prefer `README.md` as the index + semantic topic files like `core-concepts.md`, `security.md`.
+  - Add ordering numbers only if there is a deliberate reading sequence.
 
 #### Applying Naming Conventions When Creating New Content
 
@@ -172,6 +172,7 @@ Each case study should include:
 - ✅ **ALWAYS** add sensitive files to `.gitignore`
 
 ### Staging folders (not in public docs)
+
 - Do **not** mention **`source-material/`** or **`reference-material/`** in `README.md`, your public content directories, or **`docs/**/*.md`**.
 - Synthesize into tracked documentation; assistants may name these paths only in agent config files to state this policy — see `.cursor/rules/08_source_material_rules.mdc`.
 
