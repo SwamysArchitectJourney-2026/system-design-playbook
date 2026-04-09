@@ -19,7 +19,7 @@ A clear and concise description of what this PR does.
 
 ## Content Type
 
-- [ ] Educational content (`src/01_introduction/` through `src/08_failures/`)
+- [ ] Curriculum scaffolds (`src/01_foundations/` … `src/07_case-studies/`)
 - [ ] Case study (`src/07_case-studies/`)
 - [ ] Documentation (`docs/`, `README.md`)
 - [ ] Tooling/scripts (`tools/`)
