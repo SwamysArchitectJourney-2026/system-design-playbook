@@ -10,7 +10,7 @@ learning_objectives:
 
 **Evaluation stance:** For a **deep veteran**, you rarely win signal by asking what a service *does*. You present a **broken or risky enterprise** and ask them to **fix or redesign it on the whiteboard**, then stress the drawing with constraints.
 
-This pack complements **`whiteboard-exercises-platform-ai.md`** with **four end-to-end scenarios**: expected **diagram layers**, **technical depth** to listen for, and **strict** evaluator notes.
+This pack complements **`whiteboard-exercises-platform-ai.md`** with **eight end-to-end scenarios**: expected **diagram layers**, **technical depth** to listen for, and **strict** evaluator notes.
 
 ---
 

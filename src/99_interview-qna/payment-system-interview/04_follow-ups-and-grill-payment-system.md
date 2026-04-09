@@ -9,7 +9,7 @@ learning_objectives:
 
 # Payment system: follow-ups and grill
 
-Pair this with `01`–`03` in this folder and the generic grill in `../interview-execution/02_follow-up-grill-layer.md`.
+Pair this with `01`–`03` in this folder and the payment grill in `interview-execution/02_follow-up-grill-layer.md` (generic sibling: `../interview-execution/02_follow-up-grill-layer.md`).
 
 ## Idempotency and duplicates
 
