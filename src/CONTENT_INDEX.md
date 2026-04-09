@@ -8,13 +8,13 @@
 
 | Folder | Topic | Status | Planned Content |
 |--------|-------|--------|-----------------|
-| `01_core/` | Core Frameworks | 🔲 | design-framework, tradeoff-framework, failure-framework |
-| `02_patterns/` | Architectural Patterns | 🔲 | caching, rate-limiting, retries, messaging |
-| `03_systems/` | System Designs | 🔲 | notification-system, chat-system, url-shortener |
-| `04_deep-dives/` | Deep Dives | 🔲 | consistency, partitioning, scaling |
-| `05_ai-ml-systems/` | AI & ML Systems | 🔲 | mlops-agents, observability, security |
-| `06_decision-trees/` | Decision Guides | 🔲 | when-to-use-what |
-| `07_case-studies/` | Case Studies | 🔲 | end-to-end designs |
+| `01_foundations/` | Core frameworks | 🔲 | design-framework, tradeoff-framework, failure-framework |
+| `02_patterns/` | Architectural patterns | 🔲 | caching, rate-limiting, retries, messaging |
+| `03_distributed-systems/` | System designs | 🔲 | notification-system, chat-system, url-shortener |
+| `04_ai-ml-platforms/` | AI & ML platforms | 🔲 | mlops-agents, observability, security |
+| `05_architecture-deep-dives/` | Deep dives | 🔲 | consistency, partitioning, scaling |
+| `06_decision-frameworks/` | Decision guides | 🔲 | when-to-use-what |
+| `07_case-studies/` | Case studies | 🔲 | end-to-end designs |
 
 ---
 

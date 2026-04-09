@@ -46,12 +46,12 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 **Quick Overview**:
 
-- `src/01_core/` - Design, tradeoff & failure frameworks
+- `src/01_foundations/` - Design, tradeoff & failure frameworks
 - `src/02_patterns/` - Caching, rate-limiting, retries, messaging
-- `src/03_systems/` - Notification, chat, URL shortener
-- `src/04_deep-dives/` - Consistency, partitioning, scaling
-- `src/05_ai-ml-systems/` - MLOps, observability, AI security
-- `src/06_decision-trees/` - When-to-use-what decision guides
+- `src/03_distributed-systems/` - Notification, chat, URL shortener
+- `src/04_ai-ml-platforms/` - MLOps, observability, AI security
+- `src/05_architecture-deep-dives/` - Consistency, partitioning, scaling
+- `src/06_decision-frameworks/` - When-to-use-what decision guides
 - `src/07_case-studies/` - End-to-end case studies
 - `src/99_interview-qna/` - Interview prep (`README.md` workflow, `01_interview-prep-conventions.md`, role tracks `01_`–`09_`, `interview-execution/`, `career-orientation/`)
 
