@@ -6,7 +6,7 @@ topic: "End-to-end payment narrative (Azure-oriented)"
 
 # Payment processing — end-to-end interview narrative
 
-This file is the **spoken spine**. Deep modules live in the parent folder (`01`–`04`). System-specific failures: `failures.md`.
+This file is the **spoken spine**. Deep modules live in the **track root** (sibling of `02_core_questions/`): `01`–`04` `*.md` files. System-specific failures: `failures.md`.
 
 ## 1. Clarify
 
@@ -28,4 +28,4 @@ Front Door + WAF → APIM → **orchestrator** → **vault/adapter** → process
 
 ## 5–8. Failures, trade-offs, evolution, security
 
-Align with `../03_idempotency-ledger-and-failure-handling.md` and Azure cross-domain pack `../../01_azure-solutions-architect-role-pattern/04_cross_domain/payment-processing-on-azure/`.
+Align with `../../03_idempotency-ledger-and-failure-handling.md` and the Azure cross-domain pack `../../../01_azure-solutions-architect-role-pattern/04_cross_domain/payment-processing-on-azure/answer.md` (same shape as this folder: answer, diagram, tradeoffs, followups, failures).

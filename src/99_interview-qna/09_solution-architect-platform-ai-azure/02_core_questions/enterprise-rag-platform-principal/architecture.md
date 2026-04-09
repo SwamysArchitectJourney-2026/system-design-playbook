@@ -18,7 +18,20 @@ learning_objectives:
 ## Architecture diagram
 
 ```mermaid
+---
+config:
+  theme: mc
+  layout: dagre
+---
 flowchart TD
+
+  %% Soft pastel styling
+  classDef clientStyle fill:#EAF4FF,stroke:#9BBCE0,color:#1F3A5F,stroke-width:1px;
+  classDef gatewayStyle fill:#F3E8FF,stroke:#B9A0D9,color:#4A3568,stroke-width:1px;
+  classDef aiStyle fill:#E8F8F0,stroke:#9CC9B3,color:#1F4D3A,stroke-width:1px;
+  classDef dataStyle fill:#FFF4E6,stroke:#D9B38C,color:#6A4A2F,stroke-width:1px;
+  classDef govStyle fill:#FDECEF,stroke:#D9A6B0,color:#6A3D47,stroke-width:1px;
+
   subgraph client [Consumer layer]
     APP[Client app / bot]
     AKS[AKS or App Service orchestrator]
@@ -58,9 +71,20 @@ flowchart TD
   APIM -.->|Emit chargeback metrics| LOG
   AKS -.->|Authenticate via| ENTRA
   ADF -.->|Pull secrets via| KV
+
+  %% Apply styles
+  class APP,AKS clientStyle;
+  class APIM gatewayStyle;
+  class EMB,LLM aiStyle;
+  class SRC,ADF,AIS dataStyle;
+  class ENTRA,KV,LOG govStyle;
 ```
 
-**Flow summary:** (1) User → orchestrator. (2–3) Orchestrator requests **embeddings** through **APIM** for query encoding. (4) Orchestrator queries **AI Search** (hybrid/vector). (5) Orchestrator sends **completion** through **APIM** with assembled context. Ingestion runs **outside** the hot path via **ADF** / Spark into **AI Search**.
+**Flow summary:** 
+- (1) User → orchestrator. 
+- (2–3) Orchestrator requests **embeddings** through **APIM** for query encoding. 
+- (4) Orchestrator queries **AI Search** (hybrid/vector). 
+- (5) Orchestrator sends **completion** through **APIM** with assembled context. Ingestion runs **outside** the hot path via **ADF** / Spark into **AI Search**.
 
 ---
 
