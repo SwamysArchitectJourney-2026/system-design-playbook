@@ -16,7 +16,7 @@ For **very senior** candidates (e.g. **20+ years**), the pack stresses **enterpr
 
 1. **Whiteboard** — pick **2** exercises from `whiteboard-exercises-platform-ai.md`.
 2. **Troubleshooting** — **2** drills from `troubleshooting-drills-platform-ai.md`.
-3. **Design pack** — `02_core_questions/design-azure-ai-platform-landing-zone/` (`answer.md` + `failures.md` + `followups.md`); optional principal RAG deep dive: `02_core_questions/enterprise-rag-platform-principal/architecture.md`.
+3. **Design pack** — `02_core_questions/design-azure-ai-platform-landing-zone/` (`answer.md` + `failures.md` + `followups.md`); optional principal RAG deep dive: `02_core_questions/enterprise-rag-platform-principal/architecture.md`. Additional scenarios: `aks-inference-under-spikes/`, `security-review-rag-no-public-paths/`, `openai-cost-explosion/`.
 4. **Rubric** — `architect-evaluation-rubric-platform-ai.md`.
 
 **Path B — principal / enterprise (tighter narrative)**
@@ -50,7 +50,10 @@ Shared spine: `../interview-execution/`. Azure picks: `../01_azure-solutions-arc
 
 ### Core question packs (`02_core_questions/`)
 
-| Folder | Role |
-|--------|------|
-| `design-azure-ai-platform-landing-zone/` | Landing zone + hub-spoke AI platform (`answer.md`, `diagram.md`, `tradeoffs.md`, …) |
-| `enterprise-rag-platform-principal/` | **Principal RAG** — orchestrator → APIM → OpenAI/Search, ingestion, FinOps, DLS (`architecture.md`) |
+| Folder | Scenario | Bar | Key Files |
+|--------|----------|-----|-----------|
+| `design-azure-ai-platform-landing-zone/` | Landing zone + hub-spoke AI platform | Senior / Staff+ | `answer.md`, `diagram.md`, `failures.md`, `followups.md`, `tradeoffs.md` |
+| `enterprise-rag-platform-principal/` | Enterprise RAG: retrieval quality, governance, FinOps | Principal | `architecture.md`, `failures.md`, `followups.md`, `tradeoffs.md` |
+| `aks-inference-under-spikes/` | AKS inference: KEDA autoscaling, SNAT exhaustion, GPU cold start | Staff+ | `answer.md` |
+| `security-review-rag-no-public-paths/` | Security review: RAG with zero public data paths | Principal | `answer.md` |
+| `openai-cost-explosion/` | OpenAI cost explosion: diagnosis, caching, model tiering, FinOps | Staff+ | `answer.md` |
