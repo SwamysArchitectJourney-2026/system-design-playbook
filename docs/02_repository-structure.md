@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.15
+**Version**: 3.17
 **Last Updated**: April 10, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -84,7 +84,7 @@ Each case study under `07_case-studies/` must include:
 
 Role tracks use **`01_templates/`**, **`02_core_questions/<slug>/`** with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Do **not** use a `00_` prefix (use `01_` and above). The Azure track adds **`03_azure_specific/`** and **`04_cross_domain/`**. **`07_gen-ai-lead-role-pattern/`** — LLMOps, lifecycle, governance. **`04_agentic-ai-lead-competency-profile/`** — RAG + agents at lead depth. **`08_ai-engineer-role-pattern/`** — individual-contributor scope for shipping one LLM-backed product feature (API, retrieval slice, eval, ops).
 
-**`09_solution-architect-platform-ai-azure/`** — Solution Architect **Platform AI** on Azure: landing zones for AI workloads, **Azure OpenAI / AI Search / AML / Foundry**, optional **Databricks**, **AKS**, **IaC/GitOps**, DevSecOps/compliance-as-code; includes **whiteboard**, **principal/enterprise interview pack** (broken-enterprise scenarios), and **troubleshooting** drills (not trivia-first).
+**`09_solution-architect-platform-ai-azure/`** — Solution Architect **Platform AI** on Azure: landing zones for AI workloads, **Azure OpenAI / AI Search / AML / Foundry**, optional **Databricks**, **AKS**, **IaC/GitOps**, DevSecOps/compliance-as-code; includes **whiteboard**, **principal/enterprise interview pack** (broken-enterprise scenarios), **troubleshooting** drills, **`01_templates/senior-ai-platform-architect-interviewer-guide.md`**, and **`02_core_questions/enterprise-rag-platform-principal/architecture.md`** (principal RAG reference) (not trivia-first).
 
 **`career-orientation/`** — short orientation docs (e.g. production AI skill map, Gen AI lead / GenAI architect compasses), not full question banks.
 

@@ -109,7 +109,7 @@ flowchart TB
 ## 5. RAG retrieval path (platform view)
 
 ```mermaid
-flowchart LR
+flowchart TD
   subgraph ingest [Ingestion optional batch]
     SRC[LOB / lake / files]
     IDX[Indexer / pipeline]
@@ -133,6 +133,8 @@ flowchart LR
 ```
 
 **Narration:** Chargeback and throttling split across **Search SU**, **embedding** volume, and **completion** TPM; platform teams often own APIM policies and per-app keys.
+
+**Principal-deep (orchestrator + gateway + governance):** `../enterprise-rag-platform-principal/architecture.md`.
 
 ## 6. Multi-region inference (active–active story)
 

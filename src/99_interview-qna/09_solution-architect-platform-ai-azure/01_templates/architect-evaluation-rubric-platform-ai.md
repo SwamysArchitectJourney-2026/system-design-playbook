@@ -67,7 +67,7 @@ Use for **mock debrief** or **hiring calibration**. Scale **1–4** per dimensio
 
 ## Architectural posture (principal / enterprise)
 
-Use when calibrating **true senior leadership**—beyond checkbox technical facts. Full scripted scenarios: **`principal-enterprise-architect-interview-pack.md`** (overall matrix at end of that file).
+Use when calibrating **true senior leadership**—beyond checkbox technical facts. Full scripted scenarios: **`principal-enterprise-architect-interview-pack.md`** (overall matrix at end of that file). **Interviewer-facing** lenses and scenario bank: **`senior-ai-platform-architect-interviewer-guide.md`**.
 
 1. **Business value default** — Do they **right-size** (e.g. simpler hosting until scale forces complexity) or lead with **fashion**?
 2. **“I” vs “we”** — **Heroics** vs **standards**, **enablement**, and **platform** adoption across teams.

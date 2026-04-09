@@ -8,7 +8,7 @@ For **very senior** candidates (e.g. **20+ years**), the pack stresses **enterpr
 
 **Principal-style evaluation:** Give them a **broken or risky enterprise** and ask them to **fix it on the whiteboard**—not “what does service X do?” The expanded scenarios live in **`01_templates/principal-enterprise-architect-interview-pack.md`**.
 
-**Use whiteboards first.** See **`whiteboard-exercises-platform-ai.md`** (six general labs), **`principal-enterprise-architect-interview-pack.md`** (eight strict enterprise scenarios + posture matrix), and **`troubleshooting-drills-platform-ai.md`**. **`staff-plus-interview-bar.md`** explains the bar; **`architect-evaluation-rubric-platform-ai.md`** supports mock debriefs.
+**Use whiteboards first.** See **`whiteboard-exercises-platform-ai.md`** (six general labs), **`principal-enterprise-architect-interview-pack.md`** (eight strict enterprise scenarios + posture matrix), and **`troubleshooting-drills-platform-ai.md`**. **`staff-plus-interview-bar.md`** explains the bar; **`architect-evaluation-rubric-platform-ai.md`** supports mock debriefs. **Interviewers:** **`senior-ai-platform-architect-interviewer-guide.md`** — evaluation lenses, live stressors, and a **seven-scenario** bank aligned with this track.
 
 ## Drill order (suggested)
 
@@ -16,7 +16,7 @@ For **very senior** candidates (e.g. **20+ years**), the pack stresses **enterpr
 
 1. **Whiteboard** — pick **2** exercises from `whiteboard-exercises-platform-ai.md`.
 2. **Troubleshooting** — **2** drills from `troubleshooting-drills-platform-ai.md`.
-3. **Design pack** — `02_core_questions/design-azure-ai-platform-landing-zone/` (`answer.md` + `failures.md` + `followups.md`).
+3. **Design pack** — `02_core_questions/design-azure-ai-platform-landing-zone/` (`answer.md` + `failures.md` + `followups.md`); optional principal RAG deep dive: `02_core_questions/enterprise-rag-platform-principal/architecture.md`.
 4. **Rubric** — `architect-evaluation-rubric-platform-ai.md`.
 
 **Path B — principal / enterprise (tighter narrative)**
@@ -46,3 +46,11 @@ Shared spine: `../interview-execution/`. Azure picks: `../01_azure-solutions-arc
 | `01_templates/troubleshooting-drills-platform-ai.md` | Eight ordered diagnosis drills |
 | `01_templates/architect-evaluation-rubric-platform-ai.md` | Dimension rubric (1–4) + fail triggers |
 | `01_templates/platform-ai-sa-spoken-spine.md` | Verbal checklist (after whiteboard) |
+| `01_templates/senior-ai-platform-architect-interviewer-guide.md` | **Interviewer** — lenses, stressors, scenario bank, executive rubric |
+
+### Core question packs (`02_core_questions/`)
+
+| Folder | Role |
+|--------|------|
+| `design-azure-ai-platform-landing-zone/` | Landing zone + hub-spoke AI platform (`answer.md`, `diagram.md`, `tradeoffs.md`, …) |
+| `enterprise-rag-platform-principal/` | **Principal RAG** — orchestrator → APIM → OpenAI/Search, ingestion, FinOps, DLS (`architecture.md`) |
