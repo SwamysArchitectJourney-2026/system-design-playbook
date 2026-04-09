@@ -20,7 +20,7 @@
 
 ## Interview Q&A (`99_interview-qna/`)
 
-**Index:** `99_interview-qna/README.md`
+**Index:** `99_interview-qna/README.md` · **Conventions:** `99_interview-qna/01_interview-prep-conventions.md`
 
 **Shared layer:** `interview-execution/` (golden template, grill layer, cross-domain prompts).
 

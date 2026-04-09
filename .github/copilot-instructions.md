@@ -53,7 +53,7 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 - `src/05_ai-ml-systems/` - MLOps, observability, AI security
 - `src/06_decision-trees/` - When-to-use-what decision guides
 - `src/07_case-studies/` - End-to-end case studies
-- `src/99_interview-qna/` - Interview prep (role tracks `01_`–`09_`, `interview-execution/`, `career-orientation/`)
+- `src/99_interview-qna/` - Interview prep (`README.md` workflow, `01_interview-prep-conventions.md`, role tracks `01_`–`09_`, `interview-execution/`, `career-orientation/`)
 
 ---
 

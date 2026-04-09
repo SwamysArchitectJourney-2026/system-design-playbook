@@ -1,0 +1,92 @@
+---
+learning_level: "Intermediate"
+estimated_time: "12 minutes"
+topic: "Interview prep folder conventions and duplication policy"
+---
+
+# Interview prep — conventions and duplication policy
+
+This document governs **published** content under `99_interview-qna/`. It keeps **navigation** predictable and limits **entropy** when the same idea appears in more than one place.
+
+**Master index:** [README.md](README.md).
+
+---
+
+## Why these conventions exist
+
+- Role tracks accumulate **templates**, **core questions**, and **drills** over time.
+- Without rules, **links rot**, **copies drift**, and contributors duplicate the **golden answer spine** unnecessarily.
+
+---
+
+## Default track layout (contract)
+
+Most **role** folders follow:
+
+| Path | Purpose |
+|------|---------|
+| `README.md` | Entry point: how to study this role, links to spine and first drills |
+| `01_templates/` | Checklists, rubrics, whiteboard packs, format enforcement |
+| `02_core_questions/<slug>/` | `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`, `failures.md` (subset per question) |
+| `03_azure_specific/`, `04_cross_domain/` | Optional; used where Azure SA–style depth is split out |
+
+**Exceptions** are intentional: for example **`payment-system-interview/`** uses numbered modules at the **track root** plus `interview-execution/` tuned for payments—document that pattern in the track README, not here in full.
+
+---
+
+## Shared spine: single source of truth
+
+**Canonical (domain-neutral) spine and grill:**
+
+- [`interview-execution/01_golden-answer-template.md`](interview-execution/01_golden-answer-template.md)
+- [`interview-execution/02_follow-up-grill-layer.md`](interview-execution/02_follow-up-grill-layer.md)
+- [`interview-execution/03_cross-domain-prompt-bank.md`](interview-execution/03_cross-domain-prompt-bank.md)
+
+**Rule:** New role tracks should **link** to these files unless a **documented exception** applies (see below).
+
+---
+
+## Duplication policy (when to copy vs link)
+
+### Prefer **linking** when
+
+- The content is the **same narrative arc** with only **light** role wording tweaks.
+- Maintenance should stay **centralized** (one edit fixes all tracks).
+
+### Allow a **track-local copy** when
+
+- The domain needs **systematic rewrites** in every section (e.g. **money path**, **PCI**, **ledger** vocabulary).
+- The track is studied **offline** or **in isolation** and a self-contained folder measurably helps.
+
+**Example in this repo:** `payment-system-interview/interview-execution/` is a **payment-tuned** derivative of the shared folder; it points back to the generic originals for drift control.
+
+### If you add a new embedded copy
+
+1. State in that track’s **README** that the copy is **intentional** and **which** shared file it replaces.
+2. Add a **short “sync checklist”** line (e.g. when updating shared golden template, review embedded copy for the same section numbers).
+3. Avoid **nested** copies (do not duplicate the duplicate).
+
+### Do **not**
+
+- Paste the **entire** shared `interview-execution/` tree into every role “for convenience.”
+- Fork **core question** packs into two tracks without a **clear ownership** rule (prefer one slug, cross-link from the other README).
+
+---
+
+## Cross-link hygiene
+
+- Prefer **relative** links from the file that contains them; run the repo’s markdown link checker when changing structure.
+- Each **track README** should surface: **spine** (shared or local), **grill**, and **one** default drill or core question path.
+- After **moving** folders, update **`docs/02_repository-structure.md` first** (repository single source of truth), then dependent indexes.
+
+---
+
+## Content promotion (brief)
+
+Ideas start as **drafts outside** the published `src/` narrative trees. **Promote** into these tracks by **synthesis** (your own structure and wording), not by dumping raw notes into README-visible paths. Tooling-specific policy lives in workspace rules for assistants.
+
+---
+
+## Revision trigger
+
+Revisit this file when: a **second** track gains an embedded `interview-execution/`-style copy, or when **shared** and **embedded** spines **visibly diverge** on purpose (then document the divergence here in one sentence).
