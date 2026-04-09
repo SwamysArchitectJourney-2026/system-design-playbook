@@ -33,7 +33,7 @@
 - `src/05_ai-ml-systems/` — MLOps, observability, AI security *(scaffold)*
 - `src/06_decision-trees/` — When-to-use-what decision guides *(scaffold)*
 - `src/07_case-studies/` — End-to-end case studies *(scaffold)*
-- `src/99_interview-qna/` — Interview prep: `interview-execution/` + role folders `01_`–`08_` with `01_templates/` + `02_core_questions/` packs; Azure track adds `03_azure_specific/` + `04_cross_domain/`; `07_gen-ai-lead-role-pattern/` for LLMOps/lifecycle; `08_ai-engineer-role-pattern/` for IC feature shipping; `career-orientation/` for short role/skill maps; see `99_interview-qna/README.md` ✅
+- `src/99_interview-qna/` — Interview prep: `interview-execution/` + role folders `01_`–`09_` with `01_templates/` + `02_core_questions/` packs; Azure track adds `03_azure_specific/` + `04_cross_domain/`; `07_gen-ai-lead-role-pattern/` for LLMOps/lifecycle; `08_ai-engineer-role-pattern/` for IC feature shipping; `09_solution-architect-platform-ai-azure/` for Platform AI on Azure; `career-orientation/` for short role/skill maps; see `99_interview-qna/README.md` ✅
 
 ---
 

@@ -9,7 +9,7 @@
 
 ## Role tracks (templates + question packs)
 
-Each numbered folder uses: `01_templates/` → `02_core_questions/<topic>/` (`answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`, `failures.md` where present), plus Azure-specific `03_azure_specific/` and `04_cross_domain/` where built out.
+Each numbered folder uses: `01_templates/` → `02_core_questions/<topic>/` (`answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`, `failures.md` where present), plus Azure-specific `03_azure_specific/` and `04_cross_domain/` where built out (see **`01_`** and **`09_`** for rich Azure + AI platform depth).
 
 | Track | Index |
 |-------|--------|
@@ -21,6 +21,7 @@ Each numbered folder uses: `01_templates/` → `02_core_questions/<topic>/` (`an
 | Enterprise / principal / GenAI themes | [06_enterprise-principal-genai-and-ea-themes/README.md](06_enterprise-principal-genai-and-ea-themes/README.md) |
 | Gen AI lead (LLMOps + lifecycle) | [07_gen-ai-lead-role-pattern/README.md](07_gen-ai-lead-role-pattern/README.md) |
 | AI engineer (IC — ship one feature) | [08_ai-engineer-role-pattern/README.md](08_ai-engineer-role-pattern/README.md) |
+| Solution Architect — Platform AI (Azure) | [09_solution-architect-platform-ai-azure/README.md](09_solution-architect-platform-ai-azure/README.md) |
 
 **Quick competency summaries** (single-page themes) still live beside each track as `01_…/01_….md`, etc.
 
@@ -35,4 +36,4 @@ Each numbered folder uses: `01_templates/` → `02_core_questions/<topic>/` (`an
 
 ## Career orientation
 
-- [Career orientation README](career-orientation/README.md) · [skill map](career-orientation/01_production-ai-engineer-skill-map.md) · [Gen AI lead compass](career-orientation/02_gen-ai-lead-competency-compass.md)
+- [Career orientation README](career-orientation/README.md) · [skill map](career-orientation/01_production-ai-engineer-skill-map.md) · [Gen AI lead compass](career-orientation/02_gen-ai-lead-competency-compass.md) · [GenAI architect compass](career-orientation/03_genai-architect-competency-compass.md) · [Platform AI SA (Azure)](career-orientation/04_solution-architect-platform-ai-azure-compass.md)

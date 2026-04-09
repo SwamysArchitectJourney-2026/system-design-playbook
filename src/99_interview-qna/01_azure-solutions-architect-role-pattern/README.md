@@ -44,6 +44,8 @@ Locations: `02_core_questions/*`, `03_azure_specific/*`, `04_cross_domain/*`.
 
 Shared grill: `../interview-execution/`.
 
+**Platform AI** (Azure AI + Foundry + IaC/GitOps landing zone): `../09_solution-architect-platform-ai-azure/README.md`.
+
 ## One-page competency map
 
 - [01_azure-solutions-architect-role-pattern.md](01_azure-solutions-architect-role-pattern.md)

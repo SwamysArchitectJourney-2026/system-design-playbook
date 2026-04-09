@@ -1,7 +1,7 @@
 # Repository Structure
 
-**Version**: 3.11
-**Last Updated**: April 8, 2026
+**Version**: 3.15
+**Last Updated**: April 10, 2026
 **Purpose**: Single source of truth for repository structure
 
 > When the structure changes, update **this file first**, then update references in
@@ -49,6 +49,7 @@ system-design-in-practice/
 │       ├── 06_enterprise-principal-genai-and-ea-themes/
 │       ├── 07_gen-ai-lead-role-pattern/   # LLMOps + model lifecycle + responsible AI (Gen AI lead)
 │       ├── 08_ai-engineer-role-pattern/   # IC AI engineer — shipping LLM-backed features end-to-end
+│       ├── 09_solution-architect-platform-ai-azure/  # Platform AI SA — Azure AI + Foundry + data/ML + IaC/GitOps
 │       └── career-orientation/            # skill maps + role compasses (orientation only)
 ├── claude.md                              # Claude Code instructions
 ├── CONTRIBUTING.md                        # Contribution guidelines
@@ -83,7 +84,9 @@ Each case study under `07_case-studies/` must include:
 
 Role tracks use **`01_templates/`**, **`02_core_questions/<slug>/`** with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Do **not** use a `00_` prefix (use `01_` and above). The Azure track adds **`03_azure_specific/`** and **`04_cross_domain/`**. **`07_gen-ai-lead-role-pattern/`** — LLMOps, lifecycle, governance. **`04_agentic-ai-lead-competency-profile/`** — RAG + agents at lead depth. **`08_ai-engineer-role-pattern/`** — individual-contributor scope for shipping one LLM-backed product feature (API, retrieval slice, eval, ops).
 
-**`career-orientation/`** — short orientation docs (e.g. production AI skill map, Gen AI lead competency compass), not full question banks.
+**`09_solution-architect-platform-ai-azure/`** — Solution Architect **Platform AI** on Azure: landing zones for AI workloads, **Azure OpenAI / AI Search / AML / Foundry**, optional **Databricks**, **AKS**, **IaC/GitOps**, DevSecOps/compliance-as-code; includes **whiteboard**, **principal/enterprise interview pack** (broken-enterprise scenarios), and **troubleshooting** drills (not trivia-first).
+
+**`career-orientation/`** — short orientation docs (e.g. production AI skill map, Gen AI lead / GenAI architect compasses), not full question banks.
 
 ---
 
