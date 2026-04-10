@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.23
+**Version**: 3.25
 **Last Updated**: April 10, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -36,7 +36,7 @@ system-design-in-practice/
 │   ├── 05_decision-frameworks/            # 🔲 Scaffold — when-to-use-what guides
 │   ├── 06_architecture-deep-dives/        # 🔲 Scaffold — consistency, partitioning, scaling
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
-│   ├── 08_system_designs/                 # 🔲 Scaffold — full system design narratives (populate as needed)
+│   ├── 08_system_designs/                 # Interview-style forward designs — README + `_template/` golden scaffold
 │   └── 09_interview-qna/                  # ✅ Interview prep and Q&A (see README)
 │       ├── README.md                      # Master index + daily workflow
 │       ├── 01_interview-prep-conventions.md   # Duplication policy + track contract
@@ -67,10 +67,12 @@ system-design-in-practice/
 
 ### Scaffold Folders (`01_foundations/` → `07_case-studies/`)
 
-Folders marked 🔲 contain only `.gitkeep` — content is added progressively as learning deepens.
-**Do not delete `.gitkeep` files** — they hold the folder in git.
+Folders marked 🔲 are populated progressively as learning deepens; many currently hold only `.gitkeep`.
+**Do not delete `.gitkeep` files** where they anchor an empty scaffold.
 
-**Pedagogical order:** foundations → patterns → distributed systems → AI/ML platforms → **decision frameworks** → **architecture deep dives** → case studies (decide *before* diving deep) → **`08_system_designs/`** (optional scaffold for full designs) → **`09_interview-qna/`** (interview execution layer). *Legacy:* interview prep used to live under `99_interview-qna/` to sort after `07_` without an `08_` slot; the tree now uses sequential **`08` → `09`**.
+**`08_system_designs/`** is not an empty shell: it always carries [`README.md`](../src/08_system_designs/README.md) and [`_template/`](../src/08_system_designs/_template/README.md) as the contract for new designs.
+
+**Pedagogical order:** foundations → patterns → distributed systems → AI/ML platforms → **decision frameworks** → **architecture deep dives** → **`07_case-studies/`** (analyze existing systems) → **`08_system_designs/`** (construct interview-style designs) → **`09_interview-qna/`** (defend in loop). *Legacy:* interview prep used to live under `99_interview-qna/` to sort after `07_` without an `08_` slot; the tree now uses sequential **`08` → `09`**.
 
 ### File Naming Rules
 
@@ -84,6 +86,17 @@ Folders marked 🔲 contain only `.gitkeep` — content is added progressively a
 Each case study under `07_case-studies/` must include:
 `requirements.md`, `high-level-design.md`, `low-level-design.md`,
 `scalability.md`, `trade-offs.md`, `diagrams/`
+
+### Case studies vs system designs (`07_` vs `08_`)
+
+| Folder | Intent | Mode | Content rule |
+|--------|--------|------|--------------|
+| `07_case-studies/` | Understand **existing** or canonical systems | Reverse engineering / analysis | Flexible narrative depth; prioritize **explanation** of how the real system behaves. |
+| `08_system_designs/` | **Practice** designing from a prompt | Forward construction / interview-ready | **Must** follow the scaffold in `src/08_system_designs/_template/` (requirements → HLD → trade-offs → failures + `diagrams/`). |
+
+**Placement rule:** Do **not** copy a `07_` study into `08_` with minor edits. *“How Netflix/YouTube works”* → `07_`. *“My design for a notification service in 45 minutes”* → `08_`.
+
+**Template:** `src/08_system_designs/_template/README.md` — copy to a new sibling folder per design.
 
 ### Interview question packs (`09_interview-qna/`)
 

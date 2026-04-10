@@ -15,7 +15,7 @@
 | `05_decision-frameworks/` | Decision guides | 🔲 | when-to-use-what |
 | `06_architecture-deep-dives/` | Deep dives | 🔲 | consistency, partitioning, scaling |
 | `07_case-studies/` | Case studies | 🔲 | end-to-end designs |
-| `08_system_designs/` | System designs | 🔲 | full narratives / whiteboard-ready designs (define as you populate) |
+| `08_system_designs/` | Forward designs | ✅ | [`README.md`](08_system_designs/README.md) + [`_template/`](08_system_designs/_template/README.md) (interview-style construction; not a duplicate of `07_`) |
 
 ---
 

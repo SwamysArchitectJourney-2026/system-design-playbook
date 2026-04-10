@@ -108,6 +108,17 @@ Otherwise, **only link** to the global files from the track `README.md` (and fro
 
 ---
 
+## Curriculum boundaries: `07_case-studies/` vs `08_system_designs/`
+
+Interview prep (`09_interview-qna/`) **consumes** both analysis skills (from studying `07_`) and construction skills (from practicing `08_`). Keep the curriculum split clean:
+
+- **`07_case-studies/`** — understanding **existing** systems; flexible narrative; not forced into the interview walkthrough scaffold.
+- **`08_system_designs/`** — **your** forward designs from a prompt; **must** follow `src/08_system_designs/_template/` (requirements → HLD → trade-offs → failures + diagrams).
+
+**Do not** duplicate a case study into `08_` with light edits. Authoritative wording: [`docs/02_repository-structure.md`](../../docs/02_repository-structure.md) (*Case studies vs system designs*).
+
+---
+
 ## Content promotion (brief)
 
 Ideas start as **drafts outside** the published `src/` narrative trees. **Promote** into these tracks by **synthesis** (your own structure and wording), not by dumping raw notes into README-visible paths. Tooling-specific policy lives in workspace rules for assistants.
