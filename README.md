@@ -55,7 +55,8 @@ This is **Swamy's personal playbook and reference workspace**, not official cour
 To export the full folder and file structure to a text file, run:
 
 ```powershell
-tree /f > folderstructure.txt
+tree /f -I 'node_modules|bin|dist' > folderstructure.txt
+Get-ChildItem -Exclude "source-material" | Tree
 ```
 
 ```text
