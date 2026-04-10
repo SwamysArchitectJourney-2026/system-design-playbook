@@ -1,7 +1,7 @@
 # Repository Structure
 
-**Version**: 3.11
-**Last Updated**: April 8, 2026
+**Version**: 3.20
+**Last Updated**: April 10, 2026
 **Purpose**: Single source of truth for repository structure
 
 > When the structure changes, update **this file first**, then update references in
@@ -26,21 +26,23 @@ system-design-in-practice/
 │   ├── images/                            # Diagrams and images
 │   └── review-reports/                    # Review and migration reports
 ├── source-material/                       # Staging area (git-ignored)
+├── .archive/                              # Historical snapshots (not active curriculum; see root README)
 ├── src/                                   # All playbook content
 │   ├── CONTENT_INDEX.md                   # Content index and status tracker
-│   ├── 01_core/                           # 🔲 Scaffold — design, tradeoff, failure frameworks
+│   ├── 01_foundations/                    # 🔲 Scaffold — design, tradeoff, failure frameworks
 │   ├── 02_patterns/                       # 🔲 Scaffold — caching, rate-limiting, retries, messaging
-│   ├── 03_systems/                        # 🔲 Scaffold — notification, chat, url-shortener
-│   ├── 04_deep-dives/                     # 🔲 Scaffold — consistency, partitioning, scaling
-│   ├── 05_ai-ml-systems/                  # 🔲 Scaffold — mlops, observability, security
-│   ├── 06_decision-trees/                 # 🔲 Scaffold — when-to-use-what guides
+│   ├── 03_distributed-systems/            # 🔲 Scaffold — notification, chat, url-shortener
+│   ├── 04_ai-ml-platforms/                # 🔲 Scaffold — MLOps, observability, AI security
+│   ├── 05_architecture-deep-dives/        # 🔲 Scaffold — consistency, partitioning, scaling
+│   ├── 06_decision-frameworks/            # 🔲 Scaffold — when-to-use-what guides
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
 │   └── 99_interview-qna/                  # ✅ Interview prep and Q&A (see README)
-│       ├── README.md                      # Master index
+│       ├── README.md                      # Master index + daily workflow
+│       ├── 01_interview-prep-conventions.md   # Duplication policy + track contract
 │       ├── interview-execution/           # Shared golden template + grill + cross-domain prompts
 │       ├── ai-systems-architect/          # complete.md + templates + 02_core_questions/
 │       ├── enterprise-system-architect/   # complete.md + templates + 02_core_questions/
-│       ├── payment-system-interview/      # Modular 01–04 + templates + 02_core_questions/
+│       ├── payment-system-interview/      # Modular 01–04 + interview-execution/ (payment-tuned) + templates + 02_core_questions/
 │       ├── 01_azure-solutions-architect-role-pattern/   # templates + answer-format enforcement + decision/service guides + question packs
 │       ├── 02_dotnet-application-architect-azure-stack/
 │       ├── 03_azure-engineering-lead-platform-pattern/
@@ -49,6 +51,7 @@ system-design-in-practice/
 │       ├── 06_enterprise-principal-genai-and-ea-themes/
 │       ├── 07_gen-ai-lead-role-pattern/   # LLMOps + model lifecycle + responsible AI (Gen AI lead)
 │       ├── 08_ai-engineer-role-pattern/   # IC AI engineer — shipping LLM-backed features end-to-end
+│       ├── 09_solution-architect-platform-ai-azure/  # Platform AI SA — Azure AI + Foundry + data/ML + IaC/GitOps
 │       └── career-orientation/            # skill maps + role compasses (orientation only)
 ├── claude.md                              # Claude Code instructions
 ├── CONTRIBUTING.md                        # Contribution guidelines
@@ -61,10 +64,12 @@ system-design-in-practice/
 
 ## Structure Notes
 
-### Scaffold Folders (`01_core/` → `07_case-studies/`)
+### Scaffold Folders (`01_foundations/` → `07_case-studies/`)
 
 Folders marked 🔲 contain only `.gitkeep` — content is added progressively as learning deepens.
 **Do not delete `.gitkeep` files** — they hold the folder in git.
+
+**Pedagogical order:** foundations → patterns → distributed systems → AI/ML platforms → architecture deep dives → decision frameworks → case studies. Interview prep (`99_interview-qna/`) is intentionally **after** `07_` without consuming a `08_` slot.
 
 ### File Naming Rules
 
@@ -81,9 +86,13 @@ Each case study under `07_case-studies/` must include:
 
 ### Interview question packs (`99_interview-qna/`)
 
+**`99_` sorts after `01_foundations`–`07_case-studies`** without consuming an `08_` slot; it is **active prep**, not a discard area. See **`README.md`** (workflow) and **`01_interview-prep-conventions.md`** (duplication policy, embedded vs shared `interview-execution/`).
+
 Role tracks use **`01_templates/`**, **`02_core_questions/<slug>/`** with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Do **not** use a `00_` prefix (use `01_` and above). The Azure track adds **`03_azure_specific/`** and **`04_cross_domain/`**. **`07_gen-ai-lead-role-pattern/`** — LLMOps, lifecycle, governance. **`04_agentic-ai-lead-competency-profile/`** — RAG + agents at lead depth. **`08_ai-engineer-role-pattern/`** — individual-contributor scope for shipping one LLM-backed product feature (API, retrieval slice, eval, ops).
 
-**`career-orientation/`** — short orientation docs (e.g. production AI skill map, Gen AI lead competency compass), not full question banks.
+**`09_solution-architect-platform-ai-azure/`** — Solution Architect **Platform AI** on Azure: landing zones for AI workloads, **Azure OpenAI / AI Search / AML / Foundry**, optional **Databricks**, **AKS**, **IaC/GitOps**, DevSecOps/compliance-as-code; includes **whiteboard**, **principal/enterprise interview pack** (broken-enterprise scenarios), **troubleshooting** drills, **`01_templates/senior-ai-platform-architect-interviewer-guide.md`**, and **`02_core_questions/enterprise-rag-platform-principal/architecture.md`** (principal RAG reference) (not trivia-first).
+
+**`career-orientation/`** — short orientation docs (e.g. production AI skill map, Gen AI lead / GenAI architect compasses), not full question banks.
 
 ---
 

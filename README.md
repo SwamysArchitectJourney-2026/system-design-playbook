@@ -61,15 +61,17 @@ tree /f > folderstructure.txt
 ```text
 system-design-playbook/
 │
-├── src/01_core/             → Design, tradeoff & failure frameworks
-├── src/02_patterns/         → Caching, rate-limiting, retries, messaging
-├── src/03_systems/          → Notification, chat, URL shortener
-├── src/04_deep-dives/       → Consistency, partitioning, scaling
-├── src/05_ai-ml-systems/    → MLOps, observability, AI security
-├── src/06_decision-trees/   → When-to-use-what decision guides
-├── src/07_case-studies/     → End-to-end case studies
-└── src/99_interview-qna/    → Interview Q&A (role tracks, execution layer, career-orientation)
+├── src/01_foundations/           → Design, tradeoff & failure frameworks
+├── src/02_patterns/              → Caching, rate-limiting, retries, messaging
+├── src/03_distributed-systems/   → Notification, chat, URL shortener
+├── src/04_ai-ml-platforms/       → MLOps, observability, AI security
+├── src/05_architecture-deep-dives/ → Consistency, partitioning, scaling
+├── src/06_decision-frameworks/   → When-to-use-what decision guides
+├── src/07_case-studies/          → End-to-end case studies
+└── src/99_interview-qna/         → Interview prep (active; `99_` after `07_`) — README workflow, `01_interview-prep-conventions.md`, role tracks, `interview-execution/`, career-orientation
 ```
+
+**`.archive/`** at repo root holds **historical** trees and snapshots preserved for migration reference. It is **not** part of the active curriculum; prefer `src/` paths above for new work.
 
 ---
 
@@ -79,7 +81,7 @@ system-design-playbook/
 
 Start with:
 
-* `src/01_core/design-framework.md` *(once populated)*
+* `src/01_foundations/design-framework.md` *(once populated)*
 
 This defines the **default approach to any system design problem**.
 

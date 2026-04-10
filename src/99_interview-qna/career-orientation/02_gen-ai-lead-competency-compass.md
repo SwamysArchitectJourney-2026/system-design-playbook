@@ -37,6 +37,7 @@ Some organizations hire a **Generative AI lead** to own strategy **and** deliver
 - **AI systems architect:** `../ai-systems-architect/README.md` — broader systems + observability framing.
 - **Shared spine:** `../interview-execution/01_golden-answer-template.md` and `../interview-execution/02_follow-up-grill-layer.md` for how you speak under pressure.
 - **Production skill map (orientation):** `01_production-ai-engineer-skill-map.md` — complements this doc with “what production work actually looks like.”
+- **GenAI architect (hands-on design + build):** `03_genai-architect-competency-compass.md` — when the bar is architecture **and** shipping code, not only platform leadership.
 
 ## Experience band (typical)
 

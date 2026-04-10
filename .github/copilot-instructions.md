@@ -46,14 +46,14 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 **Quick Overview**:
 
-- `src/01_core/` - Design, tradeoff & failure frameworks
+- `src/01_foundations/` - Design, tradeoff & failure frameworks
 - `src/02_patterns/` - Caching, rate-limiting, retries, messaging
-- `src/03_systems/` - Notification, chat, URL shortener
-- `src/04_deep-dives/` - Consistency, partitioning, scaling
-- `src/05_ai-ml-systems/` - MLOps, observability, AI security
-- `src/06_decision-trees/` - When-to-use-what decision guides
+- `src/03_distributed-systems/` - Notification, chat, URL shortener
+- `src/04_ai-ml-platforms/` - MLOps, observability, AI security
+- `src/05_architecture-deep-dives/` - Consistency, partitioning, scaling
+- `src/06_decision-frameworks/` - When-to-use-what decision guides
 - `src/07_case-studies/` - End-to-end case studies
-- `src/99_interview-qna/` - Interview prep (role tracks `01_`–`08_`, `interview-execution/`, `career-orientation/`)
+- `src/99_interview-qna/` - Interview prep (`README.md` workflow, `01_interview-prep-conventions.md`, role tracks `01_`–`09_`, `interview-execution/`, `career-orientation/`)
 
 ---
 
@@ -85,7 +85,7 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 ##### Recommended patterns in this repo
 
-- In main learning folders (e.g., `src/01_core/`):
+- In main learning folders (e.g., `src/01_foundations/`):
   - Use ordered files: `NN_topic-slug.md`.
   - If you must split: `NN_topic-slug-part1.md`, `NN_topic-slug-part2.md` (keep the same `NN_` prefix).
 - In reference-style subfolders (e.g., a future `glossary/` folder):
@@ -376,7 +376,7 @@ docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.
 
 - [Learning Path](../docs/01_road-map.md)
 - [Content Index](../src/CONTENT_INDEX.md)
-- [Core Frameworks](../src/01_core/)
+- [Foundations](../src/01_foundations/)
 - [Patterns](../src/02_patterns/)
 - [Case Studies](../src/07_case-studies/)
 - [Interview Q&A](../src/99_interview-qna/)

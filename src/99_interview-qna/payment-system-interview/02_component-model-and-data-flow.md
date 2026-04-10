@@ -11,6 +11,74 @@ learning_objectives:
 
 Generic answers (“UI → DNS → API gateway → middle tier → message bus → database”) under-score in principal-level rounds. Anchor the design in **money movement** and **state**.
 
+```mermaid
+---
+config:
+  theme: mc
+  layout: dagre
+---
+flowchart TD
+  classDef clientStyle fill:#EAF4FF,stroke:#9BBCE0,color:#1F3A5F,stroke-width:1px;
+  classDef edgeStyle fill:#F3E8FF,stroke:#B9A0D9,color:#4A3568,stroke-width:1px;
+  classDef gatewayStyle fill:#E8F8F0,stroke:#9CC9B3,color:#1F4D3A,stroke-width:1px;
+  classDef serviceStyle fill:#FFF4E6,stroke:#D9B38C,color:#6A4A2F,stroke-width:1px;
+  classDef asyncStyle fill:#FDECEF,stroke:#D9A6B0,color:#6A3D47,stroke-width:1px;
+  classDef dataStyle fill:#F5F5F5,stroke:#B8B8B8,color:#333333,stroke-width:1px;
+  subgraph client [Clients]
+    WEB[Web App]
+    MOB[Mobile App]
+  end
+  subgraph edge [Edge / Entry]
+    DNS[DNS / Traffic Manager]
+    LB[Load Balancer / TLS Termination]
+  end
+  subgraph gateway [API Gateway]
+    APIGW[API Gateway\nAuth / Rate Limit / WAF / Logging]
+  end
+  subgraph core [Core Payment Platform]
+    ORCH[Payment Orchestration\nState Machine / Idempotency]
+    RISK[Risk / Fraud Checks]
+    ADAPT[Payment Gateway Adapter]
+    LEDGER[Ledger / Balances Service]
+  end
+  subgraph async [Async Pipeline]
+    MQ[Kafka / Service Bus / Queue]
+    NOTIFY[Notification Service]
+    RECON[Settlement / Reconciliation Jobs]
+  end
+  subgraph data [Data Stores]
+    TXDB[(Transactional DB)]
+    READDB[(Read Replica / Projections)]
+    OBJ[(Receipts / Object Store)]
+  end
+  PROC[External Payment Processor]
+  WEB --> DNS
+  MOB --> DNS
+  DNS --> LB
+  LB --> APIGW
+  APIGW --> ORCH
+
+  ORCH --> RISK
+  RISK --> ADAPT
+  ADAPT --> PROC
+  PROC --> ADAPT
+  ADAPT --> ORCH
+
+  ORCH --> LEDGER
+  ORCH --> TXDB
+  TXDB --> READDB
+  ORCH --> MQ
+  MQ --> NOTIFY
+  MQ --> RECON
+  NOTIFY --> OBJ
+  class WEB,MOB clientStyle;
+  class DNS,LB edgeStyle;
+  class APIGW gatewayStyle;
+  class ORCH,RISK,ADAPT,LEDGER serviceStyle;
+  class MQ,NOTIFY,RECON asyncStyle;
+  class TXDB,READDB,OBJ,PROC dataStyle;
+```
+
 ## Verbal “diagram” you can deliver without a whiteboard
 
 Work through **named boxes and arrows**:
