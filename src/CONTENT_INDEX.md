@@ -12,8 +12,8 @@
 | `02_patterns/` | Architectural patterns | 🔲 | caching, rate-limiting, retries, messaging |
 | `03_distributed-systems/` | System designs | 🔲 | notification-system, chat-system, url-shortener |
 | `04_ai-ml-platforms/` | AI & ML platforms | 🔲 | mlops-agents, observability, security |
-| `05_architecture-deep-dives/` | Deep dives | 🔲 | consistency, partitioning, scaling |
-| `06_decision-frameworks/` | Decision guides | 🔲 | when-to-use-what |
+| `05_decision-frameworks/` | Decision guides | 🔲 | when-to-use-what |
+| `06_architecture-deep-dives/` | Deep dives | 🔲 | consistency, partitioning, scaling |
 | `07_case-studies/` | Case studies | 🔲 | end-to-end designs |
 
 ---

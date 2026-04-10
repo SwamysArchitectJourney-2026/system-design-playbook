@@ -65,8 +65,8 @@ system-design-playbook/
 ├── src/02_patterns/              → Caching, rate-limiting, retries, messaging
 ├── src/03_distributed-systems/   → Notification, chat, URL shortener
 ├── src/04_ai-ml-platforms/       → MLOps, observability, AI security
-├── src/05_architecture-deep-dives/ → Consistency, partitioning, scaling
-├── src/06_decision-frameworks/   → When-to-use-what decision guides
+├── src/05_decision-frameworks/   → When-to-use-what decision guides
+├── src/06_architecture-deep-dives/ → Consistency, partitioning, scaling
 ├── src/07_case-studies/          → End-to-end case studies
 └── src/99_interview-qna/         → Interview prep (active; `99_` after `07_`) — README workflow, `01_interview-prep-conventions.md`, role tracks, `interview-execution/`, career-orientation
 ```

@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.20
+**Version**: 3.21
 **Last Updated**: April 10, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -33,8 +33,8 @@ system-design-in-practice/
 │   ├── 02_patterns/                       # 🔲 Scaffold — caching, rate-limiting, retries, messaging
 │   ├── 03_distributed-systems/            # 🔲 Scaffold — notification, chat, url-shortener
 │   ├── 04_ai-ml-platforms/                # 🔲 Scaffold — MLOps, observability, AI security
-│   ├── 05_architecture-deep-dives/        # 🔲 Scaffold — consistency, partitioning, scaling
-│   ├── 06_decision-frameworks/            # 🔲 Scaffold — when-to-use-what guides
+│   ├── 05_decision-frameworks/            # 🔲 Scaffold — when-to-use-what guides
+│   ├── 06_architecture-deep-dives/        # 🔲 Scaffold — consistency, partitioning, scaling
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
 │   └── 99_interview-qna/                  # ✅ Interview prep and Q&A (see README)
 │       ├── README.md                      # Master index + daily workflow
@@ -69,7 +69,7 @@ system-design-in-practice/
 Folders marked 🔲 contain only `.gitkeep` — content is added progressively as learning deepens.
 **Do not delete `.gitkeep` files** — they hold the folder in git.
 
-**Pedagogical order:** foundations → patterns → distributed systems → AI/ML platforms → architecture deep dives → decision frameworks → case studies. Interview prep (`99_interview-qna/`) is intentionally **after** `07_` without consuming a `08_` slot.
+**Pedagogical order:** foundations → patterns → distributed systems → AI/ML platforms → **decision frameworks** → **architecture deep dives** → case studies (decide *before* diving deep). Interview prep (`99_interview-qna/`) is intentionally **after** `07_` without consuming a `08_` slot.
 
 ### File Naming Rules
 

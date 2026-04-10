@@ -46,6 +46,21 @@ Most **role** folders follow:
 
 ---
 
+## Inheritance model for `interview-execution/`
+
+Treat the global folder as the **default implementation** of the interview spine:
+
+- **Canonical path:** `src/99_interview-qna/interview-execution/` (golden template, follow-up grill, cross-domain prompt bank).
+
+**Do not** create a track-local `interview-execution/` **unless** at least one of the following is true:
+
+- The domain needs **systematic rewrites** across those files (money path, compliance language, ledger semantics, etc.).
+- The track is intentionally **offline-first** and a self-contained tree is worth the **sync tax**—and the track README states that trade-off explicitly.
+
+Otherwise, **only link** to the global files from the track `README.md` (and from individual questions if useful). This prevents template and grill **drift** across many copies.
+
+---
+
 ## Duplication policy (when to copy vs link)
 
 ### Prefer **linking** when
@@ -70,6 +85,18 @@ Most **role** folders follow:
 
 - Paste the **entire** shared `interview-execution/` tree into every role “for convenience.”
 - Fork **core question** packs into two tracks without a **clear ownership** rule (prefer one slug, cross-link from the other README).
+
+---
+
+## Track taxonomy: role vs domain (contract for new folders)
+
+**Primary axis — role:** how you position in interviews (e.g. solution architect, platform architect, AI architect, enterprise architect). Prefer this for **new** top-level folders under `99_interview-qna/`.
+
+**Secondary axis — domain:** stack or vertical depth under that role (Azure, payments, GenAI, data platform, etc.)—usually a **subfolder** or a **clear prefix** in the track README, not a parallel naming scheme with no explanation.
+
+**Current tree:** mixes numbered role tracks (`01_`–`09_`), a few unnumbered role-style folders, and domain-heavy tracks (e.g. payments). That is **acceptable**; full physical reshaping is optional.
+
+**When adding a new track:** pick **one** primary axis in the folder name; if both role and domain matter, encode **role first**, then domain in a child path or in the README title so navigation stays predictable.
 
 ---
 
