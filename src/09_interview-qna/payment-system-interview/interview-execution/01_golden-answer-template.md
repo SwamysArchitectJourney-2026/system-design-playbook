@@ -95,6 +95,6 @@ At least **two** real forks, for example:
 └── followups.md   # attacks from ./02_follow-up-grill-layer.md
 ```
 
-**Azure-shaped narrative:** `../../01_azure-solutions-architect-role-pattern/04_cross_domain/payment-processing-on-azure/` (from `99_interview-qna/`).
+**Azure-shaped narrative:** `../../01_azure-solutions-architect-role-pattern/04_cross_domain/payment-processing-on-azure/` (from `09_interview-qna/`).
 
 **Generic (non-payment) spine:** [`../../interview-execution/01_golden-answer-template.md`](../../interview-execution/01_golden-answer-template.md).

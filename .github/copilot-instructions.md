@@ -53,7 +53,8 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 - `src/05_decision-frameworks/` - When-to-use-what decision guides
 - `src/06_architecture-deep-dives/` - Consistency, partitioning, scaling
 - `src/07_case-studies/` - End-to-end case studies
-- `src/99_interview-qna/` - Interview prep (`README.md` workflow, `01_interview-prep-conventions.md`, role tracks `01_`–`09_`, `interview-execution/`, `career-orientation/`)
+- `src/08_system_designs/` - Full system design narratives *(scaffold)*
+- `src/09_interview-qna/` - Interview prep (`README.md` workflow, `01_interview-prep-conventions.md`, role tracks `01_`–`09_`, `interview-execution/`, `career-orientation/`)
 
 ---
 
@@ -379,7 +380,7 @@ docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.
 - [Foundations](../src/01_foundations/)
 - [Patterns](../src/02_patterns/)
 - [Case Studies](../src/07_case-studies/)
-- [Interview Q&A](../src/99_interview-qna/)
+- [Interview Q&A](../src/09_interview-qna/)
 - [Contributing](../CONTRIBUTING.md)
 
 ---

@@ -68,7 +68,8 @@ system-design-playbook/
 ├── src/05_decision-frameworks/   → When-to-use-what decision guides
 ├── src/06_architecture-deep-dives/ → Consistency, partitioning, scaling
 ├── src/07_case-studies/          → End-to-end case studies
-└── src/99_interview-qna/         → Interview prep (active; `99_` after `07_`) — README workflow, `01_interview-prep-conventions.md`, role tracks, `interview-execution/`, career-orientation
+├── src/08_system_designs/        → Full system design narratives (scaffold)
+└── src/09_interview-qna/         → Interview prep — README workflow, `01_interview-prep-conventions.md`, role tracks, `interview-execution/`, career-orientation
 ```
 
 **`.archive/`** at repo root holds **historical** trees and snapshots preserved for migration reference. It is **not** part of the active curriculum; prefer `src/` paths above for new work.

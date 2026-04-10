@@ -15,12 +15,13 @@
 | `05_decision-frameworks/` | Decision guides | 🔲 | when-to-use-what |
 | `06_architecture-deep-dives/` | Deep dives | 🔲 | consistency, partitioning, scaling |
 | `07_case-studies/` | Case studies | 🔲 | end-to-end designs |
+| `08_system_designs/` | System designs | 🔲 | full narratives / whiteboard-ready designs (define as you populate) |
 
 ---
 
-## Interview Q&A (`99_interview-qna/`)
+## Interview Q&A (`09_interview-qna/`)
 
-**Index:** `99_interview-qna/README.md` · **Conventions:** `99_interview-qna/01_interview-prep-conventions.md`
+**Index:** `09_interview-qna/README.md` · **Conventions:** `09_interview-qna/01_interview-prep-conventions.md`
 
 **Shared layer:** `interview-execution/` (golden template, grill layer, cross-domain prompts).
 

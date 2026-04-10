@@ -6,7 +6,7 @@ topic: "Interview prep folder conventions and duplication policy"
 
 # Interview prep — conventions and duplication policy
 
-This document governs **published** content under `99_interview-qna/`. It keeps **navigation** predictable and limits **entropy** when the same idea appears in more than one place.
+This document governs **published** content under `09_interview-qna/`. It keeps **navigation** predictable and limits **entropy** when the same idea appears in more than one place.
 
 **Master index:** [README.md](README.md).
 
@@ -50,7 +50,7 @@ Most **role** folders follow:
 
 Treat the global folder as the **default implementation** of the interview spine:
 
-- **Canonical path:** `src/99_interview-qna/interview-execution/` (golden template, follow-up grill, cross-domain prompt bank).
+- **Canonical path:** `src/09_interview-qna/interview-execution/` (golden template, follow-up grill, cross-domain prompt bank).
 
 **Do not** create a track-local `interview-execution/` **unless** at least one of the following is true:
 
@@ -90,7 +90,7 @@ Otherwise, **only link** to the global files from the track `README.md` (and fro
 
 ## Track taxonomy: role vs domain (contract for new folders)
 
-**Primary axis — role:** how you position in interviews (e.g. solution architect, platform architect, AI architect, enterprise architect). Prefer this for **new** top-level folders under `99_interview-qna/`.
+**Primary axis — role:** how you position in interviews (e.g. solution architect, platform architect, AI architect, enterprise architect). Prefer this for **new** top-level folders under `09_interview-qna/`.
 
 **Secondary axis — domain:** stack or vertical depth under that role (Azure, payments, GenAI, data platform, etc.)—usually a **subfolder** or a **clear prefix** in the track README, not a parallel naming scheme with no explanation.
 

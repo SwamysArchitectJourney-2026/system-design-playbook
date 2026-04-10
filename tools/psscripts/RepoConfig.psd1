@@ -9,7 +9,8 @@
     'src\05_decision-frameworks'
     'src\06_architecture-deep-dives'
     'src\07_case-studies'
-    'src\99_interview-qna'
+    'src\08_system_designs'
+    'src\09_interview-qna'
     'docs'
     'tools\psscripts'
   )

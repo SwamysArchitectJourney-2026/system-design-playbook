@@ -10,7 +10,7 @@ This folder is a **small course**: **foundation** modules at the **root** (`01`�
 2. **Run the payment execution spine** — [`interview-execution/01_golden-answer-template.md`](interview-execution/01_golden-answer-template.md) then [`interview-execution/02_follow-up-grill-layer.md`](interview-execution/02_follow-up-grill-layer.md); optional prompts: [`interview-execution/03_cross-domain-prompt-bank.md`](interview-execution/03_cross-domain-prompt-bank.md). Index: [`interview-execution/README.md`](interview-execution/README.md). (Domain-neutral originals live in [`../interview-execution/`](../interview-execution/).)
 3. **Open `01_templates/system-design-template.md`** — checklist wired to this folder’s `interview-execution/` copy.
 4. **Run the executable pack** — read `02_core_questions/design-payment-azure-e2e/answer.md` out loud once, then walk `diagram.md`, `failures.md`, `tradeoffs.md`, `followups.md` in any depth the interview needs.
-5. **Optional Azure depth** — if the loop is Azure SA-style, read the cross-domain pack (link below); paths inside `design-payment-azure-e2e/*.md` point there with **three** `../` segments from that subfolder (up to `99_interview-qna/`, then into `01_azure-solutions-architect-role-pattern/...`).
+5. **Optional Azure depth** — if the loop is Azure SA-style, read the cross-domain pack (link below); paths inside `design-payment-azure-e2e/*.md` point there with **three** `../` segments from that subfolder (up to `09_interview-qna/`, then into `01_azure-solutions-architect-role-pattern/...`).
 
 ---
 

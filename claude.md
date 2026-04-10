@@ -54,7 +54,8 @@ Self-check: "Did I update `docs/02_repository-structure.md` first?" — If no, S
 | `src/05_decision-frameworks/` | When-to-use-what decision guides |
 | `src/06_architecture-deep-dives/` | Consistency, partitioning, scaling |
 | `src/07_case-studies/` | End-to-end case studies |
-| `src/99_interview-qna/` | Interview prep (`README.md` workflow, `01_interview-prep-conventions.md`, role tracks `01_`–`09_`, `interview-execution/`, career orientation) |
+| `src/08_system_designs/` | Full system design narratives (scaffold) |
+| `src/09_interview-qna/` | Interview prep (`README.md` workflow, `01_interview-prep-conventions.md`, role tracks `01_`–`09_`, `interview-execution/`, career orientation) |
 | `docs/02_repository-structure.md` | Authoritative repo structure |
 | `source-material/` | Staging area (git-ignored) |
 
