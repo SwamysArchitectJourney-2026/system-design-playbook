@@ -28,7 +28,7 @@
 
 **Consolidated Q&A:** `ai-systems-architect/complete.md`, `enterprise-system-architect/complete.md` (each track also has templates + one `02_core_questions/` pack).
 
-**Payments:** `payment-system-interview/README.md` — foundations `01`–`04` + **`interview-execution/`** (payment-tuned spine/grill) + `02_core_questions/design-payment-azure-e2e/`.
+**Payments:** `payment-system-interview/README.md` — foundations `01`–`04`, mock debrief **`05`**, opening drill **`06`**, + **`interview-execution/`** (payment-tuned spine/grill) + `02_core_questions/design-payment-azure-e2e/`.
 
 **Career:** `career-orientation/README.md` — `01`–`04` orientation compasses (incl. Platform AI SA on Azure).
 
