@@ -1,7 +1,7 @@
 # Repository Structure
 
-**Version**: 3.25
-**Last Updated**: April 10, 2026
+**Version**: 3.26
+**Last Updated**: April 11, 2026
 **Purpose**: Single source of truth for repository structure
 
 > When the structure changes, update **this file first**, then update references in
@@ -13,7 +13,9 @@
 
 ```text
 system-design-in-practice/
-├── .cursor/rules/                         # Cursor AI project rules
+├── .cursor/                               # Cursor AI project config
+│   ├── rules/                             # Project rules (*.mdc)
+│   └── skills.md                          # Agent index — rules, entry points, tooling (no staging content)
 ├── .github/                               # GitHub configuration
 │   ├── workflows/                         # CI/CD workflows
 │   ├── ISSUE_TEMPLATE/                    # Issue templates
@@ -23,8 +25,10 @@ system-design-in-practice/
 │   ├── 01_road-map.md                     # Learning path and roadmap
 │   ├── 02_repository-structure.md         # THIS FILE — single source of truth
 │   ├── 03_case-study-template.md          # Case study authoring template
+│   ├── 04_target-role-playbook-alignment.md  # Synthesized target roles ↔ interview tracks + gaps
 │   ├── images/                            # Diagrams and images
-│   └── review-reports/                    # Review and migration reports
+│   └── review-reports/                    # Review and tooling reports
+│       └── 01_duplicate-markdown-headings-scan.md  # Find-DuplicateContent.ps1 output (src, docs, .archive)
 ├── source-material/                       # Staging area (git-ignored)
 ├── .archive/                              # Historical snapshots (not active curriculum; see root README)
 ├── src/                                   # All playbook content

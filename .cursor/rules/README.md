@@ -1,7 +1,7 @@
 # Cursor AI Project Rules
 
 **Version**: 1.0  
-**Last Updated**: January 1, 2026
+**Last Updated**: April 11, 2026
 
 **Environment**: Windows 11, PowerShell  
 **Note**: All commands and scripts should use PowerShell syntax. File paths use Windows format.
@@ -43,6 +43,16 @@ This directory contains modular rule files for Cursor AI, following the recommen
 **Priority**: MANDATORY  
 **Content**: File naming conventions, semantic naming patterns, splitting strategies, folder structure best practices  
 **Applicability**: All new content must follow these conventions. Existing content may use `-part1`, `-part2` patterns (acceptable for mechanical splitting)
+
+### `08_source_material_rules.mdc`
+
+**Content**: Staging hygiene, zero-copy synthesis, where policy may name ignored input folders (assistant config only)
+
+---
+
+## Agent index (`../skills.md`)
+
+[`.cursor/skills.md`](../skills.md) — short map to rules, `docs/02_repository-structure.md`, `CLAUDE.md`, `tools/psscripts/`, and CI scope (markdown-only).
 
 ---
 

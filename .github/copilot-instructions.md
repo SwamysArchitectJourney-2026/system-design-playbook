@@ -44,6 +44,8 @@
 
 For the complete repository structure, see: **[docs/02_repository-structure.md](../docs/02_repository-structure.md)**
 
+**Docs (meta):** [Learning path](../docs/01_road-map.md) · [Case study template](../docs/03_case-study-template.md) · [Target roles ↔ playbook alignment](../docs/04_target-role-playbook-alignment.md) · [Duplicate-heading scan report](../docs/review-reports/01_duplicate-markdown-headings-scan.md)
+
 **Quick Overview**:
 
 - `src/01_foundations/` - Design, tradeoff & failure frameworks
