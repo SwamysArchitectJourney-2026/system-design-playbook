@@ -1,6 +1,6 @@
 ---
 learning_level: "Intermediate"
-prerequisites: ["payment-system-interview/01_clarifying-requirements-for-payment-systems.md"]
+prerequisites: ["01_clarifying-requirements-for-payment-systems.md"]
 estimated_time: "5 minutes"
 learning_objectives:
   - "Run a complete opening clarification pass in under five minutes"
