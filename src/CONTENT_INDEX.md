@@ -12,15 +12,16 @@
 | `02_patterns/` | Architectural patterns | 🔲 | caching, rate-limiting, retries, messaging |
 | `03_distributed-systems/` | System designs | 🔲 | notification-system, chat-system, url-shortener |
 | `04_ai-ml-platforms/` | AI & ML platforms | 🔲 | mlops-agents, observability, security |
-| `05_architecture-deep-dives/` | Deep dives | 🔲 | consistency, partitioning, scaling |
-| `06_decision-frameworks/` | Decision guides | 🔲 | when-to-use-what |
+| `05_decision-frameworks/` | Decision guides | 🔲 | when-to-use-what |
+| `06_architecture-deep-dives/` | Deep dives | 🔲 | consistency, partitioning, scaling |
 | `07_case-studies/` | Case studies | 🔲 | end-to-end designs |
+| `08_system_designs/` | Forward designs | ✅ | [`README.md`](08_system_designs/README.md) + [`_template/`](08_system_designs/_template/README.md) (interview-style construction; not a duplicate of `07_`) |
 
 ---
 
-## Interview Q&A (`99_interview-qna/`)
+## Interview Q&A (`09_interview-qna/`)
 
-**Index:** `99_interview-qna/README.md` · **Conventions:** `99_interview-qna/01_interview-prep-conventions.md`
+**Index:** `09_interview-qna/README.md` · **Conventions:** `09_interview-qna/01_interview-prep-conventions.md`
 
 **Shared layer:** `interview-execution/` (golden template, grill layer, cross-domain prompts).
 
@@ -28,7 +29,7 @@
 
 **Consolidated Q&A:** `ai-systems-architect/complete.md`, `enterprise-system-architect/complete.md` (each track also has templates + one `02_core_questions/` pack).
 
-**Payments:** `payment-system-interview/README.md` — foundations `01`–`04` + **`interview-execution/`** (payment-tuned spine/grill) + `02_core_questions/design-payment-azure-e2e/`.
+**Payments:** `payment-system-interview/README.md` — foundations `01`–`04`, mock debrief **`05`**, opening drill **`06`**, + **`interview-execution/`** (payment-tuned spine/grill) + `02_core_questions/design-payment-azure-e2e/`.
 
 **Career:** `career-orientation/README.md` — `01`–`04` orientation compasses (incl. Platform AI SA on Azure).
 

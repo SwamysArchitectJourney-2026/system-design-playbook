@@ -1,6 +1,6 @@
 # Repository Structure & Context
 
-**Version**: 3.9
+**Version**: 3.12
 **Last Updated**: April 10, 2026
 
 ---
@@ -13,9 +13,10 @@
 
 ### CRITICAL: Repository Purpose
 
-- ✅ **Playbook Content**: Design frameworks, patterns, distributed systems, AI/ML platforms, deep dives, decision frameworks (`src/01_foundations/` through `src/06_decision-frameworks/`)
+- ✅ **Playbook Content**: Design frameworks, patterns, distributed systems, AI/ML platforms, decision frameworks, deep dives (`src/01_foundations/` through `src/06_architecture-deep-dives/`)
 - ✅ **Case Studies**: End-to-end designs (`src/07_case-studies/`)
-- ✅ **Interview Q&A**: AI, Architect, and Enterprise Q&A (`src/99_interview-qna/`)
+- ✅ **Forward designs (interview-style)**: `src/08_system_designs/` (`README.md`, `_template/`)
+- ✅ **Interview Q&A**: AI, Architect, and Enterprise Q&A (`src/09_interview-qna/`)
 - ✅ **Documentation**: Roadmap and repo structure (`docs/`)
 
 ---
@@ -30,10 +31,11 @@
 - `src/02_patterns/` — Caching, rate-limiting, retries, messaging *(scaffold)*
 - `src/03_distributed-systems/` — Notification, chat, URL shortener *(scaffold)*
 - `src/04_ai-ml-platforms/` — MLOps, observability, AI security *(scaffold)*
-- `src/05_architecture-deep-dives/` — Consistency, partitioning, scaling *(scaffold)*
-- `src/06_decision-frameworks/` — When-to-use-what decision guides *(scaffold)*
+- `src/05_decision-frameworks/` — When-to-use-what decision guides *(scaffold)*
+- `src/06_architecture-deep-dives/` — Consistency, partitioning, scaling *(scaffold)*
 - `src/07_case-studies/` — End-to-end case studies *(scaffold)*
-- `src/99_interview-qna/` — Interview prep: `README.md` (workflow), `01_interview-prep-conventions.md` (duplication policy), `interview-execution/` + role folders `01_`–`09_` with `01_templates/` + `02_core_questions/` packs; Azure track adds `03_azure_specific/` + `04_cross_domain/`; `07_gen-ai-lead-role-pattern/` for LLMOps/lifecycle; `08_ai-engineer-role-pattern/` for IC feature shipping; `09_solution-architect-platform-ai-azure/` for Platform AI on Azure; `career-orientation/` for short role/skill maps ✅
+- `src/08_system_designs/` — Interview-style forward designs (`README.md`, `_template/`) ✅
+- `src/09_interview-qna/` — Interview prep: `README.md` (workflow), `01_interview-prep-conventions.md` (duplication policy), `interview-execution/` + role folders `01_`–`09_` with `01_templates/` + `02_core_questions/` packs; Azure track adds `03_azure_specific/` + `04_cross_domain/`; `07_gen-ai-lead-role-pattern/` for LLMOps/lifecycle; `08_ai-engineer-role-pattern/` for IC feature shipping; `09_solution-architect-platform-ai-azure/` for Platform AI on Azure; `career-orientation/` for short role/skill maps ✅
 
 ---
 

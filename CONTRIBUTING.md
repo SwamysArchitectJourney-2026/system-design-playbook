@@ -96,7 +96,7 @@ git checkout -b task/implement-csharp
 ### Markdown Documentation
 
 - Follow markdownlint standards
-- `src/99_interview-qna/.markdownlint.json` applies to files under that tree (relaxed rules for YAML front matter, repeated interview headings, list markers, and spacing). Root `.markdownlint.json` and `.markdownlint-cli2.yaml` apply to the rest of the repo.
+- `src/09_interview-qna/.markdownlint.json` applies to files under that tree (relaxed rules for YAML front matter, repeated interview headings, list markers, and spacing). Root `.markdownlint.json` and `.markdownlint-cli2.yaml` apply to the rest of the repo.
 - Use clear headings and structure
 - Include code examples where relevant
 - Keep line length reasonable (~120 characters)

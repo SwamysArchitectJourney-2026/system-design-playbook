@@ -11,7 +11,8 @@ timeout = 20
 
 # `source-material/` is a staging area and is git-ignored.
 exclude_path = [
-  "source-material/**"
+  "source-material/**",
+  ".archive/**"
 ]
 
 # Exclude patterns (examples)

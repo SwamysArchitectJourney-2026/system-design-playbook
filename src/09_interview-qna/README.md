@@ -4,9 +4,9 @@ This folder is the **published interview serving layer**: role tracks, shared ex
 
 ---
 
-## Why the folder is named `99_interview-qna`
+## Folder placement: `09_interview-qna`
 
-The **`99_`** prefix sorts **interview prep** **after** `src/01_foundations/` through `07_case-studies/` so the **curriculum scaffolds** keep stable numbering. That choice can **look** like “misc” or “legacy”; **functionally**, this directory is **primary** for interview readiness. If you only open one subtree under `src/` before a loop, it is reasonable for this to be the one.
+Interview prep sits **after** curriculum scaffolds `01`–`08`. **`08_system_designs/`** is a separate scaffold for full design narratives; **`09_interview-qna/`** is the **execution layer** for interviews—role tracks, shared spine, drills. *Legacy:* this tree lived under **`99_interview-qna/`** so it sorted after `07_` without using an `08_` prefix; the repo now uses sequential **`08` → `09`**. Functionally, this directory remains **primary** for interview readiness.
 
 ---
 

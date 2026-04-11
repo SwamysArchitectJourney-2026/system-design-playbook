@@ -1,6 +1,6 @@
 # Interview execution layer (shared)
 
-Cross-track **spine** and **grill**—use with any role folder under `99_interview-qna/`.
+Cross-track **spine** and **grill**—use with any role folder under `09_interview-qna/`.
 
 | File | Role |
 |------|------|

@@ -6,7 +6,7 @@ topic: "Interview prep folder conventions and duplication policy"
 
 # Interview prep — conventions and duplication policy
 
-This document governs **published** content under `99_interview-qna/`. It keeps **navigation** predictable and limits **entropy** when the same idea appears in more than one place.
+This document governs **published** content under `09_interview-qna/`. It keeps **navigation** predictable and limits **entropy** when the same idea appears in more than one place.
 
 **Master index:** [README.md](README.md).
 
@@ -46,6 +46,21 @@ Most **role** folders follow:
 
 ---
 
+## Inheritance model for `interview-execution/`
+
+Treat the global folder as the **default implementation** of the interview spine:
+
+- **Canonical path:** `src/09_interview-qna/interview-execution/` (golden template, follow-up grill, cross-domain prompt bank).
+
+**Do not** create a track-local `interview-execution/` **unless** at least one of the following is true:
+
+- The domain needs **systematic rewrites** across those files (money path, compliance language, ledger semantics, etc.).
+- The track is intentionally **offline-first** and a self-contained tree is worth the **sync tax**—and the track README states that trade-off explicitly.
+
+Otherwise, **only link** to the global files from the track `README.md` (and from individual questions if useful). This prevents template and grill **drift** across many copies.
+
+---
+
 ## Duplication policy (when to copy vs link)
 
 ### Prefer **linking** when
@@ -73,11 +88,34 @@ Most **role** folders follow:
 
 ---
 
+## Track taxonomy: role vs domain (contract for new folders)
+
+**Primary axis — role:** how you position in interviews (e.g. solution architect, platform architect, AI architect, enterprise architect). Prefer this for **new** top-level folders under `09_interview-qna/`.
+
+**Secondary axis — domain:** stack or vertical depth under that role (Azure, payments, GenAI, data platform, etc.)—usually a **subfolder** or a **clear prefix** in the track README, not a parallel naming scheme with no explanation.
+
+**Current tree:** mixes numbered role tracks (`01_`–`09_`), a few unnumbered role-style folders, and domain-heavy tracks (e.g. payments). That is **acceptable**; full physical reshaping is optional.
+
+**When adding a new track:** pick **one** primary axis in the folder name; if both role and domain matter, encode **role first**, then domain in a child path or in the README title so navigation stays predictable.
+
+---
+
 ## Cross-link hygiene
 
 - Prefer **relative** links from the file that contains them; run the repo’s markdown link checker when changing structure.
 - Each **track README** should surface: **spine** (shared or local), **grill**, and **one** default drill or core question path.
 - After **moving** folders, update **`docs/02_repository-structure.md` first** (repository single source of truth), then dependent indexes.
+
+---
+
+## Curriculum boundaries: `07_case-studies/` vs `08_system_designs/`
+
+Interview prep (`09_interview-qna/`) **consumes** both analysis skills (from studying `07_`) and construction skills (from practicing `08_`). Keep the curriculum split clean:
+
+- **`07_case-studies/`** — understanding **existing** systems; flexible narrative; not forced into the interview walkthrough scaffold.
+- **`08_system_designs/`** — **your** forward designs from a prompt; **must** follow `src/08_system_designs/_template/` (requirements → HLD → trade-offs → failures + diagrams).
+
+**Do not** duplicate a case study into `08_` with light edits. Authoritative wording: [`docs/02_repository-structure.md`](../../docs/02_repository-structure.md) (*Case studies vs system designs*).
 
 ---
 

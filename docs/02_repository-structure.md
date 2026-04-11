@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.20
+**Version**: 3.25
 **Last Updated**: April 10, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -33,16 +33,17 @@ system-design-in-practice/
 │   ├── 02_patterns/                       # 🔲 Scaffold — caching, rate-limiting, retries, messaging
 │   ├── 03_distributed-systems/            # 🔲 Scaffold — notification, chat, url-shortener
 │   ├── 04_ai-ml-platforms/                # 🔲 Scaffold — MLOps, observability, AI security
-│   ├── 05_architecture-deep-dives/        # 🔲 Scaffold — consistency, partitioning, scaling
-│   ├── 06_decision-frameworks/            # 🔲 Scaffold — when-to-use-what guides
+│   ├── 05_decision-frameworks/            # 🔲 Scaffold — when-to-use-what guides
+│   ├── 06_architecture-deep-dives/        # 🔲 Scaffold — consistency, partitioning, scaling
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
-│   └── 99_interview-qna/                  # ✅ Interview prep and Q&A (see README)
+│   ├── 08_system_designs/                 # Interview-style forward designs — README + `_template/` golden scaffold
+│   └── 09_interview-qna/                  # ✅ Interview prep and Q&A (see README)
 │       ├── README.md                      # Master index + daily workflow
 │       ├── 01_interview-prep-conventions.md   # Duplication policy + track contract
 │       ├── interview-execution/           # Shared golden template + grill + cross-domain prompts
 │       ├── ai-systems-architect/          # complete.md + templates + 02_core_questions/
 │       ├── enterprise-system-architect/   # complete.md + templates + 02_core_questions/
-│       ├── payment-system-interview/      # Modular 01–04 + interview-execution/ (payment-tuned) + templates + 02_core_questions/
+│       ├── payment-system-interview/      # Modular 01–06 (incl. mock after-action + 5-min clarify drill) + interview-execution/ (payment-tuned) + templates + 02_core_questions/
 │       ├── 01_azure-solutions-architect-role-pattern/   # templates + answer-format enforcement + decision/service guides + question packs
 │       ├── 02_dotnet-application-architect-azure-stack/
 │       ├── 03_azure-engineering-lead-platform-pattern/
@@ -66,10 +67,12 @@ system-design-in-practice/
 
 ### Scaffold Folders (`01_foundations/` → `07_case-studies/`)
 
-Folders marked 🔲 contain only `.gitkeep` — content is added progressively as learning deepens.
-**Do not delete `.gitkeep` files** — they hold the folder in git.
+Folders marked 🔲 are populated progressively as learning deepens; many currently hold only `.gitkeep`.
+**Do not delete `.gitkeep` files** where they anchor an empty scaffold.
 
-**Pedagogical order:** foundations → patterns → distributed systems → AI/ML platforms → architecture deep dives → decision frameworks → case studies. Interview prep (`99_interview-qna/`) is intentionally **after** `07_` without consuming a `08_` slot.
+**`08_system_designs/`** is not an empty shell: it always carries [`README.md`](../src/08_system_designs/README.md) and [`_template/`](../src/08_system_designs/_template/README.md) as the contract for new designs.
+
+**Pedagogical order:** foundations → patterns → distributed systems → AI/ML platforms → **decision frameworks** → **architecture deep dives** → **`07_case-studies/`** (analyze existing systems) → **`08_system_designs/`** (construct interview-style designs) → **`09_interview-qna/`** (defend in loop). *Legacy:* interview prep used to live under `99_interview-qna/` to sort after `07_` without an `08_` slot; the tree now uses sequential **`08` → `09`**.
 
 ### File Naming Rules
 
@@ -84,9 +87,20 @@ Each case study under `07_case-studies/` must include:
 `requirements.md`, `high-level-design.md`, `low-level-design.md`,
 `scalability.md`, `trade-offs.md`, `diagrams/`
 
-### Interview question packs (`99_interview-qna/`)
+### Case studies vs system designs (`07_` vs `08_`)
 
-**`99_` sorts after `01_foundations`–`07_case-studies`** without consuming an `08_` slot; it is **active prep**, not a discard area. See **`README.md`** (workflow) and **`01_interview-prep-conventions.md`** (duplication policy, embedded vs shared `interview-execution/`).
+| Folder | Intent | Mode | Content rule |
+|--------|--------|------|--------------|
+| `07_case-studies/` | Understand **existing** or canonical systems | Reverse engineering / analysis | Flexible narrative depth; prioritize **explanation** of how the real system behaves. |
+| `08_system_designs/` | **Practice** designing from a prompt | Forward construction / interview-ready | **Must** follow the scaffold in `src/08_system_designs/_template/` (requirements → HLD → trade-offs → failures + `diagrams/`). |
+
+**Placement rule:** Do **not** copy a `07_` study into `08_` with minor edits. *“How Netflix/YouTube works”* → `07_`. *“My design for a notification service in 45 minutes”* → `08_`.
+
+**Template:** `src/08_system_designs/_template/README.md` — copy to a new sibling folder per design.
+
+### Interview question packs (`09_interview-qna/`)
+
+**Active prep** — not an archive. See **`README.md`** (workflow) and **`01_interview-prep-conventions.md`** (duplication policy, embedded vs shared `interview-execution/`).
 
 Role tracks use **`01_templates/`**, **`02_core_questions/<slug>/`** with `answer.md`, `diagram.md`, `tradeoffs.md`, `followups.md`. Do **not** use a `00_` prefix (use `01_` and above). The Azure track adds **`03_azure_specific/`** and **`04_cross_domain/`**. **`07_gen-ai-lead-role-pattern/`** — LLMOps, lifecycle, governance. **`04_agentic-ai-lead-competency-profile/`** — RAG + agents at lead depth. **`08_ai-engineer-role-pattern/`** — individual-contributor scope for shipping one LLM-backed product feature (API, retrieval slice, eval, ops).
 

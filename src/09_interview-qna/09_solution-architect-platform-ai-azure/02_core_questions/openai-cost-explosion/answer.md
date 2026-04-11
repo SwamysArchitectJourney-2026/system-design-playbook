@@ -157,6 +157,7 @@ sequenceDiagram
 | Embedding (query only) | `text-embedding-3-small` | ~100 | $0.02 |
 
 **APIM routing policy sketch:**
+
 ```xml
 <choose>
   <when condition="@(context.Request.Headers.GetValueOrDefault("X-Query-Complexity","simple") == "complex")">
