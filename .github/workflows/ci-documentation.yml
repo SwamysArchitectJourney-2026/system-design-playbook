@@ -44,7 +44,8 @@ jobs:
             "docs/**/*.md" \
             "src/**/*.md" \
             "tools/**/*.md" \
-            ".github/**/*.md"
+            ".github/**/*.md" \
+            ".cursor/**/*.md"
 
   link-checker:
     name: Link Checking (Lychee)
