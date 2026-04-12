@@ -1,7 +1,7 @@
 # Repository Structure
 
-**Version**: 3.26
-**Last Updated**: April 11, 2026
+**Version**: 3.27
+**Last Updated**: April 12, 2026
 **Purpose**: Single source of truth for repository structure
 
 > When the structure changes, update **this file first**, then update references in
@@ -29,7 +29,6 @@ system-design-in-practice/
 │   ├── images/                            # Diagrams and images
 │   └── review-reports/                    # Review and tooling reports
 │       └── 01_duplicate-markdown-headings-scan.md  # Find-DuplicateContent.ps1 output (src, docs, .archive)
-├── source-material/                       # Staging area (git-ignored)
 ├── .archive/                              # Historical snapshots (not active curriculum; see root README)
 ├── src/                                   # All playbook content
 │   ├── CONTENT_INDEX.md                   # Content index and status tracker
