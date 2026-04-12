@@ -50,16 +50,16 @@ See: `01_educational-content-rules.mdc` for complete details.
 
 **Self-Check Question**: "Did I update the instruction file?" - If no, STOP and do it NOW.
 
-### 4. File Naming Validation (CRITICAL)
+### 4. Naming Validation (CRITICAL) — Files, Folders & Topics
 
-**Before creating or committing ANY numbered file, validate naming**:
+**Before creating or committing ANY numbered file, folder, or topic, validate naming**:
 
-1. ✅ **Check for `00_` prefix**: **NEVER ALLOWED** - Use `01_` instead
-2. ✅ **Verify scope**: Rule applies to **ALL files** including:
-   - Educational content (`01_Reference/`, `02_Learning/`, `src/01_introduction/`, etc.)
-   - Documentation files (`docs/`)
-   - Any numbered files anywhere in repository
+1. ✅ **Check for `00_` prefix**: **NEVER ALLOWED** on files, folders, or topic names — Use `01_` instead
+2. ✅ **Verify scope**: Rule applies to **ALL** of:
+   - Files — educational content, documentation, templates (e.g., `src/`, `docs/`)
+   - Folders — any directory with a numeric prefix
+   - Topics — any named topic or content section using a `00_` prefix
 3. ✅ **Quick validation**: Run `Get-ChildItem -Recurse -Filter "*00_*"` to find violations
-4. ✅ **NO EXCEPTIONS**: `00_` is NEVER allowed, even for meta/documentation files
+4. ✅ **NO EXCEPTIONS**: `00_` is NEVER allowed, even for meta/documentation files, template files, or folder names
 
-**Self-Check Question**: "Does this file use `00_` prefix?" - If yes, RENAME to `01_` or appropriate number.
+**Self-Check Question**: "Does this file, folder, or topic use `00_` prefix?" - If yes, RENAME to `01_` or appropriate number.

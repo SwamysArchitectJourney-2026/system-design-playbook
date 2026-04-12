@@ -284,6 +284,7 @@ glossary/
 - Use semantic names: `questions/`, `scenarios/`, `glossary/`
 - Use hyphens for multi-word: `system-design/`, `cloud-architecture/`
 - Use numbers ONLY when sequence matters: `01_fundamentals/`, `02_advanced/`
+- **NEVER** use `00_` prefix — applies equally to folder names, file names, and topic names
 
 ---
 
@@ -465,15 +466,16 @@ Is content > 1000 lines?
 
 ---
 
-## ✅ Checklist for New Files
+## ✅ Checklist for New Files & Folders
 
-Before creating a new file, ask:
+Before creating a new file or folder, ask:
 
-- [ ] Does the filename describe the content semantically?
+- [ ] Does the filename/folder name describe the content semantically?
 - [ ] Is the filename readable in a URL?
 - [ ] Will the filename survive reordering?
 - [ ] Does the filename work with GitHub navigation?
 - [ ] Am I encoding hierarchy in the filename? (If yes, use folders instead)
+- [ ] Does the file, folder, or topic use a `00_` prefix? (If yes, **RENAME** — `00_` is never allowed)
 
 ---
 
