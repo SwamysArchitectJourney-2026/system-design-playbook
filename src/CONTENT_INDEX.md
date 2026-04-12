@@ -42,3 +42,5 @@
 | `docs/01_road-map.md` | Learning path and roadmap |
 | `docs/02_repository-structure.md` | Authoritative repo structure (update first) |
 | `docs/03_case-study-template.md` | Template for case study authoring |
+| `docs/04_target-role-playbook-alignment.md` | Target role personas ↔ `09_interview-qna` tracks + gaps (synthesized) |
+| `docs/review-reports/01_duplicate-markdown-headings-scan.md` | Duplicate-heading scan (`Find-DuplicateContent.ps1`) for `src/`, `docs/`, `.archive/` |

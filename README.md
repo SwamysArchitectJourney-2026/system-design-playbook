@@ -121,6 +121,8 @@ system-design-playbook/
 
 Use it to **simulate** timed defense, not only to read theory.
 
+**Route target profiles to tracks** (synthesized, zero-copy): [`docs/04_target-role-playbook-alignment.md`](docs/04_target-role-playbook-alignment.md). **Heading dedupe scan** (tooling report): [`docs/review-reports/01_duplicate-markdown-headings-scan.md`](docs/review-reports/01_duplicate-markdown-headings-scan.md).
+
 ---
 
 ## 🧠 How to Read This Repository
