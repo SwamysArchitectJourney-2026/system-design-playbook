@@ -2,7 +2,7 @@
 
 **Payment-specific copy** of the shared execution spine and grill. Use **this folder first** when prepping `payment-system-interview/` so examples and prompts stay in **money-path** context (idempotency, ledger, PCI, processors, reconciliation).
 
-The **canonical generic** versions (any domain) remain in [`../../interview-execution/`](../../interview-execution/) if you need domain-neutral wording.
+The **canonical generic** versions (any domain) remain in [`../../../09_interview-qna/interview-execution/`](../../../09_interview-qna/interview-execution/) if you need domain-neutral wording.
 
 | File | Role |
 |------|------|

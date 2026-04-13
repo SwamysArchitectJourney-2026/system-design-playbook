@@ -71,4 +71,4 @@ Practice **re-scoping** in 60 seconds.
 
 Copy bullets into `../02_core_questions/design-payment-azure-e2e/followups.md` (or your own slug) and **write answers in your own words** tied to **your** diagram.
 
-**Generic grill (all domains):** [`../../interview-execution/02_follow-up-grill-layer.md`](../../interview-execution/02_follow-up-grill-layer.md).
+**Generic grill (all domains):** [`../../../09_interview-qna/interview-execution/02_follow-up-grill-layer.md`](../../../09_interview-qna/interview-execution/02_follow-up-grill-layer.md).

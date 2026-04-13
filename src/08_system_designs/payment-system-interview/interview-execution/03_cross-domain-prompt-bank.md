@@ -48,4 +48,4 @@ Use these to practice **integration-style** questions that still **center money 
 2. Run it through [`01_golden-answer-template.md`](01_golden-answer-template.md).
 3. Add **five** follow-ups from [`02_follow-up-grill-layer.md`](02_follow-up-grill-layer.md) **specific** to that prompt (e.g. webhook replay, model outage, warehouse lag).
 
-**Broader (non-payment-heavy) prompts:** [`../../interview-execution/03_cross-domain-prompt-bank.md`](../../interview-execution/03_cross-domain-prompt-bank.md).
+**Broader (non-payment-heavy) prompts:** [`../../../09_interview-qna/interview-execution/03_cross-domain-prompt-bank.md`](../../../09_interview-qna/interview-execution/03_cross-domain-prompt-bank.md).

@@ -97,4 +97,4 @@ At least **two** real forks, for example:
 
 **Azure-shaped narrative:** `../../01_azure-solutions-architect-role-pattern/04_cross_domain/payment-processing-on-azure/` (from `09_interview-qna/`).
 
-**Generic (non-payment) spine:** [`../../interview-execution/01_golden-answer-template.md`](../../interview-execution/01_golden-answer-template.md).
+**Generic (non-payment) spine:** [`../../../09_interview-qna/interview-execution/01_golden-answer-template.md`](../../../09_interview-qna/interview-execution/01_golden-answer-template.md).
