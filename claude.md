@@ -8,9 +8,9 @@ Swamy's personal system design playbook. A **thinking system**, not a notes repo
 
 ## Critical Rules
 
-### File Naming
+### Naming (Files, Folders & Topics)
 
-- **NEVER** use `00_` prefix — use `01_` and above, no exceptions
+- **NEVER** use `00_` prefix on any file, folder, or topic name — use `01_` and above, no exceptions
 - Use zero-padded numeric prefixes: `01_`, `02_`, etc.
 - Use hyphens for multi-word names: `01_modern-system-design.md`
 - Split files use `-part1`, `-part2` (never `A/B/C`)

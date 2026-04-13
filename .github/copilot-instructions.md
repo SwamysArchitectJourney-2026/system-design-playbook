@@ -65,17 +65,17 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 ### When Working with System Design Content
 
 1. **Follow Zero-Copy Policy**: All content must be transformative, not reformative
-2. **Use Numbering**: Files must use `01_`, `02_`, etc. (never `00_`)
+2. **Use Numbering**: Files, folders, and topic names must use `01_`, `02_`, etc. (never `00_`)
 3. **Keep Modular**: Recommended ≤1000 lines per file (split, don't trim)
 4. **Create Original Diagrams**: Use Mermaid-first with ASCII fallback
 5. **Case Study Structure**: Follow standard structure (requirements, HLD, LLD, scalability, trade-offs)
 
 ### When Creating Educational Content
 
-#### File Naming
+#### Naming (Files, Folders & Topics)
 
 - ✅ Use zero-padded numeric prefixes: `01_`, `02_`, etc.
-- ❌ **NEVER** use `00_` prefix - **NO EXCEPTIONS**
+- ❌ **NEVER** use `00_` prefix on any file, folder, or topic name — **NO EXCEPTIONS**
 - ✅ Use hyphens for multi-word names: `01_modern-system-design.md`
 
 #### Naming Model (Decision Framework)
