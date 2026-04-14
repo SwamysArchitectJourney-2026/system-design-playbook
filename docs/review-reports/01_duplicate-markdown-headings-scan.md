@@ -6,6 +6,7 @@ This report captures the current output of `tools/psscripts/Find-DuplicateConten
 run with `-RepoRoot . -MinOccurrences 3`.
 
 Purpose:
+
 - Make intentional template-driven heading reuse visible.
 - Provide a stable linked artifact for repository docs and CI link validation.
 - Support review of repeated headings across `src/`, `docs/`, and other tracked markdown.
