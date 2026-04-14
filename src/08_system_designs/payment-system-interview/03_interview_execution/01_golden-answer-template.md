@@ -12,7 +12,7 @@ topic: "Payment system interview spine"
 
 Use this as the **spine** for a 35–45 minute **payment** round (checkout, P2P, billing, or B2B payables). The interviewer will interrupt; each section should stand alone.
 
-**Drill first:** `../01_foundations/01_clarifying-requirements-for-payment-systems.md` → `../01_foundations/03_idempotency-ledger-and-failure-handling.md`. **Executable pack:** `../02_core_questions/design-payment-azure-e2e/answer.md`.
+**Drill first:** `../01_foundations/01_clarifying-requirements-for-payment-systems.md` → `../01_foundations/03_idempotency-ledger-and-failure-handling.md`. **Executable pack:** `../02_core_questions/design-payment-azure-e2e/01_answer.md`.
 
 ## 0. Contract with the interviewer (30 seconds)
 
@@ -45,7 +45,7 @@ Pause for confirmation or numbers.
 - **Data:** **ledger** or **double-entry** narrative; **outbox** or queue for **async** capture, notifications, **settlement** jobs.
 - **Reads:** receipt/history path (CQRS OK if justified).
 
-Offer **Mermaid or whiteboard** when asked (`../02_core_questions/design-payment-azure-e2e/diagram.md` as a starting sketch).
+Offer **Mermaid or whiteboard** when asked (`../02_core_questions/design-payment-azure-e2e/02_diagram.md` as a starting sketch).
 
 ## 4. Deep dives (prepare 2–3)
 
@@ -88,11 +88,11 @@ At least **two** real forks, for example:
 
 ```text
 02_core_questions/<your-slug>/
-├── answer.md
-├── diagram.md
-├── failures.md
-├── tradeoffs.md
-└── followups.md   # attacks from ./02_follow-up-grill-layer.md
+├── 01_answer.md
+├── 02_diagram.md
+├── 03_failures.md
+├── 04_followups.md   # attacks from ./02_follow-up-grill-layer.md
+└── 05_tradeoffs.md
 ```
 
 **Azure-shaped narrative:** `../../../09_interview-qna/01_azure-solutions-architect-role-pattern/04_cross_domain/payment-processing-on-azure/`.

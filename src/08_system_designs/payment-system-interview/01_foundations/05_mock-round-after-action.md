@@ -36,7 +36,7 @@ If several of these showed up, treat the next session as a **repeat of the same 
 4. **Every async claim gets a correctness pair** — What **status** does the user see, what **DB row** exists, what happens on **timeout** and on **duplicate submit**.
 5. **Failure question → system then human** — After internal state and reconciliation, add notifications.
 
-Deepen from: [03 — Idempotency, ledger, failure handling](03_idempotency-ledger-and-failure-handling.md), [02 — Component model](02_component-model-and-data-flow.md), and the pack [failures.md](../02_core_questions/design-payment-azure-e2e/failures.md).
+Deepen from: [03 — Idempotency, ledger, failure handling](03_idempotency-ledger-and-failure-handling.md), [02 — Component model](02_component-model-and-data-flow.md), and the pack [03_failures.md](../02_core_questions/design-payment-azure-e2e/03_failures.md).
 
 ---
 

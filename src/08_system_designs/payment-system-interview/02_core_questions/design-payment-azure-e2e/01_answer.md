@@ -6,7 +6,7 @@ topic: "End-to-end payment narrative (Azure-oriented)"
 
 # Payment processing — end-to-end interview narrative
 
-This file is the **spoken spine**. Deep modules live in the **track root** (sibling of `02_core_questions/`): `01`–`04` `*.md` files. System-specific failures: `failures.md`.
+This file is the **spoken spine**. Deep modules live in the **track root** (sibling of `02_core_questions/`): `01`–`04` `*.md` files. System-specific failures: `03_failures.md`.
 
 ## 1. Clarify
 

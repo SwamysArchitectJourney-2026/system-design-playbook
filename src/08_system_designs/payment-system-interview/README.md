@@ -9,7 +9,7 @@ This folder is a **small course**: **foundation** modules in [`01_foundations/`]
 1. **Read `01` → `04` in order** — they build concepts: requirements → components/flow → idempotency/ledger/failures → follow-ups and grill. After a weak mock, read **`05`** (after-action / failure debrief) and rehearse **`06`** (first-five-minutes checklist) before the next attempt.
 2. **Run the payment execution spine** — [`03_interview_execution/01_golden-answer-template.md`](03_interview_execution/01_golden-answer-template.md) then [`03_interview_execution/02_follow-up-grill-layer.md`](03_interview_execution/02_follow-up-grill-layer.md); optional prompts: [`03_interview_execution/03_cross-domain-prompt-bank.md`](03_interview_execution/03_cross-domain-prompt-bank.md). Index: [`03_interview_execution/README.md`](03_interview_execution/README.md). (Domain-neutral originals live in [`../../09_interview-qna/interview-execution/`](../../09_interview-qna/interview-execution/).)
 3. **Open `_templates/system-design-template.md`** — checklist wired to this folder's `03_interview_execution/` copy.
-4. **Run the executable pack** — read `02_core_questions/design-payment-azure-e2e/answer.md` out loud once, then walk `diagram.md`, `failures.md`, `tradeoffs.md`, `followups.md` in any depth the interview needs.
+4. **Run the executable pack** — read `02_core_questions/design-payment-azure-e2e/01_answer.md` out loud once, then walk `02_diagram.md`, `03_failures.md`, `05_tradeoffs.md`, `04_followups.md` in any depth the interview needs.
 5. **Optional Azure depth** — if the loop is Azure SA-style, read the cross-domain pack (link below); paths inside `design-payment-azure-e2e/*.md` point there with **four** `../` segments from that subfolder (up to `src/`, then into `09_interview-qna/01_azure-solutions-architect-role-pattern/...`).
 
 ---
@@ -25,9 +25,9 @@ This folder is a **small course**: **foundation** modules in [`01_foundations/`]
 
 ## Executable pack (single narrative)
 
-Entry point: [design-payment-azure-e2e — answer.md](02_core_questions/design-payment-azure-e2e/answer.md)
+Entry point: [design-payment-azure-e2e — answer.md](02_core_questions/design-payment-azure-e2e/01_answer.md)
 
-Same pack also includes: `diagram.md`, `failures.md`, `tradeoffs.md`, `followups.md`.
+Same pack also includes: `02_diagram.md`, `03_failures.md`, `05_tradeoffs.md`, `04_followups.md`.
 
 ## Templates
 
