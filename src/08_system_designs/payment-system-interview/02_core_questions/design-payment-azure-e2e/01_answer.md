@@ -1,7 +1,12 @@
 ---
 learning_level: "Advanced"
+prerequisites: ["Component model and data flow", "Idempotency, ledger, and failure handling"]
 estimated_time: "45 minutes"
 topic: "End-to-end payment narrative (Azure-oriented)"
+learning_objectives:
+  - "Deliver a structured 45-minute Azure payment narrative from clarify to close"
+  - "Name Azure services at each tier: Front Door, APIM, Service Bus, SQL/Cosmos, Key Vault"
+  - "Anchor failure handling to idempotency, ledger integrity, and processor reconciliation"
 ---
 
 # Payment processing — end-to-end interview narrative

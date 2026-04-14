@@ -10,4 +10,4 @@ The **canonical generic** versions (any domain) remain in [`../../../09_intervie
 | [02_follow-up-grill-layer.md](02_follow-up-grill-layer.md) | Interviewer attacks **biased to correctness, money, and compliance** |
 | [03_cross-domain-prompt-bank.md](03_cross-domain-prompt-bank.md) | Integration prompts touching **payments + fraud, data, platform, cloud** |
 
-**Track modules:** `../01_foundations/01_clarifying-requirements-for-payment-systems.md` through `../01_foundations/04_follow-ups-and-grill-payment-system.md`, plus `../02_core_questions/design-payment-azure-e2e/`.
+**Track modules:** `../01_foundations/` modules `01`–`06` (requirements → components → idempotency → grill → mock debrief → 5-min drill), plus `../02_core_questions/design-payment-azure-e2e/`.
