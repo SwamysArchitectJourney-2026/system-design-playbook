@@ -1,7 +1,7 @@
 # Repository Structure
 
-**Version**: 3.27
-**Last Updated**: April 12, 2026
+**Version**: 3.28
+**Last Updated**: April 14, 2026
 **Purpose**: Single source of truth for repository structure
 
 > When the structure changes, update **this file first**, then update references in
@@ -39,7 +39,10 @@ system-design-in-practice/
 │   ├── 05_decision-frameworks/            # 🔲 Scaffold — when-to-use-what guides
 │   ├── 06_architecture-deep-dives/        # 🔲 Scaffold — consistency, partitioning, scaling
 │   ├── 07_case-studies/                   # 🔲 Scaffold — end-to-end case studies
-│   ├── 08_system_designs/                 # Interview-style forward designs — README + `_template/` golden scaffold
+│   ├── 08_system_designs/                 # Interview-style forward designs — README, `_template/` scaffold, active designs
+│   │   ├── README.md
+│   │   ├── _template/                     # Golden scaffold for new forward designs
+│   │   └── payment-system-interview/      # Payment design track: 01_foundations/ (01–06 modules) + 02_core_questions/ + 03_interview_execution/ + _templates/
 │   └── 09_interview-qna/                  # ✅ Interview prep and Q&A (see README)
 │       ├── README.md                      # Master index + daily workflow
 │       ├── 01_interview-prep-conventions.md   # Duplication policy + track contract
@@ -73,7 +76,7 @@ system-design-in-practice/
 Folders marked 🔲 are populated progressively as learning deepens; many currently hold only `.gitkeep`.
 **Do not delete `.gitkeep` files** where they anchor an empty scaffold.
 
-**`08_system_designs/`** is not an empty shell: it always carries [`README.md`](../src/08_system_designs/README.md) and [`_template/`](../src/08_system_designs/_template/README.md) as the contract for new designs.
+**`08_system_designs/`** is not an empty shell: it always carries [`README.md`](../src/08_system_designs/README.md) and [`_template/`](../src/08_system_designs/_template/README.md) as the contract for new designs. **`payment-system-interview/`** is the first active design track, structured as `01_foundations/` (modules 01–06) + `02_core_questions/design-payment-azure-e2e/` + `03_interview_execution/` + `_templates/`.
 
 **Pedagogical order:** foundations → patterns → distributed systems → AI/ML platforms → **decision frameworks** → **architecture deep dives** → **`07_case-studies/`** (analyze existing systems) → **`08_system_designs/`** (construct interview-style designs) → **`09_interview-qna/`** (defend in loop). *Legacy:* interview prep used to live under `99_interview-qna/` to sort after `07_` without an `08_` slot; the tree now uses sequential **`08` → `09`**.
 
