@@ -15,7 +15,7 @@
 | `05_decision-frameworks/` | Decision guides | 🔲 | when-to-use-what |
 | `06_architecture-deep-dives/` | Deep dives | 🔲 | consistency, partitioning, scaling |
 | `07_case-studies/` | Case studies | 🔲 | end-to-end designs |
-| `08_system_designs/` | Forward designs | ✅ | [`README.md`](08_system_designs/README.md) + [`_template/`](08_system_designs/_template/README.md) (interview-style construction; not a duplicate of `07_`) |
+| `08_system_designs/` | Forward designs | ✅ | [`README.md`](08_system_designs/README.md) + [`_template/`](08_system_designs/_template/README.md) (interview-style construction; not a duplicate of `07_`) · Active track: [`payment-system-interview/`](08_system_designs/payment-system-interview/README.md) (`01_foundations/` modules 01–06, `02_core_questions/design-payment-azure-e2e/` numbered pack, `03_interview_execution/`, `_templates/`) |
 
 ---
 
