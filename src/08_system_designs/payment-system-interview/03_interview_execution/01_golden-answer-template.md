@@ -12,7 +12,7 @@ topic: "Payment system interview spine"
 
 Use this as the **spine** for a 35–45 minute **payment** round (checkout, P2P, billing, or B2B payables). The interviewer will interrupt; each section should stand alone.
 
-**Drill first:** `../01_clarifying-requirements-for-payment-systems.md` → `../03_idempotency-ledger-and-failure-handling.md`. **Executable pack:** `../02_core_questions/design-payment-azure-e2e/answer.md`.
+**Drill first:** `../01_foundations/01_clarifying-requirements-for-payment-systems.md` → `../01_foundations/03_idempotency-ledger-and-failure-handling.md`. **Executable pack:** `../02_core_questions/design-payment-azure-e2e/answer.md`.
 
 ## 0. Contract with the interviewer (30 seconds)
 
@@ -95,6 +95,6 @@ At least **two** real forks, for example:
 └── followups.md   # attacks from ./02_follow-up-grill-layer.md
 ```
 
-**Azure-shaped narrative:** `../../01_azure-solutions-architect-role-pattern/04_cross_domain/payment-processing-on-azure/` (from `09_interview-qna/`).
+**Azure-shaped narrative:** `../../../09_interview-qna/01_azure-solutions-architect-role-pattern/04_cross_domain/payment-processing-on-azure/`.
 
 **Generic (non-payment) spine:** [`../../../09_interview-qna/interview-execution/01_golden-answer-template.md`](../../../09_interview-qna/interview-execution/01_golden-answer-template.md).

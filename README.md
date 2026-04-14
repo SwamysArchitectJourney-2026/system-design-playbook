@@ -77,7 +77,7 @@ system-design-playbook/
 ├── src/05_decision-frameworks/    → When-to-use-what (tradeoff-driven decisions)
 ├── src/06_architecture-deep-dives/ → Advanced topics (consistency, partitioning, scaling)
 ├── src/07_case-studies/           → Analyze existing systems (reverse engineering / exploration)
-├── src/08_system_designs/         → Structured walkthroughs (forward construction, interview-style)
+├── src/08_system_designs/         → Structured walkthroughs (forward construction, interview-style); first active: payment-system-interview/
 └── src/09_interview-qna/          → Interview execution layer — drills, templates, role tracks
 ```
 

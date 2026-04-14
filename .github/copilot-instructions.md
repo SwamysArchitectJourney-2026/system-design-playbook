@@ -55,7 +55,7 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 - `src/05_decision-frameworks/` - When-to-use-what decision guides
 - `src/06_architecture-deep-dives/` - Consistency, partitioning, scaling
 - `src/07_case-studies/` - End-to-end case studies
-- `src/08_system_designs/` - Interview-style forward designs (`README.md`, `_template/` — see `docs/02_repository-structure.md`)
+- `src/08_system_designs/` - Interview-style forward designs (`README.md`, `_template/`, first active track: `payment-system-interview/` — see `docs/02_repository-structure.md`)
 - `src/09_interview-qna/` - Interview prep (`README.md` workflow, `01_interview-prep-conventions.md`, role tracks `01_`–`09_`, `interview-execution/`, `career-orientation/`)
 
 ---

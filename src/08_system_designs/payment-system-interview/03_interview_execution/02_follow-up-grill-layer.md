@@ -12,7 +12,7 @@ topic: "Payment system grill layer"
 
 Staff+ **payment** rounds probe **money correctness**, **compliance touchpoints**, and **operational reconciliation**. For each topic, prepare a **one-sentence thesis** plus **one concrete mechanism** (not “we’d monitor it”).
 
-Use with `../04_follow-ups-and-grill-payment-system.md` and `./03_cross-domain-prompt-bank.md`.
+Use with `../01_foundations/04_follow-ups-and-grill-payment-system.md` and `./03_cross-domain-prompt-bank.md`.
 
 ## Correctness, money, and ledger
 
