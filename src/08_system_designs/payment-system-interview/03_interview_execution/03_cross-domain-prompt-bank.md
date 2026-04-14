@@ -5,6 +5,14 @@ estimated_time: "20 minutes"
 learning_objectives:
   - "Stress-test payment prep with adjacent-domain prompts"
 topic: "Payment cross-domain prompts"
+related_topics:
+  prerequisites:
+    - 01_golden-answer-template.md
+    - 02_follow-up-grill-layer.md
+  builds_upon:
+    - 02_follow-up-grill-layer.md
+  enables: []
+  cross_refs: []
 ---
 
 # Cross-domain prompt bank — payments

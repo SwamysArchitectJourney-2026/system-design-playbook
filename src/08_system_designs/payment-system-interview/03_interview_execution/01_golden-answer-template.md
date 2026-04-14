@@ -6,6 +6,16 @@ learning_objectives:
   - "Run one repeatable arc for payment system design rounds"
   - "Pause cleanly for PCI, idempotency, and processor deep dives"
 topic: "Payment system interview spine"
+related_topics:
+  prerequisites:
+    - ../01_foundations/01_clarifying-requirements-for-payment-systems.md
+    - ../01_foundations/03_idempotency-ledger-and-failure-handling.md
+  builds_upon:
+    - ../01_foundations/04_follow-ups-and-grill-payment-system.md
+  enables:
+    - 02_follow-up-grill-layer.md
+  cross_refs:
+    - ../02_core_questions/design-payment-azure-e2e/01_answer.md
 ---
 
 # Golden answer template — payment system design
