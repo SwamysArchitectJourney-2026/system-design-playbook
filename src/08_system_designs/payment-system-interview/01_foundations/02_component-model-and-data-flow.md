@@ -5,6 +5,14 @@ estimated_time: "25 minutes"
 learning_objectives:
   - "Name payment-specific services beyond a generic API tier"
   - "Describe request flow from client to gateway and ledger in interview language"
+related_topics:
+  prerequisites:
+    - 01_clarifying-requirements-for-payment-systems.md
+  builds_upon:
+    - 01_clarifying-requirements-for-payment-systems.md
+  enables:
+    - 03_idempotency-ledger-and-failure-handling.md
+  cross_refs: []
 ---
 
 # Component model and data flow (payment systems)

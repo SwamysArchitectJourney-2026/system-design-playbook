@@ -1,3 +1,21 @@
+---
+learning_level: "Advanced"
+prerequisites: ["Component model and data flow"]
+estimated_time: "10 minutes"
+learning_objectives:
+  - "Read an Azure-specific payment flow diagram with service names at each tier"
+  - "Extend the diagram in the room with Private Endpoints, Managed Identity, or zone-redundant SQL"
+related_topics:
+  prerequisites:
+    - ../../01_foundations/02_component-model-and-data-flow.md
+  builds_upon:
+    - 01_answer.md
+  enables:
+    - 03_failures.md
+  cross_refs:
+    - ../../01_foundations/02_component-model-and-data-flow.md
+---
+
 # Diagram: payment E2E (Azure)
 
 Azure-specific rendering of the payment flow. Extend in the room — add Private Endpoints on adapter, Managed Identity on Key Vault access, or zone-redundant SQL replicas as depth demands.

@@ -6,6 +6,14 @@ learning_objectives:
   - "Explain idempotency keys and safe retries for payments"
   - "Contrast sync vs async confirmation and user-visible states"
   - "Outline reconciliation and failure handling beyond user notification"
+related_topics:
+  prerequisites:
+    - 02_component-model-and-data-flow.md
+  builds_upon:
+    - 02_component-model-and-data-flow.md
+  enables:
+    - 04_follow-ups-and-grill-payment-system.md
+  cross_refs: []
 ---
 
 # Idempotency, ledger, and failure handling

@@ -5,6 +5,15 @@ estimated_time: "25 minutes"
 learning_objectives:
   - "Defend a payment design under common staff+ follow-ups"
   - "Tie answers to idempotency, ledger, messaging, and PCI boundaries"
+related_topics:
+  prerequisites:
+    - 01_clarifying-requirements-for-payment-systems.md
+    - 03_idempotency-ledger-and-failure-handling.md
+  builds_upon:
+    - 03_idempotency-ledger-and-failure-handling.md
+  enables:
+    - 05_mock-round-after-action.md
+  cross_refs: []
 ---
 
 # Payment system: follow-ups and grill

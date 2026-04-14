@@ -7,6 +7,17 @@ learning_objectives:
   - "Deliver a structured 45-minute Azure payment narrative from clarify to close"
   - "Name Azure services at each tier: Front Door, APIM, Service Bus, SQL/Cosmos, Key Vault"
   - "Anchor failure handling to idempotency, ledger integrity, and processor reconciliation"
+related_topics:
+  prerequisites:
+    - ../../01_foundations/02_component-model-and-data-flow.md
+    - ../../01_foundations/03_idempotency-ledger-and-failure-handling.md
+  builds_upon:
+    - ../../01_foundations/04_follow-ups-and-grill-payment-system.md
+  enables:
+    - 02_diagram.md
+    - 03_failures.md
+  cross_refs:
+    - ../../03_interview_execution/01_golden-answer-template.md
 ---
 
 # Payment processing — end-to-end interview narrative

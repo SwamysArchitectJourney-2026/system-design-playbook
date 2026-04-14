@@ -5,6 +5,13 @@ estimated_time: "20 minutes"
 learning_objectives:
   - "Enumerate functional and non-functional dimensions for payment systems in interviews"
   - "Separate user scale from traffic, money-movement, and compliance constraints"
+related_topics:
+  prerequisites: []
+  builds_upon: []
+  enables:
+    - 02_component-model-and-data-flow.md
+    - 06_first-five-minutes-clarifying-checklist.md
+  cross_refs: []
 ---
 
 # Clarifying requirements: payment systems (interview opening)
