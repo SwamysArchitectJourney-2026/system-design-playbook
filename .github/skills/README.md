@@ -29,5 +29,6 @@ output to expect.
 
 - `.github/agents/` — Full instruction sets for coding agent tasks
 - `.cursor/agents/` — Cursor/Claude Code equivalents
+- `.cursor/skills/*/SKILL.md` — Cursor-native skill bundles (same capabilities, discovery via `description`)
 - `.github/prompts/skill.md` — Older, more general skill definition (repo educator role)
 - `CLAUDE.md` — Authoritative operating contract

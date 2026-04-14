@@ -1,7 +1,7 @@
 # Repository Structure & Context
 
-**Version**: 3.26
-**Last Updated**: April 11, 2026
+**Version**: 3.29
+**Last Updated**: April 14, 2026
 
 ---
 
@@ -36,6 +36,7 @@
 - `src/07_case-studies/` — End-to-end case studies *(scaffold)*
 - `src/08_system_designs/` — Interview-style forward designs (`README.md`, `_template/`, first active track: `payment-system-interview/`) ✅
 - `src/09_interview-qna/` — Interview prep: `README.md` (workflow), `01_interview-prep-conventions.md` (duplication policy), `interview-execution/` + role folders `01_`–`09_` with `01_templates/` + `02_core_questions/` packs; Azure track adds `03_azure_specific/` + `04_cross_domain/`; `07_gen-ai-lead-role-pattern/` for LLMOps/lifecycle; `08_ai-engineer-role-pattern/` for IC feature shipping; `09_solution-architect-platform-ai-azure/` for Platform AI on Azure; `career-orientation/` for short role/skill maps ✅
+- **AI agent config** — `.cursor/agents/` + `.cursor/skills/` (Cursor / Claude Code); `.github/agents/` + `.github/skills/` (Copilot coding agent); root `CLAUDE.md` → `## Agent Instructions`
 
 ---
 

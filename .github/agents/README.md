@@ -21,7 +21,7 @@ When creating an issue, reference the appropriate agent in the issue body:
 
 ```text
 Task type: content-review
-Files to review: src/08_system_designs/payment-system-interview/01_foundations/
+Files to review: src/09_interview-qna/payment-system-interview/
 ```
 
 The Copilot coding agent will read `content-review.md` for context on the repo's

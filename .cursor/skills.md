@@ -2,6 +2,8 @@
 
 Short map for **how to operate in this playbook repo**. This file does **not** embed raw staging content; it points to policies and entry points.
 
+**Cursor Skills (bundles):** project skills with `SKILL.md` live under [`.cursor/skills/`](skills/README.md) (`content-reviewer`, `structure-updater`). This file is the **navigation index**; each `SKILL.md` carries the **machine-facing `description`** used for skill discovery.
+
 ---
 
 ## Rules (read in this order when unsure)

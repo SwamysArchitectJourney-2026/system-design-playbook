@@ -1,6 +1,6 @@
 # Repository Structure
 
-**Version**: 3.28
+**Version**: 3.29
 **Last Updated**: April 14, 2026
 **Purpose**: Single source of truth for repository structure
 
@@ -15,10 +15,14 @@
 system-design-in-practice/
 ├── .cursor/                               # Cursor AI project config
 │   ├── rules/                             # Project rules (*.mdc)
-│   └── skills.md                          # Agent index — rules, entry points, tooling (no staging content)
+│   ├── agents/                            # Agent prompts — content reviewer, structure updater (+ README)
+│   ├── skills/                            # Cursor skills — `*/SKILL.md` bundles (+ README)
+│   └── skills.md                          # Operating index — rules, entry points, tooling
 ├── .github/                               # GitHub configuration
 │   ├── workflows/                         # CI/CD workflows
 │   ├── ISSUE_TEMPLATE/                    # Issue templates
+│   ├── agents/                            # Copilot coding agent task instructions (+ README)
+│   ├── skills/                            # Copilot skill invoke contracts (+ README)
 │   ├── copilot-instructions.md            # GitHub Copilot instructions
 │   └── prompts/                           # Reusable prompt templates
 ├── docs/                                  # Documentation

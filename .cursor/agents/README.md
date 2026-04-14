@@ -14,6 +14,12 @@ Each file defines a focused role with explicit rules, triggers, and output forma
 
 ---
 
+## Related: Cursor Skills
+
+For the same capabilities in **Cursor skill** format (`name` + `description` frontmatter), see [`.cursor/skills/`](../skills/README.md).
+
+---
+
 ## How Agents Work in This Repo
 
 Agents read `.cursor/rules/*.mdc` for detailed policies. The key files are:
@@ -31,7 +37,8 @@ The operating contract for all agents is `CLAUDE.md` (repo root) → `## Agent I
 ## Adding a New Agent
 
 1. Create `NN_agent-name.md` in this directory (use next available number)
-2. Create `.github/agents/agent-name.md` for the GitHub Copilot coding agent equivalent
-3. Optionally create `.github/skills/agent-name.md` for a skill definition
-4. Add a row to the table above
-5. Add a row to the `CLAUDE.md` agent table
+2. Create `.cursor/skills/<slug>/SKILL.md` if Cursor should auto-route to this capability (see [`.cursor/skills/README.md`](../skills/README.md))
+3. Create `.github/agents/agent-name.md` for the GitHub Copilot coding agent equivalent
+4. Optionally create `.github/skills/agent-name.md` for a Copilot invoke contract
+5. Add rows to the tables in this README and in `CLAUDE.md` (`## Agent Instructions`)
+6. If you add a **new** top-level folder under `.cursor/`, extend the `.cursor/` tree in `docs/02_repository-structure.md`

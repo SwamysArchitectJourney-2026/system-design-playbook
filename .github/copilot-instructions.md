@@ -46,6 +46,8 @@ For the complete repository structure, see: **[docs/02_repository-structure.md](
 
 **Docs (meta):** [Learning path](../docs/01_road-map.md) · [Case study template](../docs/03_case-study-template.md) · [Target roles ↔ playbook alignment](../docs/04_target-role-playbook-alignment.md) · [Duplicate-heading scan report](../docs/review-reports/01_duplicate-markdown-headings-scan.md)
 
+**Agent / skill instructions:** [`agents/`](agents/README.md) (Copilot coding agent tasks) · [`skills/`](skills/README.md) (invoke contracts) · [`.cursor/agents/`](../.cursor/agents/README.md) / [`.cursor/skills/`](../.cursor/skills/README.md) (Cursor) · root [`claude.md`](../claude.md) (`## Agent Instructions`)
+
 **Quick Overview**:
 
 - `src/01_foundations/` - Design, tradeoff & failure frameworks

@@ -103,6 +103,7 @@ Before any task, agents must read:
 | File | What it defines |
 |------|----------------|
 | `.cursor/skills.md` | Repository operating index — rules, entry points, scripts |
+| `.cursor/skills/*/SKILL.md` | Cursor **project skills** — `name` + `description` for routing; start at `.cursor/skills/README.md` |
 | `.cursor/rules/01_educational-content-rules.mdc` | Content quality bar (zero-copy, YAML, 1000-line rule) |
 | `.cursor/rules/03_quality-assurance.mdc` | QA checklist — use for content + technical review |
 | `.cursor/rules/04_markdown-standards.mdc` | Markdown and YAML frontmatter standards |
@@ -116,6 +117,18 @@ Before any task, agents must read:
 | Structure Updater | `.cursor/agents/02_structure-updater.md` | Adding/renaming/moving files or folders |
 | Content Review (GitHub) | `.github/agents/content-review.md` | GitHub Copilot coding agent — review tasks |
 | Structure Update (GitHub) | `.github/agents/structure-update.md` | GitHub Copilot coding agent — structure tasks |
+| Cursor skills (auto-routing) | `.cursor/skills/<slug>/SKILL.md` | Bundled Content Reviewer / Structure Updater roles for Cursor discovery |
+
+### How `CLAUDE.md` works with Claude Code
+
+**Claude Code** loads **`claude.md` at the repo root** automatically (along with any nested `CLAUDE.md` if you add them later). Treat this file as the **single contract** for *all* agents:
+
+- Put **non-negotiables** and **read-this-first** tables at the top of `## Agent Instructions`.
+- Put **long role prompts** in `.cursor/agents/` and link them from the table above.
+- Put **Cursor Skills** (for the Skills UI / discovery) in `.cursor/skills/<name>/SKILL.md` — keep `description` rich with trigger phrases.
+- Put **GitHub Copilot coding agent** task docs in `.github/agents/` and optional invoke contracts in `.github/skills/`.
+
+Do **not** duplicate full policies here; link to `.cursor/rules/*.mdc` instead so updates stay in one place.
 
 ### Reasoning Framework (Mandatory)
 
@@ -157,11 +170,13 @@ REPEAT:  Until all requirements are met
 
 ### How to Create New Agent Instructions
 
-To add a new agent to this repo:
+To add a new agent or skill to this repo:
 
-1. Create `.cursor/agents/NN_agent-name.md` — for Cursor/Claude Code
-2. Create `.github/agents/agent-name.md` — for GitHub Copilot coding agent
-3. Optionally create `.github/skills/agent-name.md` — for a skill definition (how to invoke it)
-4. Reference the new agent in this `CLAUDE.md` table above
-5. Do **not** update `docs/02_repository-structure.md` for agent config files
-   (these live in `.cursor/` and `.github/` which are config, not content)
+1. **`CLAUDE.md` (this file)** — Add a row under **Available Specialized Agents** (or the Cursor skill row) with the file path and when to use it. Keep **Read These First** accurate.
+2. **`.cursor/agents/NN_agent-name.md`** — Long-form instructions for Cursor / Claude Code (triggers, rules, output shape).
+3. **`.cursor/skills/<slug>/SKILL.md`** — Optional but recommended for Cursor: YAML `name` + `description` (third person, trigger terms) and short steps; link to the matching agent file for depth.
+4. **`.github/agents/agent-name.md`** — Parity for GitHub Copilot **coding agent** tasks.
+5. **`.github/skills/agent-name.md`** — Optional invoke / I/O contract for Copilot chat or docs.
+6. **`docs/02_repository-structure.md`** — If you add a **new** top-level folder under `.cursor/` or `.github/` (e.g. a new config subtree), add one line to the ASCII tree so others can discover it. Routine edits **inside** existing `agents/` or `skills/` folders do not require structure churn.
+
+**Naming:** Agent files use `01_`, `02_` under `.cursor/agents/`. Skill slugs use **lowercase hyphenated** directory names (`content-reviewer`, not `ContentReviewer`).

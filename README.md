@@ -61,6 +61,8 @@ This is **Swamy's personal playbook and reference workspace**, not official cour
 
 > Full structure: [`docs/02_repository-structure.md`](docs/02_repository-structure.md)
 
+**AI agents:** Cursor prompts in [`.cursor/agents/`](.cursor/agents/README.md) and skills in [`.cursor/skills/`](.cursor/skills/README.md); Copilot coding-agent tasks in [`.github/agents/`](.github/agents/README.md) and [`.github/skills/`](.github/skills/README.md). Root contract: [`claude.md`](claude.md) → **Agent Instructions**.
+
 To export the full folder and file structure to a text file, run:
 
 ```powershell
