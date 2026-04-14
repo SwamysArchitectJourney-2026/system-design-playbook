@@ -6,6 +6,15 @@ learning_objectives:
   - "Run one repeatable arc for payment system design rounds"
   - "Pause cleanly for PCI, idempotency, and processor deep dives"
 topic: "Payment system interview spine"
+related_topics:
+  prerequisites:
+    - ../01_clarifying-requirements-for-payment-systems.md
+    - ../02_component-model-and-data-flow.md
+  builds_upon: []
+  enables:
+    - 02_follow-up-grill-layer.md
+  cross_refs:
+    - ../../interview-execution/01_golden-answer-template.md
 ---
 
 # Golden answer template — payment system design

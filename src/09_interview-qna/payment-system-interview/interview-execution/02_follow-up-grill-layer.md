@@ -6,6 +6,15 @@ learning_objectives:
   - "Anticipate payment interview follow-ups by category"
   - "Answer with ledger, idempotency, and PCI mechanisms"
 topic: "Payment system grill layer"
+related_topics:
+  prerequisites:
+    - 01_golden-answer-template.md
+    - ../04_follow-ups-and-grill-payment-system.md
+  builds_upon: []
+  enables:
+    - 03_cross-domain-prompt-bank.md
+  cross_refs:
+    - ../../interview-execution/02_follow-up-grill-layer.md
 ---
 
 # Follow-up grill layer — payment systems
