@@ -1,7 +1,22 @@
 ---
 learning_level: "Advanced"
+prerequisites:
+  - "01–03 foundation modules in this track"
 estimated_time: "45 minutes"
 topic: "End-to-end payment narrative (Azure-oriented)"
+learning_objectives:
+  - "Narrate an end-to-end Azure payment design covering identity, payment flow, idempotency, and ledger"
+  - "Quote Azure services (Front Door, APIM, Service Bus, SQL, Cosmos DB) with rationale at each tier"
+related_topics:
+  prerequisites:
+    - ../../01_clarifying-requirements-for-payment-systems.md
+    - ../../02_component-model-and-data-flow.md
+    - ../../03_idempotency-ledger-and-failure-handling.md
+  builds_upon: []
+  enables:
+    - diagram.md
+    - failures.md
+  cross_refs: []
 ---
 
 # Payment processing — end-to-end interview narrative

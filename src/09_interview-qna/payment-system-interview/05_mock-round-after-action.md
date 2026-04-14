@@ -5,6 +5,14 @@ estimated_time: "8 minutes"
 learning_objectives:
   - "Debrief a payment mock using failure-oriented language"
   - "Lock three behaviors before the next session: clarify, diagram, money path"
+related_topics:
+  prerequisites:
+    - 01_clarifying-requirements-for-payment-systems.md
+  builds_upon:
+    - 04_follow-ups-and-grill-payment-system.md
+  enables: []
+  cross_refs:
+    - 02_core_questions/design-payment-azure-e2e/answer.md
 ---
 
 # Mock round — after-action (failures-style debrief)

@@ -5,6 +5,12 @@ estimated_time: "5 minutes"
 learning_objectives:
   - "Run a complete opening clarification pass in under five minutes"
   - "Avoid single-dimension scoping (users only) in payment rounds"
+related_topics:
+  prerequisites:
+    - 01_clarifying-requirements-for-payment-systems.md
+  builds_upon: []
+  enables: []
+  cross_refs: []
 ---
 
 # First five minutes — clarifying checklist (payment design)
